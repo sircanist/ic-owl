@@ -9,6 +9,19 @@ import java.util
 import scala.collection.JavaConverters.{asScalaSetConverter, setAsJavaSetConverter}
 
 
+trait Checker[E, I]{
+  def getEntailment: E
+  def getStatic: Set[I]
+  def isEntailed(input: Set[I]): Boolean
+  def isTautology:Boolean
+  def getModule(input: Set[I]): Set[I]
+}
+
+trait CheckerFactory[E, I]{
+  def createChecker(entailment: E, static: Set[I]): Checker[E, I]
+}
+
+
 class SimpleChecker(reasonerFactory: OWLReasonerFactory,
                     entailment: java.util.Set[OWLAxiom],
                     static: Set[OWLAxiom],

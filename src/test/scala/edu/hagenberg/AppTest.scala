@@ -30,8 +30,8 @@ class Test1 extends AnyFunSuite {
             input,
             static,
             checkerFactory = new SimpleCheckerFactory(new OpenlletReasonerFactory),
-            expansionStrategy = new SimpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            contractionStrategy = new SimpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
+            expansionStrategy = ExpansionStrategies.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
+            contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             algorithm = Algorithms.simple
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
@@ -58,8 +58,8 @@ class Test1 extends AnyFunSuite {
             input,
             static,
             checkerFactory = new SimpleCheckerFactory(new OpenlletReasonerFactory),
-            expansionStrategy = new SimpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            contractionStrategy = new SimpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
+            expansionStrategy = ExpansionStrategies.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
+            contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             algorithm = Algorithms.simple
         )
         val remove_axioms = generator.executeAlgorithm(entailment)

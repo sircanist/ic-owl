@@ -1,15 +1,5 @@
 package edu.hagenberg
 
-import org.semanticweb.owlapi.model.{OWLAxiom, OWLDataFactory, OWLEntity, OWLOntology, OWLOntologyManager}
-import org.semanticweb.owlapi.reasoner.{FreshEntityPolicy, IndividualNodeSetPolicy, NullReasonerProgressMonitor, OWLReasonerFactory, SimpleConfiguration}
-
-
-trait Algorithm[E, I]{
-
-  def findRemoveSet(input: Set[I], finder: JustificationFinder[E, I]): Option[Set[I]]
-}
-
-
 class JustificationFinder[E, I](checker: Checker[E,I],
                                 expansionStrategy: ExpansionStrategy[E, I],
                                 contractionStrategy: ContractionStrategy[E, I]){
@@ -31,30 +21,6 @@ class JustificationFinder[E, I](checker: Checker[E,I],
   }
 }
 
-trait Checker[E, I]{
-  def getEntailment: E
-  def getStatic: Set[I]
-  def isEntailed(input: Set[I]): Boolean
-  def isTautology:Boolean
-  def getModule(input: Set[I]): Set[I]
-}
-
-trait CheckerFactory[E, I]{
-  def createChecker(entailment: E, static: Set[I]): Checker[E, I]
-}
-
-
-trait ExpansionStrategy[E, I]{
-  def doExpansion(axioms: Set[I], checker: Checker[E, I] ): Option[Set[I]]
-}
-
-
-trait ContractionStrategy[E, I]{
-  def doPruning(axioms: Set[I], checker: Checker[E, I] ): Option[Set[I]]
-}
-
-
-
 class BlackBoxGenerator[E, I](input: Set[I],
                               static: Set[I],
                               checkerFactory: CheckerFactory[E, I],
@@ -67,11 +33,11 @@ class BlackBoxGenerator[E, I](input: Set[I],
     val algorithmInput = if (useModularisation) checker.getModule(input) else input
     val finder: JustificationFinder[E, I] = new JustificationFinder(checker, expansionStrategy, contractionStrategy)
     if (checker.isTautology)
-      return None
-    if (!checker.isEntailed(algorithmInput))
-      return None
-    val removes: Option[Set[I]] = algorithm.findRemoveSet(algorithmInput, finder)
-    removes
+      None
+    else if (!checker.isEntailed(algorithmInput))
+      None
+    else
+      algorithm.findRemoveSet(algorithmInput, finder)
   }
 }
 
