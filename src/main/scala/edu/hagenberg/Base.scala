@@ -1,12 +1,13 @@
 package edu.hagenberg
 
-class JustificationFinder[E, I](checker: Checker[E,I],
+class JustificationFinder[E, I](val checker: Checker[E,I],
                                 expansionStrategy: ExpansionStrategy[E, I],
                                 contractionStrategy: ContractionStrategy[E, I]){
   private[this] def expand(workingAxioms: Set[I]): Option[Set[I]] = {
     val expanded = expansionStrategy.doExpansion(workingAxioms, checker)
     expanded
   }
+
 
   private[this] def contract(expandedAxioms: Set[I]): Option[Set[I]] = {
     val removeCandidates = expandedAxioms
@@ -37,7 +38,7 @@ class BlackBoxGenerator[E, I](input: Set[I],
     else if (!checker.isEntailed(algorithmInput))
       None
     else
-      algorithm.findRemoveSet(algorithmInput, finder)
+      algorithm.findRemoveSet(algorithmInput, finder, checkerFactory)
   }
 }
 

@@ -18,10 +18,12 @@ object Util {
     return c.stream().skip(random.nextInt(c.size())).findFirst()
   }
   def getRandomElement[E](c: Set[E]): Option[E] = {
-    if (c.size >= 0)
+    if (c.size <= 0)
       None
-    val n = util.Random.nextInt(c.size)
-    Some(c.iterator.drop(n).next)
+    else {
+      val n = util.Random.nextInt(c.size)
+      Some(c.iterator.drop(n).next)
+    }
   }
 
   def getAxiomsFromFile(file: File) = {

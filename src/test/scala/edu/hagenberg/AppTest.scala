@@ -60,7 +60,7 @@ class Test1 extends AnyFunSuite {
             checkerFactory = new SimpleCheckerFactory(new OpenlletReasonerFactory),
             expansionStrategy = ExpansionStrategies.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            algorithm = Algorithms.simple
+            algorithm = Algorithms.simpleWeakening
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
         print(remove_axioms)
