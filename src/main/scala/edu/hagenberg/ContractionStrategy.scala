@@ -1,16 +1,15 @@
 package edu.hagenberg
 
-import scala.collection.mutable
-
-
+import scala.annotation.tailrec
 
 trait ContractionStrategy[E, I]{
   def doPruning(axioms: Set[I], checker: Checker[E, I] ): Option[Set[I]]
 }
 
 object ContractionStrategy {
-  def simpleContractionStrategy[E, I](): ContractionStrategy[E, I] = {
+  def simpleContractionStrategy[E, I]: ContractionStrategy[E, I] = {
     (axioms, checker) => {
+      @tailrec
       def removeWhile(refutable: Seq[I], contraction: Set[I], static: Set[I]): Option[Set[I]] ={
         refutable match{
           case x +: Seq() =>

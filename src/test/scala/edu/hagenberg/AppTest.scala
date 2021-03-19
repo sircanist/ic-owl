@@ -1,17 +1,15 @@
 package edu.hagenberg
 
 
-import com.google.common.collect.Sets
-import org.scalatest.funsuite.AnyFunSuite
-
-import edu.hagenberg.Util.{getAxiomsFromFile}
+import edu.hagenberg.Util.getAxiomsFromFile
 import openllet.owlapi.OpenlletReasonerFactory
-import org.semanticweb.owlapi.model.{ IRI, OWLAxiom,  OWLDeclarationAxiom}
+import org.scalatest.funsuite.AnyFunSuite
 import org.semanticweb.owlapi.apibinding.OWLManager
+import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLDeclarationAxiom}
 
-import scala.collection.JavaConverters._
 import java.io.File
 import java.util
+import scala.collection.JavaConverters._
 
 class Test1 extends AnyFunSuite {
     test("Hello World"){
@@ -30,9 +28,10 @@ class Test1 extends AnyFunSuite {
             input,
             static,
             checkerFactory = new SimpleCheckerFactory(new OpenlletReasonerFactory),
-            expansionStrategy = ExpansionStrategies.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
+            reasonerFactory = new OpenlletReasonerFactory,
+            expansionStrategy = ExpansionStrategy.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            algorithm = Algorithms.simple
+            algorithm = Algorithm.simple
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
         print(remove_axioms)
@@ -58,12 +57,16 @@ class Test1 extends AnyFunSuite {
             input,
             static,
             checkerFactory = new SimpleCheckerFactory(new OpenlletReasonerFactory),
-            expansionStrategy = ExpansionStrategies.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
+            reasonerFactory = new OpenlletReasonerFactory,
+            expansionStrategy = ExpansionStrategy.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            algorithm = Algorithms.simpleWeakening
+            algorithm = Algorithm.simpleWeakening
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
-        print(remove_axioms)
+        remove_axioms match {
+            case Left(s) => println(s"ERROR: ${s.getMessage}")
+            case Right(paths) => println(paths)
+        }
 //        val manager = OWLManager.createOWLOntologyManager
 //        val merged = manager.loadOntologyFromOntologyDocument(new File("/tmp/merged_complex.owl"))
 //        val unwanted = manager.loadOntologyFromOntologyDocument(new File("/tmp/unwanted.owl"))

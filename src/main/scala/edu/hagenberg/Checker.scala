@@ -26,14 +26,14 @@ class SimpleChecker(reasonerFactory: OWLReasonerFactory,
                     entailment: java.util.Set[OWLAxiom],
                     static: Set[OWLAxiom],
                     timeOutMS: Long = Long.MaxValue) extends Checker[java.util.Set[OWLAxiom],OWLAxiom] {
-  var m: OWLOntologyManager = createManager();
+  var m: OWLOntologyManager = createManager
   val signatures: java.util.Set[OWLEntity]  = entailment.asScala.flatMap(_.getSignature.asScala).asJava
   val reasoner_config = new SimpleConfiguration(
     new NullReasonerProgressMonitor, FreshEntityPolicy.ALLOW, timeOutMS, IndividualNodeSetPolicy.BY_SAME_AS)
 
 
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
-    m = createManager();
+    m = createManager
     var entailed: Boolean = false
     val ont: OWLOntology = m.createOntology(input.asJava)
     val df: OWLDataFactory = m.getOWLDataFactory
@@ -60,7 +60,7 @@ class SimpleChecker(reasonerFactory: OWLReasonerFactory,
   override def getModule(input: Set[OWLAxiom]): Set[OWLAxiom] = {
     val moduleType = ModuleType.STAR
     val jInput: java.util.Set[OWLAxiom] = input.asJava
-    val extractor = new SyntacticLocalityModuleExtractor(createManager(),jInput.stream() , moduleType)
+    val extractor = new SyntacticLocalityModuleExtractor(createManager,jInput.stream() , moduleType)
     extractor.extract(signatures).asScala.toSet
   }
 

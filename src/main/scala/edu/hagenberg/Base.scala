@@ -1,5 +1,11 @@
 package edu.hagenberg
 
+import org.semanticweb.owlapi.model.OWLAxiom
+import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
+
+
+case class PathElement(justifications: Set[OWLAxiom], selected: OWLAxiom, weakened: Option[OWLAxiom])
+
 class JustificationFinder[E, I](val checker: Checker[E,I],
                                 expansionStrategy: ExpansionStrategy[E, I],
                                 contractionStrategy: ContractionStrategy[E, I]){
@@ -25,20 +31,21 @@ class JustificationFinder[E, I](val checker: Checker[E,I],
 class BlackBoxGenerator[E, I](input: Set[I],
                               static: Set[I],
                               checkerFactory: CheckerFactory[E, I],
+                              reasonerFactory: OWLReasonerFactory,
                               expansionStrategy: ExpansionStrategy[E,I],
                               contractionStrategy: ContractionStrategy[E, I],
                               algorithm: Algorithm[E, I],
                               useModularisation: Boolean = true){
-  def executeAlgorithm(entailment: E): Option[Set[I]] ={
+  def executeAlgorithm(entailment: E): Either[Error, List[List[PathElement]]] ={
     val checker: Checker[E, I] = checkerFactory.createChecker(entailment, static)
     val algorithmInput = if (useModularisation) checker.getModule(input) else input
     val finder: JustificationFinder[E, I] = new JustificationFinder(checker, expansionStrategy, contractionStrategy)
     if (checker.isTautology)
-      None
+      Left(new Error("Tautology"))
     else if (!checker.isEntailed(algorithmInput))
-      None
+      Left(new Error("Not Entailed"))
     else
-      algorithm.findRemoveSet(algorithmInput, finder, checkerFactory)
+      Right(algorithm.findRemoveSet(algorithmInput, finder, reasonerFactory))
   }
 }
 

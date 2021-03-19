@@ -1,14 +1,13 @@
 package edu.hagenberg
 
 
-
 trait ExpansionStrategy[E, I]{
   def doExpansion(axioms: Set[I], checker: Checker[E, I] ): Option[Set[I]]
 }
 
 
-object ExpansionStrategies {
-  def simpleExpansionStrategy[E, I](): ExpansionStrategy[E, I] = {
+object ExpansionStrategy {
+  def simpleExpansionStrategy[E, I]: ExpansionStrategy[E, I] = {
     (axioms, checker) => {
       def addWhile(axioms: Seq[I], newelems: Set[I]): Option[Set[I]] ={
         axioms match{
