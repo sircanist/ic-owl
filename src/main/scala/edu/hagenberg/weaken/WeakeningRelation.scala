@@ -54,12 +54,9 @@ object WeakeningRelation {
     }
 
 //
-  def getSubClassToWeaken(axiom: OWLAxiom, dataFactory: OWLDataFactory): OWLSubClassOfAxiom ={
+  def getClassExpression(axiom: OWLAxiom): OWLClassExpression ={
     if (axiom.getAxiomType.equals(AxiomType.CLASS_ASSERTION)){
-      val classAssertion: OWLClassAssertionAxiom = axiom.asInstanceOf[OWLClassAssertionAxiom]
-      val classExpression = classAssertion.getClassExpression
-      val topClass = dataFactory.getOWLClass(IRI.create("owl:Thing"))
-      dataFactory.getOWLSubClassOfAxiom(topClass, classExpression)
+      axiom.asInstanceOf[OWLClassAssertionAxiom].getClassExpression
     }
     //    if (axiom.getAxiomType().equals(AxiomType.OBJECT_PROPERTY_ASSERTION)){
     //      val classAssertion: OWLObjectPropertyAssertionAxiom = axiom.asInstanceOf[OWLObjectPropertyAssertionAxiom]
@@ -68,7 +65,7 @@ object WeakeningRelation {
     //      return dataFactory.getOWLSubClassOfAxiom(topClass, classExpression.get)
     //    }
     else if (axiom.getAxiomType.equals(AxiomType.SUBCLASS_OF))
-      axiom.asInstanceOf[OWLSubClassOfAxiom]
+      axiom.asInstanceOf[OWLSubClassOfAxiom].getSuperClass
     else
       throw new IllegalArgumentException("Currently, only concept inclusions are supported.")
   }
@@ -92,14 +89,20 @@ object WeakeningRelation {
       val ontologyManager = Util.createManager
       val dataFactory = ontologyManager.getOWLDataFactory
       val checker = finder.checker
-      val subClassOfAxiom: OWLSubClassOfAxiom = getSubClassToWeaken(axiom, dataFactory)
-      val conclusion: ELConceptDescription = ELConceptDescription.of(subClassOfAxiom.getSuperClass)
+      val classExpression: OWLClassExpression = getClassExpression(axiom)
+      val conclusion: ELConceptDescription = ELConceptDescription.of(classExpression)
       val weakenedRHS: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet()
-      val nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(conclusion.upperNNeighborsReduced(n))
 
       val (static, _) = input.partition(checker.getStatic)
 
       val baseAxioms = static ++ justification - axiom
+
+      val nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(conclusion.upperNNeighborsReduced(n))
+      val reasoner = reasonerFactory.createReasoner(Util.createManager.createOntology((checker.getStatic).asJava))
+//      val conceptnames_1 = conclusion.getConceptNames
+//      val existentialrestricions_1 = conclusion.getExistentialRestrictions
+//      dataFactory.getowlobjectin
+//      reasoner.isSatisfiable(classExpression.getClassesInSignature.toArray()(0).asInstanceOf[OWLClassExpression])
 
       while (!nextCandidates.isEmpty) {
         val processedCandidates: java.util.Set[ELConceptDescription] = new java.util.HashSet(nextCandidates)
