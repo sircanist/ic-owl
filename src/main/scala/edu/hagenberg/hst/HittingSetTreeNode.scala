@@ -9,32 +9,11 @@ case class RootConnection(root: HittingSetTreeNode, edge: Edge)
 case class Edge(selected: OWLAxiom, weakened: Option[OWLAxiom])
 
 class HittingSetTreeNode(val root: Option[RootConnection],
-                         var justification: Set[OWLAxiom] = Set.empty) {
+                         var justification: Option[Set[OWLAxiom]] = None) {
 
-  var processed: Boolean =   if (justification.nonEmpty) true else false
+  var processed: Boolean =  justification.nonEmpty
 
   val edges: List[Edge] = getEdgesToRoot
-
-  def updateJustification(just: Set[OWLAxiom]): Unit = {
-    justification = just
-    processed = true
-  }
-//
-//  var children: List[HittingSetTreeNode] = List.empty
-//
-//  def addChild(node: HittingSetTreeNode): Unit = {
-//    children = node :: children
-//  }
-
-//  def getOutgoingEdges: List[Edge] = {
-//
-//    def getEdgeIfExists(root: Option[RootConnection]): Option[Edge] = root match {
-//      case Some(RootConnection(_, edge)) => Some(edge)
-//      case _ => None
-//    }
-//    children.flatMap(
-//      child => getEdgeIfExists(child.root))
-//  }
 
   def getNodesToRoot: List[HittingSetTreeNode] = {
     HittingSetTreeNode.getNodesToRoot(this, List.empty)
@@ -42,6 +21,10 @@ class HittingSetTreeNode(val root: Option[RootConnection],
 
   def getEdgesToRoot: List[Edge] = {
     HittingSetTreeNode.getEdgesToRoot(this, List.empty)
+  }
+
+  def getPathElementsToRoot: List[PathElement] = {
+    HittingSetTreeNode.getPathElementsToRoot(this, List.empty)
   }
 
 
@@ -68,11 +51,15 @@ object HittingSetTreeNode{
   def getPathElementsToRoot(node: HittingSetTreeNode, path: List[PathElement]): List[PathElement] = {
     node.root match {
       case Some(RootConnection(root, edge)) =>
-        getPathElementsToRoot(
-          root,
-          PathElement(justifications = root.justification,
-                      selected = edge.selected,
-                      weakened = edge.weakened) :: path)
+        root.justification match {
+          case Some(justification) =>
+              getPathElementsToRoot(
+              root,
+              PathElement(justifications = justification,
+              selected = edge.selected,
+              weakened = edge.weakened) :: path)
+          case None => path
+        }
       case None => path
     }
   }

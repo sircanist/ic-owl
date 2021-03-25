@@ -60,7 +60,7 @@ class Test1 extends AnyFunSuite {
             reasonerFactory = new OpenlletReasonerFactory,
             expansionStrategy = ExpansionStrategy.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            algorithm = Algorithm.simpleWeakening
+            algorithm = Algorithm.hittingSetWeakening
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
         remove_axioms match {
@@ -74,5 +74,7 @@ class Test1 extends AnyFunSuite {
 //        val staticAxioms = merged.getAxioms().asScala -- AxiomSplitter(unwanted).getAboxAxioms
 
     }
+
+
 }
 

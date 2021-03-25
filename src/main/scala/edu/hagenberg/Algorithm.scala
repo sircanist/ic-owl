@@ -1,5 +1,6 @@
 package edu.hagenberg
 
+import edu.hagenberg.hst.{HittingSetTree, HittingSetTreeNode}
 import org.semanticweb.owlapi.model.OWLAxiom
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 
@@ -47,6 +48,21 @@ object Algorithm {
 
       val all = findAll(input)
       List(all)
+    }
+
+  def hittingSetWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
+    (input, finder, reasonerFactory) => {
+      val rootNode = new HittingSetTreeNode(root=None)
+      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory)
+      tree.bfs().toList.map(el => el.getPathElementsToRoot)
+    }
+
+
+  def hittingSetNoWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
+    (input, finder, reasonerFactory) => {
+      val rootNode = new HittingSetTreeNode(root=None)
+      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory, weaken = false)
+      tree.bfs().toList.map(el => el.getPathElementsToRoot)
     }
 
 //  def simpleWeakening(): Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =

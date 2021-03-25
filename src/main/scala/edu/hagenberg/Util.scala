@@ -37,13 +37,11 @@ object Util {
     OWLManager.createOWLOntologyManager()
   }
 
-
-  def getWeakenedSet(input: Set[OWLAxiom],
-                     just: Set[OWLAxiom],
-                     finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
-                     reasoner: OWLReasonerFactory):
-  (OWLAxiom, Option[OWLAxiom]) ={
-    val selected: OWLAxiom = Util.getRandomElement(just).get
+  def getWeakened(input: Set[OWLAxiom],
+                  just: Set[OWLAxiom],
+                  selected: OWLAxiom,
+                  finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
+                  reasoner: OWLReasonerFactory): Option[OWLAxiom] = {
     val currentWeakeningRelation =
       selected.getAxiomType match {
         case AxiomType.CLASS_ASSERTION | AxiomType.SUBCLASS_OF =>
@@ -54,8 +52,17 @@ object Util {
     val weakened: Set[OWLAxiom] = currentWeakeningRelation.getWeakened(input, finder, just, selected, reasoner)
     val chosen_weakened = Util.getRandomElement(weakened)
     chosen_weakened match {
-      case Some(found) => (selected, Some(found))
-      case _ => (selected, None)
+      case Some(found) => Some(found)
+      case _ => None
     }
+  }
+
+  def getWeakenedSet(input: Set[OWLAxiom],
+                     just: Set[OWLAxiom],
+                     finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
+                     reasoner: OWLReasonerFactory):
+  (OWLAxiom, Option[OWLAxiom]) ={
+    val selected: OWLAxiom = Util.getRandomElement(just).get
+    (selected, getWeakened(input, just, selected, finder, reasoner))
   }
 }

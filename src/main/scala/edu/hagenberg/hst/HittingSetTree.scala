@@ -1,66 +1,72 @@
 package edu.hagenberg.hst
 
-import edu.hagenberg.JustificationFinder
+import edu.hagenberg.{JustificationFinder, Util}
 import org.semanticweb.owlapi.model.OWLAxiom
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 
-import scala.collection.mutable.ListBuffer
 import scala.collection.immutable.Queue
 
-class HittingSetTree[E, I](input: Set[OWLAxiom], root: HittingSetTreeNode, finder: JustificationFinder[E, I], reasonerFactory: OWLReasonerFactory) {
+class HittingSetTree[E, I](input: Set[OWLAxiom],
+                           root: HittingSetTreeNode,
+                           finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
+                           reasonerFactory: OWLReasonerFactory,
+                           weaken:Boolean =true) {
 
-  var visited: ListBuffer[HittingSetTreeNode] = new ListBuffer[HittingSetTreeNode]
-  var no_childs: ListBuffer[HittingSetTreeNode] = new ListBuffer[HittingSetTreeNode]
-  visited += root
-  def getJustification(axioms:Set[OWLAxiom]): Set[OWLAxiom] ={
-    // get the justification for the axioms
-       // - if None => return None
-    // if found return child edge paths
+  def getJustification(axioms:Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
+    finder.searchOneJustification(axioms)
   }
-  def getEdge(axioms:Set[OWLAxiom], justification: Set[OWLAxiom], selected: OWLAxiom): Set[Edge] ={
-    // get the new input = axioms - justification + axiom
-    // create weakening
-    // return edge
+  def getEdge(axioms:Set[OWLAxiom], justification: Set[OWLAxiom], selected: OWLAxiom): Edge ={
+    // get the new input = axioms - justification + selected
+    val weakened: Option[OWLAxiom] = {
+      if (weaken)
+        Util.getWeakened(input, justification, selected, finder, reasonerFactory)
+      else
+        None
+    }
+    Edge(selected, weakened)
   }
 
-  def getChildren(root: HittingSetTreeNode, axioms:Set[OWLAxiom], just: Set[OWLAxiom]): List[HittingSetTreeNode]  = {
-    // select all axioms randomly from just
-    // getEdge(axioms, justification, selected)
-    // create Node with root
-    // return the Edges
+  def getChildren(root: HittingSetTreeNode, axioms:Set[OWLAxiom], justifications: Set[OWLAxiom]): Set[HittingSetTreeNode]  = {
+    def createChildForEdge(root: HittingSetTreeNode, edge: Edge) = {
+      new HittingSetTreeNode(Some(RootConnection(root, edge)))
+    }
+    justifications.map {
+      just => createChildForEdge(root, getEdge(axioms, justifications, just))
+    }
   }
 
   def getAxioms(edges: List[Edge]): Set[OWLAxiom] = {
-    // return input - edges
+    val selected: List[OWLAxiom] = edges.map(edge => edge.selected)
+    val weakened: List[OWLAxiom] = edges.flatMap(edge => edge.weakened)
+    input -- selected.toSet ++ weakened.toSet
   }
-
-//  def processNode(node: HittingSetTreeNode): List[HittingSetTreeNode] = {
-//    val edges = node.edges
-//    val axioms: Set[OWLAxiom] = getAxioms(edges)// input -- edges
-//    val just = getJustification(axioms)
-//    node.updateJustification(just)
-//    visited += node
-//    val children = getChildren(node, axioms, just)
-//    if (children.isEmpty){
-//      no_childs += node
-//    }
-//    children
-//  }
 
 
   def processNode(node:HittingSetTreeNode, discovered: Set[HittingSetTreeNode]): (HittingSetTreeNode, Set[OWLAxiom]) = {
     val edges = node.edges
 
+    def toSet(selected: OWLAxiom, weakened: Option[OWLAxiom]) = {
+      weakened match {
+        case Some(w) => Set(selected, w)
+        case None => Set(selected)
+      }
+    }
     // this probably does not work for non laconic axioms
     def edges_flatten(edges: List[Edge]) = {
-      edges.flatMap(e => {
-        val axs: Set[OWLAxiom] = Set(e.selected, e.weakened.getOrElse(Set.empty[OWLAxiom]))
-        axs
-      }).toSet
+      edges.flatMap(e => toSet(e.selected, e.weakened)).toSet
     }
+
+    def check_intersection(just1: Set[OWLAxiom], justNode: Option[Set[OWLAxiom]]) = {
+      justNode match {
+        case Some(just) => just1.intersect(just).isEmpty
+        case None => false // no intersection possible because one element is None
+      }
+    }
+
     val axioms: Set[OWLAxiom] = getAxioms(edges)// input -- edges
-    val discover: Option[Set[OWLAxiom]] = discovered.collectFirst{
-      case i if edges_flatten(edges).intersect(i.justification).isEmpty => i.justification
+    val discover: Option[Option[Set[OWLAxiom]]] = discovered.collectFirst{
+      case i
+        if check_intersection(edges_flatten(edges), i.justification) => i.justification
     }
     val just = discover match {
       case Some(justification) => justification
@@ -69,7 +75,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom], root: HittingSetTreeNode, finde
     (new HittingSetTreeNode(node.root, just), axioms)
   }
 
-  def bfs(root: HittingSetTreeNode): Set[HittingSetTreeNode] = {
+  def bfs(): Set[HittingSetTreeNode] = {
 
     def bfs_(q: Queue[HittingSetTreeNode],
              discovered: Set[HittingSetTreeNode],
@@ -78,14 +84,18 @@ class HittingSetTree[E, I](input: Set[OWLAxiom], root: HittingSetTreeNode, finde
       val (newNode, axioms) = processNode(head, discovered)
       val dn = discovered + head
       val children = {
-        if (newNode.justification.nonEmpty)
-          getChildren(newNode, axioms, newNode.justification)
-        else
-          List.empty
+        newNode.justification match {
+          case Some(just) => getChildren(newNode, axioms, just)
+          case None =>  List.empty
+        }
       }
 
-      val cp = if (children.isEmpty) closedPaths + newNode  else closedPaths
-      val n = children.filter(child => closedPaths.exists(closed => child.edges.toSet.subsetOf(closed.edges.toSet)))
+      // if no justifications were found for the newNode it cannot have children
+      // if a justification was found it must have a mutation were the justification is not to be found
+      // so it must have children
+      assert ( newNode.justification.nonEmpty == children.nonEmpty )
+      val cp = if (newNode.justification.isEmpty) closedPaths + newNode  else closedPaths
+      val n = children.filter(child => !closedPaths.exists(closed => child.edges.toSet.subsetOf(closed.edges.toSet)))
 
       // TODO if explanation enclosed, reuse
 
