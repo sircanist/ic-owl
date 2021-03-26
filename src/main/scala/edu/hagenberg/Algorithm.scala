@@ -52,7 +52,7 @@ object Algorithm {
 
   def hittingSetWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
     (input, finder, reasonerFactory) => {
-      val rootNode = new HittingSetTreeNode(root=None)
+      val rootNode = new HittingSetTreeNode(root = None)
       val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory)
       tree.bfs().toList.map(el => el.getPathElementsToRoot)
     }
@@ -60,23 +60,8 @@ object Algorithm {
 
   def hittingSetNoWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
     (input, finder, reasonerFactory) => {
-      val rootNode = new HittingSetTreeNode(root=None)
+      val rootNode = new HittingSetTreeNode(root = None)
       val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory, weaken = false)
       tree.bfs().toList.map(el => el.getPathElementsToRoot)
     }
-
-//  def simpleWeakening(): Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
-//    (input, finder) => {
-//
-//      def findAll(input: Set[OWLAxiom]): Set[OWLAxiom] = {
-//        val justification = finder.searchOneJustification(input)
-//        justification match {
-//          case Some(just) => just ++ findAll(input -- just)
-//          case None => Set.empty
-//        }
-//      }
-//
-//      val all = findAll(input)
-//      Some(all)
-//      }
 }

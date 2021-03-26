@@ -19,7 +19,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
     // get the new input = axioms - justification + selected
     val weakened: Option[OWLAxiom] = {
       if (weaken)
-        Util.getWeakened(input, justification, selected, finder, reasonerFactory)
+        Util.getWeakened2(input, justification, selected, finder, reasonerFactory)
       else
         None
     }

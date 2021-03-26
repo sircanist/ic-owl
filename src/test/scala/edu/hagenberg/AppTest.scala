@@ -31,7 +31,8 @@ class Test1 extends AnyFunSuite {
             reasonerFactory = new OpenlletReasonerFactory,
             expansionStrategy = ExpansionStrategy.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            algorithm = Algorithm.simple
+            algorithm = Algorithm.simple,
+            useModularisation = false
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
         print(remove_axioms)

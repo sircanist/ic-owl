@@ -97,8 +97,13 @@ object WeakeningRelation {
 
       val baseAxioms = static ++ justification - axiom
 
-      val nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(conclusion.upperNNeighborsReduced(n))
-      val reasoner = reasonerFactory.createReasoner(Util.createManager.createOntology((checker.getStatic).asJava))
+      val testOntology = Util.createManager.createOntology((checker.getStatic).asJava)
+//      val reasoner = reasonerFactory.createReasoner(testOntology)
+      val nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
+        Util.upperNNeighborsOntology(testOntology,
+          conclusion: ELConceptDescription,
+          reasonerFactory: OWLReasonerFactory,
+          dataFactory: OWLDataFactory))
 //      val conceptnames_1 = conclusion.getConceptNames
 //      val existentialrestricions_1 = conclusion.getExistentialRestrictions
 //      dataFactory.getowlobjectin
@@ -110,7 +115,13 @@ object WeakeningRelation {
         val weakenedAxiom: OWLAxiom =
           createWeakenedAxiom(axiom, candidate, dataFactory)
         if (checker.isEntailed(baseAxioms + weakenedAxiom)) {
-          nextCandidates.addAll(candidate.upperNNeighborsReduced(n))
+
+          val new_next_candidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
+            Util.upperNNeighborsOntology(testOntology,
+              candidate: ELConceptDescription,
+              reasonerFactory: OWLReasonerFactory,
+              dataFactory: OWLDataFactory))
+          nextCandidates.addAll(new_next_candidates)
           // TODO add superclasses with reasoner
         } else
           weakenedRHS add candidate
