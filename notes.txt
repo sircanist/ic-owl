@@ -1,0 +1,18 @@
+Prio 2
+> anonymous identity entailment is not working
+
+Prio 1
+Get secure weakening
+Add entailment set set OWLAxiom
+SnortSensor can be in resultset but HoneyPotSensor not
+ > because removing the DataPropertyAssertion automatically makes the ontology not entailing the complex Assertion with
+     SnortSensor and the DataPropertyAssertion (having one not matching in a conjunction is enough to not entail it)
+1 justification for two possible entailments > where the other entailment is not possible anymore after conversion to ElDescription
+0 = {OWLClassAssertionAxiomImpl@8216} "ClassAssertion(ObjectSomeValuesFrom(<http://purl.org/cti-core#hasIncidentState> <http://purl.org/cti-core#ClosedIncidentState>) <http://purl.org/cti-scenario1#Incident1>)"
+1 = {OWLClassAssertionAxiomImpl@8217} "ClassAssertion(ObjectSomeValuesFrom(<http://purl.org/cti-core#takenCourseOfAction> ObjectSomeValuesFrom(<http://purl.org/cti-core#coaCost> <http://purl.org/cti-core#LowCOACost>)) <http://purl.org/cti-scenario1#Incident1>)"
+2 = {OWLClassAssertionAxiomImpl@8218} "ClassAssertion(ObjectSomeValuesFrom(<http://purl.org/cti-core#observedBy> ObjectIntersectionOf(<http://purl.org/cti-core#SnortSensor> DataHasValue(<http://purl.org/cti-core#sensorVersion> "3.2"^^xsd:string))) <http://purl.org/cti-scenario1#AttackerSighting>)"
+3 = {OWLClassAssertionAxiomImpl@8219} "ClassAssertion(<http://purl.org/cti-scenario1-attacker#AttackerAdvantage> _:genid2147483648)"
+4 = {OWLClassAssertionAxiomImpl@8220} "ClassAssertion(ObjectSomeValuesFrom(<http://purl.org/cti-core#fromIdentity> <http://purl.org/cti-core#PersonIdentity>) <http://purl.org/cti-scenario1#Source1>)"
+5 = {OWLClassAssertionAxiomImpl@8221} "ClassAssertion(ObjectSomeValuesFrom(<http://purl.org/cti-core#seenObservable> <http://purl.org/cti-scenario1-attacker#CNCIPAddress>) <http://purl.org/cti-scenario1#AttackerSighting>)"
+6 = {OWLDataPropertyAssertionAxiomImpl@8222} "DataPropertyAssertion(<http://purl.org/cti-core#discoveredIncidentTime> <http://purl.org/cti-scenario1#Incident1> "2020-10-26T21:32:52"^^xsd:dateTime)"
+7 = {OWLClassAssertionAxiomImpl@8223} "ClassAssertion(ObjectSomeValuesFrom(<http://purl.org/cti-core#observedBy> <http://purl.org/cti-core#HoneyPotSensor>) <http://purl.org/cti-scenario1#AttackerSighting>)"

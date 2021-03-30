@@ -19,7 +19,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
     // get the new input = axioms - justification + selected
     val weakened: Option[OWLAxiom] = {
       if (weaken)
-        Util.getWeakened2(input, justification, selected, finder, reasonerFactory)
+        Util.getWeakened(input, justification, selected, finder, reasonerFactory)
       else
         None
     }
@@ -38,7 +38,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
   def getAxioms(edges: List[Edge]): Set[OWLAxiom] = {
     val selected: List[OWLAxiom] = edges.map(edge => edge.selected)
     val weakened: List[OWLAxiom] = edges.flatMap(edge => edge.weakened)
-    input -- selected.toSet ++ weakened.toSet
+    (input ++ weakened.toSet) -- selected.toSet
   }
 
 

@@ -1,6 +1,7 @@
 package edu.hagenberg
 
 import com.google.common.collect.Sets
+import conexp.fx.core.collections.Collections3
 import conexp.fx.core.dl.ELConceptDescription
 import edu.hagenberg.weaken.WeakeningRelation
 import org.semanticweb.owlapi.apibinding.OWLManager
@@ -8,6 +9,7 @@ import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 
 import java.io.File
+import java.util.function.BiPredicate
 import java.util.stream.Collectors
 import java.util.{Optional, Random}
 import scala.collection.JavaConverters.asScalaSetConverter
@@ -61,26 +63,6 @@ object Util {
   }
 
 
-  def getWeakened2(input: Set[OWLAxiom],
-                  just: Set[OWLAxiom],
-                  selected: OWLAxiom,
-                  finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
-                  reasoner: OWLReasonerFactory): Option[OWLAxiom] = {
-    val currentWeakeningRelation =
-    selected.getAxiomType match {
-      case AxiomType.CLASS_ASSERTION | AxiomType.SUBCLASS_OF =>
-        WeakeningRelation.semanticELConceptInclusionWeakeningRelation
-      case AxiomType.OBJECT_PROPERTY_ASSERTION => WeakeningRelation.elPropertyWeakeningRelation
-      case _ => WeakeningRelation.classicalWeakeningRelation
-    }
-    val weakened: Set[OWLAxiom] = currentWeakeningRelation.getWeakened(input, finder, just, selected, reasoner)
-    val chosen_weakened = Util.getRandomElement(weakened)
-    chosen_weakened match {
-      case Some(found) => Some(found)
-      case _ => None
-    }
-  }
-
   def getWeakenedSet(input: Set[OWLAxiom],
                      just: Set[OWLAxiom],
                      finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
@@ -97,12 +79,18 @@ object Util {
                               n:Integer = Integer.MAX_VALUE) = {
     val concepts_reduced: java.util.Set[ELConceptDescription] =
       m_upperNNeighborsOntology(ontology, concept, reasonerFactory, factory, n)
-    val searched_upper_concepts: java.util.Set[ELConceptDescription] =
-      concept.upperNNeighborsReduced(n)
-    concepts_reduced.addAll(searched_upper_concepts)
     concepts_reduced
-
   }
+
+//  def subsumedByELCD(ontology: OWLOntology,
+//                     concept1: ELConceptDescription,
+//                     concept2: ELConceptDescription,
+//                     reasonerFactory: OWLReasonerFactory,
+//                     factory: OWLDataFactory,
+//                     n:Integer = Integer.MAX_VALUE) = {
+//    reasoner = reasonerFactory.createReasoner()
+//
+//  }
 
   def m_upperNNeighborsOntology(ontology: OWLOntology,
                                 concept: ELConceptDescription,
@@ -112,25 +100,53 @@ object Util {
 
     val reasoner = reasonerFactory.createReasoner(ontology)
 
+
+    val predicate = new BiPredicate[ELConceptDescription, ELConceptDescription] {
+      def test(x: ELConceptDescription, y: ELConceptDescription) =
+        (x.subsumes((y)) && y.subsumes(x)) //  || subsumedBy(x.toOWLClassExpression, y.toOWLClassExpression)
+    }
+
     def get_super_classes(iri: IRI) = {
       reasoner.getSuperClasses(factory.getOWLClass(iri),true)
+    }
+
+    def subsumedBy(ce1: OWLClassExpression, ce2: OWLClassExpression) = {
+      val subClassOfAxiom = factory.getOWLSubClassOfAxiom(ce1, ce2)
+      reasoner.isEntailed(subClassOfAxiom)
+    }
+
+    def subsumedByIRI(iri1: IRI, iri2: IRI) = {
+      val subClassOfAxiom = factory.getOWLSubClassOfAxiom(factory.getOWLClass(iri1), factory.getOWLClass(iri2))
+      reasoner.isEntailed(subClassOfAxiom)
     }
 
     def m_upperNNeighborsReduced(concept: ELConceptDescription, n: Integer): java.util.Set[ELConceptDescription] = {
       val reducedForm: ELConceptDescription = concept.reduce()
 
       val upperNNeighborsFromConceptNames: java.util.stream.Stream[ELConceptDescription] = {
-        reducedForm.getConceptNames.stream().flatMap(
+        reducedForm.getConceptNames.stream().map(
           A => {
             val superClasses = get_super_classes(A)
-            superClasses.entities().map[ELConceptDescription](
-              superclass => {
-                val upperNeighbor = reducedForm.clone()
-                upperNeighbor.getConceptNames.remove(A)
-                upperNeighbor.getConceptNames.add(superclass.getIRI)
-                upperNeighbor
-              }
+            val upperNeighbor = reducedForm.clone()
+            upperNeighbor.getConceptNames.remove(A)
+            upperNeighbor.getConceptNames.addAll((superClasses.entities().map[IRI](_.getIRI)).collect(Collectors.toSet[IRI]))
+
+            val orig_concepts: java.util.Set[IRI] = new java.util.HashSet(upperNeighbor.getConceptNames)
+            upperNeighbor.getConceptNames.removeIf(
+              parent =>
+                orig_concepts.stream()
+                .filter(other => !other.equals(parent))
+                .anyMatch(child => subsumedByIRI(child, parent))
             )
+            upperNeighbor
+//            superClasses.entities().map[ELConceptDescription](
+//              superclass => {
+//                val upperNeighbor = reducedForm.clone()
+//                upperNeighbor.getConceptNames.remove(A)
+//                upperNeighbor.getConceptNames.add(superclass.getIRI)
+//                upperNeighbor
+//              }
+//            )
           }
         )
       }
@@ -143,14 +159,14 @@ object Util {
                 val upperNeighbor = reducedForm.clone()
                 upperNeighbor.getExistentialRestrictions.remove(ER.getKey, ER.getValue)
                 uErs
-                  .parallelStream()
+                  .stream()
                   .filter(
                     uER => reducedForm.getExistentialRestrictions.entries
                       .parallelStream()
                       .filter(otherER => !otherER.equals(ER))
                       .filter(otherER => ER.getKey.equals(otherER.getKey))
                       .map[ELConceptDescription](entry => entry.getValue)
-                      .noneMatch(uER.subsumes(_)))
+                      .noneMatch(child => uER.subsumes(child) || subsumedBy(child.toOWLClassExpression, uER.toOWLClassExpression)))
                   .sequential()
                   .forEach(uER => upperNeighbor.getExistentialRestrictions.put(ER.getKey, uER))
                 upperNeighbor
@@ -170,7 +186,12 @@ object Util {
           upperNNeighborsFromConceptNames,
           upperNNeighborsFromExistentialRestriction)
       //upperNNeighborsFromConceptNames.collect(Collectors.toSet[ELConceptDescription])
-      stream.collect(Collectors.toSet[ELConceptDescription])
+      //stream.collect(Collectors.toSet[ELConceptDescription])
+      Collections3
+        .representatives(
+          stream
+            .collect(Collectors.toSet()),
+          predicate);
       }
     m_upperNNeighborsReduced(concept, n)
   }

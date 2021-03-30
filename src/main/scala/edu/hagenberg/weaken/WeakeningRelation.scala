@@ -97,7 +97,7 @@ object WeakeningRelation {
 
       val baseAxioms = static ++ justification - axiom
 
-      val testOntology = Util.createManager.createOntology((checker.getStatic).asJava)
+      val testOntology = Util.createManager.createOntology((baseAxioms).asJava)
 //      val reasoner = reasonerFactory.createReasoner(testOntology)
       val nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
         Util.upperNNeighborsOntology(testOntology,
@@ -145,7 +145,8 @@ object WeakeningRelation {
       })
 
 
-      val nonMinimalWeakening: java.util.Set[OWLAxiom] = Sets.newConcurrentHashSet()
+      // TODO evaluate by expanding reasoner of eldescription
+      val nonMinimalWeakenings: java.util.Set[OWLAxiom] = Sets.newConcurrentHashSet()
       val order: MatrixRelation[OWLAxiom, OWLAxiom] = new MatrixRelation(true)
       order.rowHeads().addAll(weakening)
       weakening.stream().parallel().forEach(weakening1 ⇒ {
@@ -158,7 +159,17 @@ object WeakeningRelation {
         })
         System.gc()
       })
-      weakening.removeAll(nonMinimalWeakening)
+      weakening.stream().parallel().forEach(weakening2 ⇒ {
+        val reasoner: OWLReasoner =
+          reasonerFactory.createReasoner(Util.createManager.createOntology((baseAxioms + weakening2).asJava))
+        order.col(weakening2).stream().sequential().forEach(weakening1 ⇒ {
+          if (!(weakening1 equals weakening2))
+            if (!(reasoner isEntailed weakening1))
+              nonMinimalWeakenings add weakening2
+        })
+        System.gc()
+      })
+      weakening.removeAll(nonMinimalWeakenings)
       weakening.asScala.toSet
     }
 }
