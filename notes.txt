@@ -16,3 +16,31 @@ SnortSensor can be in resultset but HoneyPotSensor not
 5 = {OWLClassAssertionAxiomImpl@8221} "ClassAssertion(ObjectSomeValuesFrom(<http://purl.org/cti-core#seenObservable> <http://purl.org/cti-scenario1-attacker#CNCIPAddress>) <http://purl.org/cti-scenario1#AttackerSighting>)"
 6 = {OWLDataPropertyAssertionAxiomImpl@8222} "DataPropertyAssertion(<http://purl.org/cti-core#discoveredIncidentTime> <http://purl.org/cti-scenario1#Incident1> "2020-10-26T21:32:52"^^xsd:dateTime)"
 7 = {OWLClassAssertionAxiomImpl@8223} "ClassAssertion(ObjectSomeValuesFrom(<http://purl.org/cti-core#observedBy> <http://purl.org/cti-core#HoneyPotSensor>) <http://purl.org/cti-scenario1#AttackerSighting>)"
+
+
+ideen fuer loesung
+
+problem:
+- compliant solution x another compliant solution could entail secret information
+
+1.
+- create multiple edges (new) for each possible selection of weakening one
+  - merge all possible paths into one > as a set of all sets which has no element which is more general then another element (possible conflict with anonymous individuals)
+  > only works if all possible compliant solutions are considered! i.e. algorithm does not consider values could stay, but priories removing them beforehand (in EL.. constructor)
+
+2.
+- create a ruleset with only one element in the axiom as a singleton in an axiom set
+  > entailment no longer possible as a blackbox
+
+3.
+- rewrite handling of multiple entailments to only one concept and verify concept after concept (with applied reduction(s))
+  > entailment no longer possible as a blackbox
+  > intensive
+
+4.
+- find another way (algorithm in paper to filter out concepts in sets which are seen anywhere in policy definition)
+
+
+
+--- problem for 1 is
+OWLDatasomeValuesFrom >>> check if EL!!!!

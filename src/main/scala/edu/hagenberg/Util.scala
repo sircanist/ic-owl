@@ -150,6 +150,15 @@ object Util {
           }
         )
       }
+      val upperNNeighborsFromDataValues: java.util.stream.Stream[ELConceptDescription] = {
+        reducedForm.getDataValues.entries().stream().map(
+          V => {
+            val upperNeighbor = reducedForm.clone()
+            upperNeighbor.getDataValues.remove(V.getKey, V.getValue)
+            upperNeighbor
+          }
+        )
+      }
       val _upperNNeighborsFromExistentialRestrictions: java.util.stream.Stream[ELConceptDescription] = {
         reducedForm.getExistentialRestrictions.entries().stream().flatMap(
           ER => {
@@ -183,7 +192,9 @@ object Util {
           _upperNNeighborsFromExistentialRestrictions
       }
       val stream: java.util.stream.Stream[ELConceptDescription] = java.util.stream.Stream.concat(
-          upperNNeighborsFromConceptNames,
+          java.util.stream.Stream.concat(
+            upperNNeighborsFromConceptNames,
+            upperNNeighborsFromDataValues),
           upperNNeighborsFromExistentialRestriction)
       //upperNNeighborsFromConceptNames.collect(Collectors.toSet[ELConceptDescription])
       //stream.collect(Collectors.toSet[ELConceptDescription])

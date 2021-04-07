@@ -9,7 +9,7 @@ case class PathElement(justifications: Set[OWLAxiom], selected: OWLAxiom, weaken
 class JustificationFinder[E, I](val checker: Checker[E,I],
                                 expansionStrategy: ExpansionStrategy[E, I],
                                 contractionStrategy: ContractionStrategy[E, I]){
-  private[this] def expand(workingAxioms: Set[I]): Option[Set[I]] = {
+    private[this] def expand(workingAxioms: Set[I]): Option[Set[I]] = {
     val expanded = expansionStrategy.doExpansion(workingAxioms, checker)
     expanded
   }
