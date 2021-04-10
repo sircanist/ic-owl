@@ -46,7 +46,7 @@ object Util {
                   just: Set[OWLAxiom],
                   selected: OWLAxiom,
                   finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
-                  reasoner: OWLReasonerFactory): Option[OWLAxiom] = {
+                  reasoner: OWLReasonerFactory): Set[OWLAxiom] = {
     val currentWeakeningRelation =
       selected.getAxiomType match {
         case AxiomType.CLASS_ASSERTION | AxiomType.SUBCLASS_OF =>
@@ -54,12 +54,14 @@ object Util {
         case AxiomType.OBJECT_PROPERTY_ASSERTION => WeakeningRelation.elPropertyWeakeningRelation
         case _ => WeakeningRelation.classicalWeakeningRelation
       }
-    val weakened: Set[OWLAxiom] = currentWeakeningRelation.getWeakened(input, finder, just, selected, reasoner)
-    val chosen_weakened = Util.getRandomElement(weakened)
-    chosen_weakened match {
-      case Some(found) => Some(found)
-      case _ => None
-    }
+    val weakenedSet: Set[OWLAxiom] = currentWeakeningRelation.getWeakened(input, finder, just, selected, reasoner)
+    weakenedSet
+//
+//    val chosen_weakened = Util.getRandomElement(weakened)
+//    chosen_weakened match {
+//      case Some(found) => Some(found)
+//      case _ => None
+//    }
   }
 
 
@@ -69,7 +71,9 @@ object Util {
                      reasoner: OWLReasonerFactory):
   (OWLAxiom, Option[OWLAxiom]) ={
     val selected: OWLAxiom = Util.getRandomElement(just).get
-    (selected, getWeakened(input, just, selected, finder, reasoner))
+    val weakendSet = getWeakened(input, just, selected, finder, reasoner)
+    val chosen_weakened = Util.getRandomElement(weakendSet)
+    (selected, chosen_weakened)
   }
 
   def upperNNeighborsOntology(ontology: OWLOntology,

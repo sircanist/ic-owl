@@ -1,13 +1,13 @@
 package edu.hagenberg
 
-import edu.hagenberg.hst.{HittingSetTree, HittingSetTreeNode}
+import edu.hagenberg.hst.{HittingSetTree, HittingSetTreeNode, SearchIterator}
 import org.semanticweb.owlapi.model.OWLAxiom
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 
 
 trait Algorithm[E, I]{
 
-  def findRemoveSet(input: Set[I], finder: JustificationFinder[E, I], reasonerFactory: OWLReasonerFactory): List[List[PathElement]]
+  def findRemoveSet(input: Set[I], finder: JustificationFinder[E, I], reashittingSetNoWeakeningonerFactory: OWLReasonerFactory): List[List[PathElement]]
 }
 
 
@@ -50,18 +50,26 @@ object Algorithm {
       List(all)
     }
 
-  def hittingSetWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
+  def hittingSet(weaken: Boolean, searchIterator: SearchIterator):Algorithm[java.util.Set[OWLAxiom], OWLAxiom] = {
     (input, finder, reasonerFactory) => {
       val rootNode = new HittingSetTreeNode(root = None)
-      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory)
-      tree.bfs().toList.map(el => el.getPathElementsToRoot)
+      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory, weaken, searchIterator)
+      tree.search().toList.map(el => el.getPathElementsToRoot)
     }
-
-
-  def hittingSetNoWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
-    (input, finder, reasonerFactory) => {
-      val rootNode = new HittingSetTreeNode(root = None)
-      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory, weaken = false)
-      tree.bfs().toList.map(el => el.getPathElementsToRoot)
-    }
+  }
+//  def hittingSetWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
+//    (input, finder, reasonerFactory) => {
+//      val rootNode = new HittingSetTreeNode(root = None)
+//      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory)
+//      tree.bfs().toList.map(el => el.getPathElementsToRoot)
+//    }
+//
+//
+//
+//  def hittingSetNoWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =
+//    (input, finder, reasonerFactory) => {
+//      val rootNode = new HittingSetTreeNode(root = None)
+//      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory, weaken = false)
+//      tree.bfs().toList.map(el => el.getPathElementsToRoot)
+//    }
 }

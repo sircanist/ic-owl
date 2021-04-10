@@ -2,6 +2,7 @@ package edu.hagenberg
 
 
 import edu.hagenberg.Util.getAxiomsFromFile
+import edu.hagenberg.hst.DFS
 import openllet.owlapi.OpenlletReasonerFactory
 import org.scalatest.funsuite.AnyFunSuite
 import org.semanticweb.owlapi.apibinding.OWLManager
@@ -61,7 +62,7 @@ class Test1 extends AnyFunSuite {
             reasonerFactory = new OpenlletReasonerFactory,
             expansionStrategy = ExpansionStrategy.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            algorithm = Algorithm.hittingSetWeakening
+            algorithm = Algorithm.hittingSet(true, DFS)
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
         remove_axioms match {

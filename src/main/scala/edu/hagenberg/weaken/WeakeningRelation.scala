@@ -22,11 +22,8 @@ trait WeakeningRelation {
 object WeakeningRelation {
 
   def semanticELConceptInclusionWeakeningRelation: WeakeningRelation =
-    nthELConceptInclusionWeakeningRelation3(java.lang.Integer.MAX_VALUE)
+    nthELConceptInclusionWeakeningRelation3()
   //semanticELConceptInclusionWeakeningRelation(dataFactory)
-
-  def syntacticELConceptInclusionWeakeningRelation: WeakeningRelation =
-    nthELConceptInclusionWeakeningRelation3(1)
 
   def classicalWeakeningRelation: WeakeningRelation =
     (_, _, _, _, _) ⇒ Set.empty
@@ -84,7 +81,7 @@ object WeakeningRelation {
       throw new IllegalArgumentException("Currently, only concept inclusions are supported.")
   }
 //
-  def nthELConceptInclusionWeakeningRelation3(n: Integer): WeakeningRelation =
+  def nthELConceptInclusionWeakeningRelation3(): WeakeningRelation =
     (input, finder, justification, axiom, reasonerFactory) ⇒ {
       val ontologyManager = Util.createManager
       val dataFactory = ontologyManager.getOWLDataFactory
@@ -146,7 +143,6 @@ object WeakeningRelation {
 
 
       // TODO evaluate by expanding reasoner of eldescription
-      val nonMinimalWeakenings: java.util.Set[OWLAxiom] = Sets.newConcurrentHashSet()
       val order: MatrixRelation[OWLAxiom, OWLAxiom] = new MatrixRelation(true)
       order.rowHeads().addAll(weakening)
       weakening.stream().parallel().forEach(weakening1 ⇒ {
@@ -159,17 +155,33 @@ object WeakeningRelation {
         })
         System.gc()
       })
+      val notNecessaryWeakenings: java.util.Set[OWLAxiom] = Sets.newConcurrentHashSet()
+//      weakening.stream().parallel().forEach(weakening2 ⇒ {
+//        // weakening1 subsumes weakening2 and therefore is more general or same general
+//        order.col(weakening2).stream().sequential().forEach(weakening1 ⇒ {
+//              notNecessaryWeakenings add weakening1
+//        })
+//      })
+
+      // remove all weakening < other weakening (with subsumption)
       weakening.stream().parallel().forEach(weakening2 ⇒ {
         val reasoner: OWLReasoner =
           reasonerFactory.createReasoner(Util.createManager.createOntology((baseAxioms + weakening2).asJava))
         order.col(weakening2).stream().sequential().forEach(weakening1 ⇒ {
-          if (!(weakening1 equals weakening2))
+          if (!(weakening1 equals weakening2)) {
             if (!(reasoner isEntailed weakening1))
-              nonMinimalWeakenings add weakening2
+              notNecessaryWeakenings add weakening2
+            else{
+              if (!(notNecessaryWeakenings contains weakening1) &&
+                  !(notNecessaryWeakenings contains weakening2)) {
+                notNecessaryWeakenings add weakening1
+              }
+            }
+          }
         })
         System.gc()
       })
-      weakening.removeAll(nonMinimalWeakenings)
+      weakening.removeAll(notNecessaryWeakenings)
       weakening.asScala.toSet
     }
 }
