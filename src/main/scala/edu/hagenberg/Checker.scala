@@ -1,11 +1,10 @@
 package edu.hagenberg
 
 import edu.hagenberg.Util.createManager
-import org.semanticweb.owlapi.model.{OWLAxiom, OWLDataFactory, OWLEntity, OWLOntology, OWLOntologyManager}
-import org.semanticweb.owlapi.reasoner.{FreshEntityPolicy, IndividualNodeSetPolicy, NullReasonerProgressMonitor, OWLReasonerFactory, SimpleConfiguration}
+import org.semanticweb.owlapi.model._
+import org.semanticweb.owlapi.reasoner._
 import uk.ac.manchester.cs.owlapi.modularity.{ModuleType, SyntacticLocalityModuleExtractor}
 
-import java.util
 import scala.collection.JavaConverters.{asScalaSetConverter, setAsJavaSetConverter}
 
 
@@ -22,7 +21,7 @@ trait CheckerFactory[E, I]{
 }
 
 
-class SimpleChecker(reasonerFactory: OWLReasonerFactory,
+abstract class OWLSetChecker(reasonerFactory: OWLReasonerFactory,
                     entailment: java.util.Set[OWLAxiom],
                     static: Set[OWLAxiom],
                     timeOutMS: Long = Long.MaxValue) extends Checker[java.util.Set[OWLAxiom],OWLAxiom] {
@@ -32,26 +31,6 @@ class SimpleChecker(reasonerFactory: OWLReasonerFactory,
     new NullReasonerProgressMonitor, FreshEntityPolicy.ALLOW, timeOutMS, IndividualNodeSetPolicy.BY_SAME_AS)
 
 
-  override def isEntailed(input: Set[OWLAxiom]): Boolean = {
-    m = createManager
-    var entailed: Boolean = false
-    val ont: OWLOntology = m.createOntology(input.asJava)
-    val df: OWLDataFactory = m.getOWLDataFactory
-//    signatures.forEach{
-//      ent =>
-//        if (!ent.isBuiltIn){
-//          if (!ont.containsEntityInSignature(ent)){
-//            ont.addAxiom(df.getOWLDeclarationAxiom(ent))
-//          }
-//        }
-//    }
-    val check_entailed = (axiom: OWLAxiom) => reasonerFactory.createReasoner(ont,reasoner_config)
-      .isEntailed(axiom)
-
-    entailed = entailment.parallelStream.anyMatch((axiom: OWLAxiom) =>  check_entailed(axiom))
-    m.removeOntology(ont)
-    entailed
-  }
 
   override def isTautology: Boolean = {
     isEntailed(Set.empty)
@@ -71,8 +50,53 @@ class SimpleChecker(reasonerFactory: OWLReasonerFactory,
 
 
 
-class SimpleCheckerFactory(reasonerFactory: OWLReasonerFactory, timeOutMS: Long = Long.MaxValue) extends CheckerFactory[java.util.Set[OWLAxiom], OWLAxiom] {
-  override def createChecker(entailment: util.Set[OWLAxiom], refutable: Set[OWLAxiom]): Checker[util.Set[OWLAxiom], OWLAxiom] = {
-    new SimpleChecker(reasonerFactory, entailment, refutable, timeOutMS)
+class AxiomsAtOnceChecker(reasonerFactory: OWLReasonerFactory,
+                             entailment: java.util.Set[OWLAxiom],
+                             static: Set[OWLAxiom],
+                             timeOutMS: Long = Long.MaxValue) extends OWLSetChecker(reasonerFactory, entailment, static, timeOutMS){
+
+  override def isEntailed(input: Set[OWLAxiom]): Boolean = {
+    m = createManager
+    val ont: OWLOntology = m.createOntology(input.asJava)
+    val check_entailed = (axiom: java.util.Set[OWLAxiom]) => reasonerFactory.createReasoner(ont,reasoner_config)
+      .isEntailed(axiom)
+
+    val entailed = check_entailed(entailment)
+    m.removeOntology(ont)
+    entailed
+  }
+}
+
+class AnyAxiomChecker(reasonerFactory: OWLReasonerFactory,
+                    entailment: java.util.Set[OWLAxiom],
+                    static: Set[OWLAxiom],
+                    timeOutMS: Long = Long.MaxValue) extends OWLSetChecker(reasonerFactory, entailment, static, timeOutMS){
+
+  override def isEntailed(input: Set[OWLAxiom]): Boolean = {
+    m = createManager
+    val ont: OWLOntology = m.createOntology(input.asJava)
+    val check_entailed = (axiom: OWLAxiom) => reasonerFactory.createReasoner(ont,reasoner_config)
+      .isEntailed(axiom)
+
+    val entailed = entailment.parallelStream.anyMatch((axiom: OWLAxiom) =>  check_entailed(axiom))
+    m.removeOntology(ont)
+    entailed
+  }
+}
+
+//class SimpleCheckerFactory(reasonerFactory: OWLReasonerFactory, timeOutMS: Long = Long.MaxValue) extends CheckerFactory[java.util.Set[OWLAxiom], OWLAxiom] {
+//  override def createChecker(entailment: util.Set[OWLAxiom], refutable: Set[OWLAxiom]): Checker[util.Set[OWLAxiom], OWLAxiom] = {
+//    new SimpleChecker(reasonerFactory, entailment, refutable, timeOutMS)
+//  }
+//}
+
+object CheckerFactory{
+  def AxiomsAtOnceStrategy(reasonerFactory: OWLReasonerFactory, timeOutMS: Long = Long.MaxValue): CheckerFactory[java.util.Set[OWLAxiom], OWLAxiom] = {
+    (entailment, refutable) =>
+      new AxiomsAtOnceChecker(reasonerFactory, entailment, refutable, timeOutMS)
+  }
+  def AnyAxiomCheckerStrategy(reasonerFactory: OWLReasonerFactory, timeOutMS: Long = Long.MaxValue): CheckerFactory[java.util.Set[OWLAxiom], OWLAxiom] = {
+    (entailment, refutable) =>
+      new AnyAxiomChecker(reasonerFactory, entailment, refutable, timeOutMS)
   }
 }

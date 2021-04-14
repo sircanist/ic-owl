@@ -68,7 +68,14 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
     def check_intersection(just1: Set[OWLAxiom], justNode: Option[Set[OWLAxiom]]) = {
       justNode match {
-        case Some(just) => just1.intersect(just).isEmpty
+        case Some(just) => {
+          val intersection = just1.intersect(just)
+          println(intersection.toString())
+          if (intersection.isEmpty)
+            true
+          else
+            false
+        }
         case None => false // no intersection possible because one element is None
       }
     }
@@ -108,6 +115,9 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       assert(newNode.justification.nonEmpty == children.nonEmpty)
       val cp = if (newNode.justification.isEmpty) closedPaths + newNode  else closedPaths
       val n = children.filter(child => !closedPaths.exists(closed => edges_subsetOf(child.edges.toSet,closed.edges.toSet)))
+      if (!n.eq(children)){
+        println("Children were removed by filter!")
+      }
       (dn, cp, n)
 
       // TODO if explanation enclosed, reuse
@@ -131,9 +141,8 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
              discovered: Set[HittingSetTreeNode],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val head::nq = l
-      val (dn, cp, n) = common(head, discovered, closedPaths)
-      //      // TODO if explanation enclosed, reuse
-      val nq2 = List.concat(n,nq)
+      val (dn, cp, children) = common(head, discovered, closedPaths)
+      val nq2 = List.concat(children,nq)
       if (nq2.nonEmpty)
         dfs_(nq2, dn, cp)
       else

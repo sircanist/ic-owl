@@ -43,11 +43,13 @@ object WeakeningRelation {
 
       val origAssertion: OWLObjectPropertyAssertionAxiom = axiom.asInstanceOf[OWLObjectPropertyAssertionAxiom]
       val obj = origAssertion.getObject
-      if (obj.isNamed) {
-        Set(createAnonymousAssertion(origAssertion))
-      }
-      else
-        Set.empty
+      Set.empty // do not use anonymouse assertions until entailment check shortcut solution has been found
+      // for the special case where anonymous individuals have different ids (maybe hash or generate deterministic?)
+//      if (obj.isNamed) {
+//        Set(createAnonymousAssertion(origAssertion))
+//      }
+//      else
+//        Set.empty
     }
 
 //
@@ -119,7 +121,6 @@ object WeakeningRelation {
               reasonerFactory: OWLReasonerFactory,
               dataFactory: OWLDataFactory))
           nextCandidates.addAll(new_next_candidates)
-          // TODO add superclasses with reasoner
         } else
           weakenedRHS add candidate
 
@@ -142,7 +143,6 @@ object WeakeningRelation {
       })
 
 
-      // TODO evaluate by expanding reasoner of eldescription
       val order: MatrixRelation[OWLAxiom, OWLAxiom] = new MatrixRelation(true)
       order.rowHeads().addAll(weakening)
       weakening.stream().parallel().forEach(weakening1 ⇒ {

@@ -2,7 +2,7 @@ package edu.hagenberg
 
 
 import edu.hagenberg.Util.getAxiomsFromFile
-import edu.hagenberg.hst.DFS
+import edu.hagenberg.hst.BFS
 import openllet.owlapi.OpenlletReasonerFactory
 import org.scalatest.funsuite.AnyFunSuite
 import org.semanticweb.owlapi.apibinding.OWLManager
@@ -28,7 +28,7 @@ class Test1 extends AnyFunSuite {
         val generator: BlackBoxGenerator[java.util.Set[OWLAxiom], OWLAxiom] = new BlackBoxGenerator(
             input,
             static,
-            checkerFactory = new SimpleCheckerFactory(new OpenlletReasonerFactory),
+            checkerFactory = CheckerFactory.AxiomsAtOnceStrategy(new OpenlletReasonerFactory),
             reasonerFactory = new OpenlletReasonerFactory,
             expansionStrategy = ExpansionStrategy.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
             contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
@@ -58,11 +58,12 @@ class Test1 extends AnyFunSuite {
         val generator: BlackBoxGenerator[java.util.Set[OWLAxiom], OWLAxiom] = new BlackBoxGenerator(
             input,
             static,
-            checkerFactory = new SimpleCheckerFactory(new OpenlletReasonerFactory),
+            checkerFactory = CheckerFactory.AxiomsAtOnceStrategy(new OpenlletReasonerFactory),
             reasonerFactory = new OpenlletReasonerFactory,
-            expansionStrategy = ExpansionStrategy.simpleExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            contractionStrategy = ContractionStrategy.simpleContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            algorithm = Algorithm.hittingSet(true, DFS)
+            expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
+            contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
+            algorithm = Algorithm.hittingSet(true, BFS)
+            //algorithm = Algorithm.simple
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
         remove_axioms match {
