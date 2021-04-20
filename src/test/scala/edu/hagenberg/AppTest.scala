@@ -68,7 +68,22 @@ class Test1 extends AnyFunSuite {
         val remove_axioms = generator.executeAlgorithm(entailment)
         remove_axioms match {
             case Left(s) => println(s"ERROR: ${s.getMessage}")
-            case Right(paths) => println(paths)
+            case Right(paths) => {
+                paths.foreach(
+                    pathelements => {
+                        println("\n\nNew path")
+                        pathelements.foreach {
+                            path => {
+                                println("{")
+                                println("Justifications:\n " + path.justifications)
+                                println("selected:\n " + path.selected)
+                                println("weakened:\n " + path.weakened)
+                                println("}")
+                            }
+                        }
+                    }
+                )
+            }
         }
 //        val manager = OWLManager.createOWLOntologyManager
 //        val merged = manager.loadOntologyFromOntologyDocument(new File("/tmp/merged_complex.owl"))

@@ -43,13 +43,21 @@ object WeakeningRelation {
 
       val origAssertion: OWLObjectPropertyAssertionAxiom = axiom.asInstanceOf[OWLObjectPropertyAssertionAxiom]
       val obj = origAssertion.getObject
-      Set.empty // do not use anonymouse assertions until entailment check shortcut solution has been found
+      //Set.empty // do not use anonymouse assertions until entailment check shortcut solution has been found
       // for the special case where anonymous individuals have different ids (maybe hash or generate deterministic?)
+
+      // 1. one fix is hashing the name in the anonymous assertion so they can be compared
+      // and then afterwards overwriting it, but then it must be ensured that the anonymous individuals
+      // are still anonymous in the set, which is error prone and tricky
+
+      // 2. one fix overwriting the shortcut, to not handle anonymous sets for edges-list
+
+      // 3. one fix is disabling the shortcut
 //      if (obj.isNamed) {
 //        Set(createAnonymousAssertion(origAssertion))
 //      }
 //      else
-//        Set.empty
+        Set.empty
     }
 
 //
