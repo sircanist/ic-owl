@@ -92,9 +92,6 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
     (new HittingSetTreeNode(node.root, just), axioms)
   }
 
-  def edges_subsetOf(edges1: Set[Edge],edges2: Set[Edge]): Boolean = {
-    edges1.subsetOf(edges2)
-  }
 
   def search(): Set[HittingSetTreeNode] = {
 
@@ -114,7 +111,9 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       // so it must have children
       assert(newNode.justification.nonEmpty == children.nonEmpty)
       val cp = if (newNode.justification.isEmpty) closedPaths + newNode  else closedPaths
-      val n = children.filter(child => !closedPaths.exists(closed => edges_subsetOf(child.edges.toSet,closed.edges.toSet)))
+      val n = children.filter{
+        child =>
+          !closedPaths.exists(closed => child.edges.toSet.subsetOf(closed.edges.toSet))}
       if (!n.eq(children)){
         println("Children were removed by filter!")
       }
@@ -124,33 +123,33 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
     }
 
-    def bfs_(q: Queue[HittingSetTreeNode],
+    def bfs(q: Queue[HittingSetTreeNode],
              discovered: Set[HittingSetTreeNode],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val (head, nq) = q.dequeue
-      val (dn, cp, n) = common(head, discovered, closedPaths)
+      val (dn, cp, children) = common(head, discovered, closedPaths)
 //      // TODO if explanation enclosed, reuse
-      val nq2 = nq.enqueue(n)
+      val nq2 = nq.enqueue(children)
       if (nq2.nonEmpty)
-        bfs_(nq2, dn, cp)
+        bfs(nq2, dn, cp)
       else
         cp
     }
 
-    def dfs_(l: List[HittingSetTreeNode],
+    def dfs(l: List[HittingSetTreeNode],
              discovered: Set[HittingSetTreeNode],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val head::nq = l
       val (dn, cp, children) = common(head, discovered, closedPaths)
       val nq2 = List.concat(children,nq)
       if (nq2.nonEmpty)
-        dfs_(nq2, dn, cp)
+        dfs(nq2, dn, cp)
       else
         cp
     }
     searchIterator match {
-      case BFS => bfs_( Queue( root ), Set( ), Set(  ))
-      case DFS => dfs_( List( root ), Set( ), Set(  ))
+      case BFS => bfs( Queue( root ), Set( ), Set(  ))
+      case DFS => dfs( List( root ), Set( ), Set(  ))
     }
   }
 }

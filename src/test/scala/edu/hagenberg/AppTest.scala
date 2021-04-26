@@ -2,7 +2,7 @@ package edu.hagenberg
 
 
 import edu.hagenberg.Util.getAxiomsFromFile
-import edu.hagenberg.hst.BFS
+import edu.hagenberg.hst.{BFS, DFS}
 import openllet.owlapi.OpenlletReasonerFactory
 import org.scalatest.funsuite.AnyFunSuite
 import org.semanticweb.owlapi.apibinding.OWLManager
@@ -41,16 +41,16 @@ class Test1 extends AnyFunSuite {
 
 
     test("real"){
-        val PATH_MASTERARBEIT = "/home/chris/Desktop/VPRO/Mastererarbeit/"
+        val PATH_MASTERARBEIT = "/home/chris/Desktop/masterarbeit/"
 
         val base_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/cti.owl"))
         val attacker_knowledge_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1-att.owl"))
         val cti_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1.owl"))
-        val unwanted_ontology_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File("/tmp/unwanted.owl"))
+        val unwanted_ontology_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1-unwanted.owl"))
 
         val static_without_cti: Set[OWLAxiom] = base_axioms ++ attacker_knowledge_axioms
         val input: Set[OWLAxiom] = static_without_cti ++ cti_axioms
-        val static: Set[OWLAxiom] = input -- cti_axioms.diff(static_without_cti)
+        val static: Set[OWLAxiom] = static_without_cti ++ cti_axioms.intersect(static_without_cti)
 
         val entailment = (unwanted_ontology_axioms -- static).filter(axiom => !axiom.isInstanceOf[OWLDeclarationAxiom]).asJava
 
@@ -58,12 +58,12 @@ class Test1 extends AnyFunSuite {
         val generator: BlackBoxGenerator[java.util.Set[OWLAxiom], OWLAxiom] = new BlackBoxGenerator(
             input,
             static,
-            checkerFactory = CheckerFactory.AxiomsAtOnceStrategy(new OpenlletReasonerFactory),
+            checkerFactory = CheckerFactory.AnyAxiomCheckerStrategy(new OpenlletReasonerFactory),
             reasonerFactory = new OpenlletReasonerFactory,
             expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
             contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-            algorithm = Algorithm.hittingSet(true, BFS)
-            //algorithm = Algorithm.simple
+            algorithm = Algorithm.hittingSet(true, DFS)
+            //algorithm = Algorithm.simpleWeakening
         )
         val remove_axioms = generator.executeAlgorithm(entailment)
         remove_axioms match {

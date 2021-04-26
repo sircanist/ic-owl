@@ -41,15 +41,15 @@ object ExpansionStrategy {
           expansion.foreach(
             axiom =>  axiom.getSignature.forEach(
               ent => {
-                val referncingAxioms = ont.getReferencingAxioms(ent).asScala
-                new_expansion = new_expansion ++ referncingAxioms
+                val referencingAxioms = ont.getReferencingAxioms(ent).asScala
+                new_expansion = new_expansion ++ referencingAxioms
               }
             )
           )
           addWhile(ont, new_expansion)
           }
         }
-      val (static, expander) = axioms.partition(checker.getStatic)
+      val (static, _) = axioms.partition(checker.getStatic)
       val manager = createManager
       val ont: OWLOntology = manager.createOntology(axioms.asJava)
       addWhile(ont, static)

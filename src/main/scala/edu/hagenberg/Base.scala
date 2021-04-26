@@ -44,6 +44,8 @@ class BlackBoxGenerator[E, I](input: Set[I],
       Left(new Error("Tautology"))
     else if (!checker.isEntailed(algorithmInput))
       Left(new Error("Not Entailed"))
+    else if (checker.isEntailed(static))
+      Left(new Error("Unwanted Axioms are entailed in static"))
     else
       Right(algorithm.findRemoveSet(algorithmInput, finder, reasonerFactory))
   }

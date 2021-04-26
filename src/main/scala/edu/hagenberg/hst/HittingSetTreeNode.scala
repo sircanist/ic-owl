@@ -11,8 +11,6 @@ case class Edge(selected: OWLAxiom, weakened: Option[OWLAxiom])
 class HittingSetTreeNode(val root: Option[RootConnection],
                          var justification: Option[Set[OWLAxiom]] = None) {
 
-  var processed: Boolean =  justification.nonEmpty
-
   val edges: List[Edge] = getEdgesToRoot
 
   def getNodesToRoot: List[HittingSetTreeNode] = {
