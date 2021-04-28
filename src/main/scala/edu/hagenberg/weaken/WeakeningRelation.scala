@@ -106,7 +106,7 @@ object WeakeningRelation {
 
       val testOntology = Util.createManager.createOntology((baseAxioms).asJava)
 //      val reasoner = reasonerFactory.createReasoner(testOntology)
-      val nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
+      var nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
         Util.upperNNeighborsOntology(testOntology,
           conclusion: ELConceptDescription,
           reasonerFactory: OWLReasonerFactory,
@@ -117,13 +117,13 @@ object WeakeningRelation {
 //      reasoner.isSatisfiable(classExpression.getClassesInSignature.toArray()(0).asInstanceOf[OWLClassExpression])
 
       while (!nextCandidates.isEmpty) {
-        val processedCandidates: java.util.Set[ELConceptDescription] = new java.util.HashSet(nextCandidates)
+        val processedCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(nextCandidates)
         nextCandidates.parallelStream().forEach(candidate ⇒ {
         val weakenedAxiom: OWLAxiom =
           createWeakenedAxiom(axiom, candidate, dataFactory)
         if (checker.isEntailed(baseAxioms + weakenedAxiom)) {
 
-          val new_next_candidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
+          val new_next_candidates: java.util.Set[ELConceptDescription] = Sets.newHashSet(
             Util.upperNNeighborsOntology(testOntology,
               candidate: ELConceptDescription,
               reasonerFactory: OWLReasonerFactory,
@@ -133,6 +133,7 @@ object WeakeningRelation {
           weakenedRHS add candidate
 
         })
+        nextCandidates = Sets.newConcurrentHashSet(nextCandidates)
         nextCandidates.removeAll(processedCandidates)
       }
       def isStrictlyMoreSpecific(c: ELConceptDescription, d: ELConceptDescription): Boolean = (c compareTo d) == -1
