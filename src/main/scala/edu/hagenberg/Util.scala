@@ -34,9 +34,17 @@ object Util {
   }
 
   def getAxiomsFromFile(file: File): Set[OWLAxiom] = {
+    val manager = createManager
     createManager.loadOntologyFromOntologyDocument(file).getAxioms().asScala.toSet
   }
 
+  def getAxiomsFromFile(file: File, irimapper: List[OWLOntologyIRIMapper]): Set[OWLAxiom] = {
+    val manager = createManager
+    irimapper.foreach{
+      manager.getIRIMappers.add(_)
+    }
+    manager.loadOntologyFromOntologyDocument(file).getAxioms().asScala.toSet
+  }
 
   def createManager: OWLOntologyManager = {
     OWLManager.createOWLOntologyManager()

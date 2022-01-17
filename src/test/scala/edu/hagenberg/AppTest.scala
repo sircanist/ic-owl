@@ -2,11 +2,12 @@ package edu.hagenberg
 
 
 import edu.hagenberg.Util.getAxiomsFromFile
-import edu.hagenberg.hst.{BFS, DFS}
+import edu.hagenberg.hst.DFS
 import openllet.owlapi.OpenlletReasonerFactory
 import org.scalatest.funsuite.AnyFunSuite
 import org.semanticweb.owlapi.apibinding.OWLManager
 import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLDeclarationAxiom}
+import org.semanticweb.owlapi.util.SimpleIRIMapper
 
 import java.io.File
 import java.util
@@ -41,16 +42,29 @@ class Test1 extends AnyFunSuite {
 
 
     test("real"){
-        val PATH_MASTERARBEIT = "/home/chris/Desktop/masterarbeit/"
+        //val PATH_MASTERARBEIT = "/home/chris/Desktop/masterarbeit/"
+        val PATH_MASTERARBEIT = "/home/chris/Desktop/VPRO/Mastererarbeit/"
+        val PATH_CORE = PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/cti.owl"
+        val PATH_ATT_KNOWLEDGE = PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1-att.owl"
+        val PATH_SCENARIO1 = PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1.owl"
+        val PATH_UNWANTED = PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1-unwanted.owl"
 
-        val base_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/cti.owl"))
-        val attacker_knowledge_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1-att.owl"))
-        val cti_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1.owl"))
-        val unwanted_ontology_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_MASTERARBEIT + "org/ontologien/tawny_ctidev/scenario1-unwanted.owl"))
+        val iriMapper = List(
+            new SimpleIRIMapper
+                (IRI.create("http://purl.org/cti-core"), IRI.create("file:///" + PATH_CORE)),
+            new SimpleIRIMapper
+                (IRI.create("http://purl.org/cti-scenario1"), IRI.create("file:///" + PATH_SCENARIO1)))
+
+
+        val base_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_CORE), iriMapper)
+        val attacker_knowledge_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_ATT_KNOWLEDGE), iriMapper)
+        val cti_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_SCENARIO1), iriMapper)
+        val unwanted_ontology_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(PATH_UNWANTED), iriMapper)
 
         val static_without_cti: Set[OWLAxiom] = base_axioms ++ attacker_knowledge_axioms
         val input: Set[OWLAxiom] = static_without_cti ++ cti_axioms
-        val static: Set[OWLAxiom] = static_without_cti ++ cti_axioms.intersect(static_without_cti)
+        //val static: Set[OWLAxiom] = static_without_cti ++ cti_axioms.intersect(static_without_cti)
+        val static: Set[OWLAxiom] = static_without_cti // removing intersections leads to also possible delete instances
 
         val entailment = (unwanted_ontology_axioms -- static).filter(axiom => !axiom.isInstanceOf[OWLDeclarationAxiom]).asJava
 
