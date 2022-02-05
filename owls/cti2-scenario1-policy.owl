@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl"
+     xml:base="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-policy.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl">
+     ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-policy.owl">
     <Prefix name="cti" IRI="http://purl.org/cti-core#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -18,87 +18,16 @@
     <Prefix name="cti2-sc1" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl#"/>
     <Prefix name="cti2-sc1-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl#"/>
     <Prefix name="cti2-sc1-senstive" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-policy.owl#"/>
-    <Import>https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl</Import>
+    <Import>https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl</Import>
+    <Import>https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl</Import>
     <Declaration>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
+        <NamedIndividual IRI="#BK1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#iAttackPatternTemplate"/>
+        <NamedIndividual IRI="#BK2"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iCoA1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iDomainNameAttacker"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iFile"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iFileHash"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iHoneypotSensor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iImpactAssessment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iIncident"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iIncidentStatusRelationship"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iIndicator"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iIndicatorPattern"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iIntrusionSet"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iIpAttacker"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iKillChainPhase"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iMalwareInstance"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iSightingIncident"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iSnortsensor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iThreatActor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#iTool"/>
+        <NamedIndividual IRI="#BK3"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#container-business-impact"/>
@@ -137,6 +66,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#Indicateable"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iAttackPatternDerived"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#IPv6Address"/>
     </Declaration>
     <Declaration>
@@ -162,6 +94,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#roles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iObservedDataHoneypot"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#first_seen"/>
@@ -245,6 +180,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#MaliciousActivityIndicator"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iCompanyXYZ"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#SCO_SRO"/>
     </Declaration>
     <Declaration>
@@ -267,6 +205,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#derived-from"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iHoneypotSensor"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#SCO"/>
@@ -353,6 +294,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#container-communicates-with"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iIntrusionSet"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#AuditorAssetAsset"/>
     </Declaration>
     <Declaration>
@@ -360,6 +304,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#CIAImpact-Condidentiality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iIncident"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#AgreeOpinion"/>
@@ -387,6 +334,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#SHA3_256Hash"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iFile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iCoA1"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#IncidentGrouping"/>
@@ -420,6 +373,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#IndicatorPattern-SURICATA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iTool"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#IndicatorPattern"/>
@@ -509,6 +465,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#Indicator"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iSnortsensor"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#ind-DiscoveredMethod-Antivirus"/>
     </Declaration>
     <Declaration>
@@ -522,6 +481,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#is-a-victim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iThreatActor"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#Asset"/>
@@ -620,6 +582,9 @@
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#investigates"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iFileHash"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#Person"/>
     </Declaration>
     <Declaration>
@@ -674,6 +639,9 @@
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#vuln-discovered"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iIpAttacker"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#sensor_name"/>
     </Declaration>
     <Declaration>
@@ -713,6 +681,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#DiscoveredMethod-Customer"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iImpactAssessment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#ReceissanceAttackerInfrastructure"/>
     </Declaration>
     <Declaration>
@@ -735,6 +706,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#kill_chain_name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iObservedDataIncident"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#ind-IndicatorPattern-SNORT"/>
@@ -878,6 +852,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#SRO"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iSightingIncident"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#DiscoveredMethod-Antivirus"/>
     </Declaration>
     <Declaration>
@@ -924,6 +901,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#ind-IncidentStatus-Open"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iMalwareInstance"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#container-sensed-by"/>
@@ -989,6 +969,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#Confidence-High"/>
     </Declaration>
     <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-bk.owl#BK1_AttackAbleSensor"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#DiscoveredMethod-SecurityAlarm"/>
     </Declaration>
     <Declaration>
@@ -1040,6 +1023,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#ExecutiveAssetAsset"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iSightingAttackPattern"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#AdministratorAssetAsset"/>
     </Declaration>
     <Declaration>
@@ -1077,6 +1063,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#tool_name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iBobMayerIdentity"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#domain_name_value"/>
@@ -1133,6 +1122,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#StagingAttackerInfrastructure"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iIncidentGrouping"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#Actor"/>
     </Declaration>
     <Declaration>
@@ -1151,10 +1143,16 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#DiskdriveAssetAsset"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iIndicatorPattern"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#is-a-coa-cost"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#located-at"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iDomainNameAttacker"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#container-incident-status"/>
@@ -1238,6 +1236,9 @@
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#is-a-beacons-to"/>
     </Declaration>
     <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-bk.owl#BK3_HoneyPotSystem"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#BenignIndicator"/>
     </Declaration>
     <Declaration>
@@ -1304,6 +1305,9 @@
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#created-by"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iAttackPatternTemplate"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#NeutralOpinion"/>
     </Declaration>
     <Declaration>
@@ -1364,6 +1368,9 @@
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#IndicatorPattern-SNORT"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iKillChainPhase"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#ImpactAssessment"/>
     </Declaration>
     <Declaration>
@@ -1377,6 +1384,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#coordinator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iSightingIndicator"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#MalwareAnalysisGrouping"/>
@@ -1398,6 +1408,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#file_name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iIncidentStatusRelationship"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#DatabaseAsset"/>
@@ -1440,6 +1453,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#container-kill-chain-phase"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#iIndicator"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#reporter"/>
@@ -1562,6 +1578,9 @@
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#kill-chain-phase"/>
     </Declaration>
     <Declaration>
+        <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-bk.owl#BK2_HoneyPotSystem"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#WebapplicationAssea"/>
     </Declaration>
     <Declaration>
@@ -1577,730 +1596,17 @@
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#is-a-responder"/>
     </Declaration>
     <ClassAssertion>
-        <Class abbreviatedIRI="cti2:AttackPattern"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK1_AttackAbleSensor"/>
+        <NamedIndividual IRI="#BK1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="cti2:AttackPattern"/>
-        <NamedIndividual IRI="#iAttackPatternTemplate"/>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem"/>
+        <NamedIndividual IRI="#BK2"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Person"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK3_HoneyPotSystem"/>
+        <NamedIndividual IRI="#BK3"/>
     </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:CoA"/>
-        <NamedIndividual IRI="#iCoA1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Organization"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:DomainName"/>
-        <NamedIndividual IRI="#iDomainNameAttacker"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:File"/>
-        <NamedIndividual IRI="#iFile"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:MD5_Hash"/>
-        <NamedIndividual IRI="#iFileHash"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:HoneyPotSensor"/>
-        <NamedIndividual IRI="#iHoneypotSensor"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:ImpactAssessment"/>
-        <NamedIndividual IRI="#iImpactAssessment"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Incident"/>
-        <NamedIndividual IRI="#iIncident"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:IncidentGrouping"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Relationship"/>
-        <NamedIndividual IRI="#iIncidentStatusRelationship"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:AttributionIndicator"/>
-        <NamedIndividual IRI="#iIndicator"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:CompromisedIndicator"/>
-        <NamedIndividual IRI="#iIndicator"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:MaliciousActivityIndicator"/>
-        <NamedIndividual IRI="#iIndicator"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:IndicatorPattern-SNORT"/>
-        <NamedIndividual IRI="#iIndicatorPattern"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:IntrusionSet"/>
-        <NamedIndividual IRI="#iIntrusionSet"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:IPv4Address"/>
-        <NamedIndividual IRI="#iIpAttacker"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:KillChainPhase"/>
-        <NamedIndividual IRI="#iKillChainPhase"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Malware"/>
-        <NamedIndividual IRI="#iMalwareInstance"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:ObservedData"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:ObservedData"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Sighting"/>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Sighting"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Sighting"/>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:SnortSensor"/>
-        <NamedIndividual IRI="#iSnortsensor"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:ThreatActor"/>
-        <NamedIndividual IRI="#iThreatActor"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2:Tool"/>
-        <NamedIndividual IRI="#iTool"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:derived-from"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-        <NamedIndividual IRI="#iAttackPatternTemplate"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iAttackPatternTemplate"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:works-for"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:coa-cost"/>
-        <NamedIndividual IRI="#iCoA1"/>
-        <NamedIndividual abbreviatedIRI="cti2:ind-CoACost-NONE"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:confidence"/>
-        <NamedIndividual IRI="#iCoA1"/>
-        <NamedIndividual abbreviatedIRI="cti2:ind-Confidence-High"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iCoA1"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:mitigates"/>
-        <NamedIndividual IRI="#iCoA1"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:mitigates"/>
-        <NamedIndividual IRI="#iCoA1"/>
-        <NamedIndividual IRI="#iIndicator"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iDomainNameAttacker"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:resolves-to"/>
-        <NamedIndividual IRI="#iDomainNameAttacker"/>
-        <NamedIndividual IRI="#iIpAttacker"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iFile"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:file-hash"/>
-        <NamedIndividual IRI="#iFile"/>
-        <NamedIndividual IRI="#iFileHash"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iFileHash"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
-        <NamedIndividual IRI="#iImpactAssessment"/>
-        <NamedIndividual abbreviatedIRI="cti2:ind-BusinessImpact-None"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:confidence"/>
-        <NamedIndividual IRI="#iImpactAssessment"/>
-        <NamedIndividual abbreviatedIRI="cti2:ind-Confidence-High"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iImpactAssessment"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iIncident"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:discovered-method"/>
-        <NamedIndividual IRI="#iIncident"/>
-        <NamedIndividual abbreviatedIRI="cti2:ind-DiscoveredMethod-NIDS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:has-impact"/>
-        <NamedIndividual IRI="#iIncident"/>
-        <NamedIndividual IRI="#iImpactAssessment"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
-        <NamedIndividual IRI="#iIncident"/>
-        <NamedIndividual IRI="#iIncidentStatusRelationship"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:victim"/>
-        <NamedIndividual IRI="#iIncident"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iAttackPatternTemplate"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iCoA1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iDomainNameAttacker"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iFile"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iFileHash"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iHoneypotSensor"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iImpactAssessment"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iIncident"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iIncidentStatusRelationship"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iIndicator"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iIndicatorPattern"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iIntrusionSet"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iIpAttacker"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iKillChainPhase"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iMalwareInstance"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iSnortsensor"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iThreatActor"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-        <NamedIndividual IRI="#iIncidentGrouping"/>
-        <NamedIndividual IRI="#iTool"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:confidence"/>
-        <NamedIndividual IRI="#iIncidentStatusRelationship"/>
-        <NamedIndividual abbreviatedIRI="cti2:ind-Confidence-High"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:incident-status"/>
-        <NamedIndividual IRI="#iIncidentStatusRelationship"/>
-        <NamedIndividual abbreviatedIRI="cti2:ind-IncidentStatus-Closed"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:is-a-incident-status"/>
-        <NamedIndividual IRI="#iIncidentStatusRelationship"/>
-        <NamedIndividual IRI="#iIncidentStatusRelationship"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:based-on"/>
-        <NamedIndividual IRI="#iIndicator"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iIndicator"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:indicates"/>
-        <NamedIndividual IRI="#iIndicator"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:indicator-pattern"/>
-        <NamedIndividual IRI="#iIndicator"/>
-        <NamedIndividual IRI="#iIndicatorPattern"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:kill-chain-phase"/>
-        <NamedIndividual IRI="#iIndicator"/>
-        <NamedIndividual IRI="#iKillChainPhase"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:actor-uses"/>
-        <NamedIndividual IRI="#iIntrusionSet"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:actor-uses"/>
-        <NamedIndividual IRI="#iIntrusionSet"/>
-        <NamedIndividual IRI="#iTool"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:attributed-to-actor"/>
-        <NamedIndividual IRI="#iIntrusionSet"/>
-        <NamedIndividual IRI="#iThreatActor"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:targets"/>
-        <NamedIndividual IRI="#iIntrusionSet"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iIpAttacker"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iMalwareInstance"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:sample"/>
-        <NamedIndividual IRI="#iMalwareInstance"/>
-        <NamedIndividual IRI="#iFile"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:observed-object"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-        <NamedIndividual IRI="#iDomainNameAttacker"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:observed-object"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-        <NamedIndividual IRI="#iIpAttacker"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:observed-object"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-        <NamedIndividual IRI="#iDomainNameAttacker"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:observed-object"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-        <NamedIndividual IRI="#iFile"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:observed-object"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-        <NamedIndividual IRI="#iIpAttacker"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:observed-data"/>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:sighting-of"/>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:where-sighted"/>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:where-sighted"/>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:observed-data"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:sensed-by"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-        <NamedIndividual IRI="#iHoneypotSensor"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:sensed-by"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-        <NamedIndividual IRI="#iSnortsensor"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:sighting-of"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-        <NamedIndividual IRI="#iIncident"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:where-sighted"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:where-sighted"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:observed-data"/>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:sighting-of"/>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-        <NamedIndividual IRI="#iIndicator"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:where-sighted"/>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:where-sighted"/>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
-        <NamedIndividual IRI="#iTool"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:delivers"/>
-        <NamedIndividual IRI="#iTool"/>
-        <NamedIndividual IRI="#iMalwareInstance"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:attack_pattern_name"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-        <Literal>Attacker used PowerShell to download malware</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:external_references"/>
-        <NamedIndividual IRI="#iAttackPatternDerived"/>
-        <Literal>{&quot;source_name&quot;: &quot;mitre-attack&quot;,
-                          &quot;external_id&quot;: &quot;T1059.001&quot;,
-                          &quot;url&quot;: &quot;https://attack.mitre.org/techniques/T1059/006&quot;}</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:attack_pattern_name"/>
-        <NamedIndividual IRI="#iAttackPatternTemplate"/>
-        <Literal>PowerShell</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:external_references"/>
-        <NamedIndividual IRI="#iAttackPatternTemplate"/>
-        <Literal>{&quot;source_name&quot;: &quot;mitre-attack&quot;,
-                          &quot;external_id&quot;: &quot;T1059.001&quot;,
-                          &quot;url&quot;: &quot;https://attack.mitre.org/techniques/T1059/006&quot;}</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:stix_id"/>
-        <NamedIndividual IRI="#iAttackPatternTemplate"/>
-        <Literal>attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:identity_name"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-        <Literal>BobMayer</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:roles"/>
-        <NamedIndividual IRI="#iBobMayerIdentity"/>
-        <Literal>analyst</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:coa_description"/>
-        <NamedIndividual IRI="#iCoA1"/>
-        <Literal>blocked ip-address 1.2.3.4 by sensor</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:coa_name"/>
-        <NamedIndividual IRI="#iCoA1"/>
-        <Literal>coA1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:identity_name"/>
-        <NamedIndividual IRI="#iCompanyXYZ"/>
-        <Literal>CompanyXYX</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:domain_name_value"/>
-        <NamedIndividual IRI="#iDomainNameAttacker"/>
-        <Literal>evilattacker.com</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:file_name"/>
-        <NamedIndividual IRI="#iFile"/>
-        <Literal>non.exe</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:hash-value"/>
-        <NamedIndividual IRI="#iFileHash"/>
-        <Literal>1193d996eb185e5457d8caa6c4ef024d</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:incident-name"/>
-        <NamedIndividual IRI="#iIncident"/>
-        <Literal>Incident1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:indicator_pattern_value"/>
-        <NamedIndividual IRI="#iIndicatorPattern"/>
-        <Literal>alert tcp any any &lt;&gt; 1.2.3.4 any</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:actor_name"/>
-        <NamedIndividual IRI="#iIntrusionSet"/>
-        <Literal>attacker-1234</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:ip_value"/>
-        <NamedIndividual IRI="#iIpAttacker"/>
-        <Literal>1.2.3.4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:kill_chain_name"/>
-        <NamedIndividual IRI="#iKillChainPhase"/>
-        <Literal>lockheed-martin-cyber-kill-chain</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:phase_name"/>
-        <NamedIndividual IRI="#iKillChainPhase"/>
-        <Literal>exloitation</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:first_observed"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2020-12-31T00:00:00-01:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:last_observed"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2020-12-31T00:00:00-01:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:number_observed"/>
-        <NamedIndividual IRI="#iObservedDataHoneypot"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:first_observed"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2021-01-01T00:00:00-01:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:last_observed"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2021-01-01T00:00:00-01:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:number_observed"/>
-        <NamedIndividual IRI="#iObservedDataIncident"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:first_seen"/>
-        <NamedIndividual IRI="#iSightingAttackPattern"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2021-01-01T00:00:00-01:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:first_seen"/>
-        <NamedIndividual IRI="#iSightingIncident"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2021-01-01T00:00:00-01:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:first_seen"/>
-        <NamedIndividual IRI="#iSightingIndicator"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2021-01-01T00:00:00-01:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:sensor_version"/>
-        <NamedIndividual IRI="#iSnortsensor"/>
-        <Literal>3.210X</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:actor_name"/>
-        <NamedIndividual IRI="#iThreatActor"/>
-        <Literal>HackerGroupXYZ</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="cti2:tool_name"/>
-        <NamedIndividual IRI="#iTool"/>
-        <Literal>PowerShell</Literal>
-    </DataPropertyAssertion>
 </Ontology>
 
 
