@@ -1233,10 +1233,10 @@
         <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#discovered-method"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#is-a-beacons-to"/>
+        <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-bk.owl#BK3_HoneyPotSystem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-bk.owl#BK3_HoneyPotSystem"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#is-a-beacons-to"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#BenignIndicator"/>
@@ -1575,10 +1575,10 @@
         <DataProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#tlp"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#kill-chain-phase"/>
+        <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-bk.owl#BK2_HoneyPotSystem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-bk.owl#BK2_HoneyPotSystem"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#kill-chain-phase"/>
     </Declaration>
     <Declaration>
         <Class IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#WebapplicationAssea"/>
