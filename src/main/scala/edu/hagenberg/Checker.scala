@@ -1,12 +1,14 @@
 package edu.hagenberg
 
 import edu.hagenberg.Util.createManager
+import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat
 import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.reasoner._
 import uk.ac.manchester.cs.owlapi.modularity.{ModuleType, SyntacticLocalityModuleExtractor}
 
 import scala.collection.JavaConverters.{asScalaSetConverter, setAsJavaSetConverter}
 
+import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat
 
 trait Checker[E, I]{
   def getEntailment: E
@@ -84,6 +86,44 @@ class AnyAxiomChecker(reasonerFactory: OWLReasonerFactory,
   }
 }
 
+
+class AnyAxiomCEChecker(reasonerFactory: OWLReasonerFactory,
+                      entailment: java.util.Set[OWLAxiom],
+                      static: Set[OWLAxiom],
+                      timeOutMS: Long = Long.MaxValue) extends OWLSetChecker(reasonerFactory, entailment, static, timeOutMS){
+
+  val ces = entailment.asScala.map( axiom => axiom.asInstanceOf[OWLClassAssertionAxiom].getClassExpression)
+
+  override def isEntailed(input: Set[OWLAxiom]): Boolean = {
+    m = createManager
+    val ont: OWLOntology = m.createOntology(input.asJava)
+
+    val entailed = ces.exists(ce => !reasonerFactory.createReasoner(ont, reasoner_config).getInstances(ce).isEmpty)
+
+    /*val check_entailed = (axiom: OWLAxiom) => {
+
+      // this silently skips non class expressions, risky
+      val ce =
+        if (axiom.getAxiomType.equals(AxiomType.CLASS_ASSERTION))
+         axiom.asInstanceOf[OWLClassAssertionAxiom].getClassExpression
+        else null
+      //ont.saveOntology(new FunctionalSyntaxDocumentFormat, System.out)
+      if (ce != null) {
+        val instances = reasonerFactory.createReasoner(ont,reasoner_config).getInstances(ce, false)
+        return !instances.isEmpty
+      }
+      else {
+        print("OMG here we go")
+        return false
+      }
+    }
+    val entailed = entailment.parallelStream.anyMatch((axiom: OWLAxiom) =>  check_entailed(axiom))*/
+
+    m.removeOntology(ont)
+    entailed
+  }
+}
+
 //class SimpleCheckerFactory(reasonerFactory: OWLReasonerFactory, timeOutMS: Long = Long.MaxValue) extends CheckerFactory[java.util.Set[OWLAxiom], OWLAxiom] {
 //  override def createChecker(entailment: util.Set[OWLAxiom], refutable: Set[OWLAxiom]): Checker[util.Set[OWLAxiom], OWLAxiom] = {
 //    new SimpleChecker(reasonerFactory, entailment, refutable, timeOutMS)
@@ -98,5 +138,9 @@ object CheckerFactory{
   def AnyAxiomCheckerStrategy(reasonerFactory: OWLReasonerFactory, timeOutMS: Long = Long.MaxValue): CheckerFactory[java.util.Set[OWLAxiom], OWLAxiom] = {
     (entailment, refutable) =>
       new AnyAxiomChecker(reasonerFactory, entailment, refutable, timeOutMS)
+  }
+  def AnyAxiomCheckerCEStrategy(reasonerFactory: OWLReasonerFactory, timeOutMS: Long = Long.MaxValue): CheckerFactory[java.util.Set[OWLAxiom], OWLAxiom] = {
+    (entailment, refutable) =>
+      new AnyAxiomCEChecker(reasonerFactory, entailment, refutable, timeOutMS)
   }
 }

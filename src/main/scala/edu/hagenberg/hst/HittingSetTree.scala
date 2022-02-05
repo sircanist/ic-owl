@@ -6,6 +6,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 
 import scala.collection.immutable
 import scala.collection.immutable.Queue
+import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat
 sealed trait SearchIterator
 object BFS extends  SearchIterator
 object DFS extends  SearchIterator

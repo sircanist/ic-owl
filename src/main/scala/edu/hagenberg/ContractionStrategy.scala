@@ -66,14 +66,17 @@ object ContractionStrategy {
                 // it was not the culprit which lead to slow down, so cannot increase
                 // speed
                 removeWhile(xs, new_contraction, static, remove_count)
-              } else
+              } else {
                 // increase speed because culprit was found
+                println(x)
                 removeWhile(xs, contraction, static, remove_count*2)
+              }
             }
 
         }
       }
       val (static, refutable) = axioms.partition(checker.getStatic)
+      println("contracting")
       removeWhile(refutable.toSeq, refutable, static, WINDOW_SIZE)
     }
   }
