@@ -87,7 +87,7 @@
     </dependency>
     <dependency>
       <groupId>me.kriegel.francesco</groupId>
-      <artifactId>conexp-fx-api5</artifactId>
+      <artifactId>conexp-fx-api5-dl-only</artifactId>
       <version>5.5.1-SNAPSHOT</version>
       <exclusions>
         <exclusion>

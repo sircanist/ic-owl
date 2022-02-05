@@ -93,4 +93,5 @@ object CLI extends App {
       )
     }
   }
+  System.exit(0)
 }

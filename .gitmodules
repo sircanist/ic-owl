@@ -1,0 +1,3 @@
+[submodule "concept-fx-dl-only"]
+	path = concept-fx-dl-only
+	url = https://github.com/sircanist/concept-fx-dl-only.git
