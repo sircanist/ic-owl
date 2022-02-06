@@ -100,7 +100,8 @@ object WeakeningRelation {
       val conclusion: ELConceptDescription = ELConceptDescription.of(classExpression)
       val weakenedRHS: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet()
 
-      val (static, _) = input.partition(checker.getStatic)
+      //val (static, _) = input.partition(checker.getStatic)
+      val static = finder.checker.getStatic
 
       val baseAxioms = static ++ justification - axiom
 

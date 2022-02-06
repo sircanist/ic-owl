@@ -24,22 +24,18 @@
   </licenses>
 
   <repositories>
-    <repository>
-      <id>scala-tools.org</id>
-      <name>Scala-Tools Maven2 Repository</name>
-      <url>http://scala-tools.org/repo-releases</url>
-    </repository>
   </repositories>
 
   <pluginRepositories>
-    <pluginRepository>
-      <id>scala-tools.org</id>
-      <name>Scala-Tools Maven2 Repository</name>
-      <url>http://scala-tools.org/repo-releases</url>
-    </pluginRepository>
   </pluginRepositories>
 
   <dependencies>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>27.0-jre</version>
+      <!-- <version>24.0-jre</version> -->
+    </dependency>
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
