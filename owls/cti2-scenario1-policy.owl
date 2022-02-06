@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-policy.owl"
+     xml:base="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-policy.owl">
+     ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl">
     <Prefix name="cti" IRI="http://purl.org/cti-core#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -17,7 +17,7 @@
     <Prefix name="pattern" IRI="http://www.w3id.org/ontolink/pattern.owl#"/>
     <Prefix name="cti2-sc1" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl#"/>
     <Prefix name="cti2-sc1-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl#"/>
-    <Prefix name="cti2-sc1-senstive" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-policy.owl#"/>
+    <Prefix name="cti2-sc1-senstive" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl#"/>
     <Declaration>
         <NamedIndividual IRI="#BK1"/>
     </Declaration>
