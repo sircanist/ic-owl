@@ -6,21 +6,19 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl">
-    <Prefix name="cti" IRI="http://purl.org/cti-core#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="cti2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="cti-sc1" IRI="http://purl.org/cti-scenario1#"/>
     <Prefix name="pattern" IRI="http://www.w3id.org/ontolink/pattern.owl#"/>
     <Prefix name="cti2-sc1" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl#"/>
     <Prefix name="cti2-sc2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2.owl#"/>
     <Prefix name="cti2-sc1-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl#"/>
     <Prefix name="cti2-sc2-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2-bk.owl#"/>
+    <Prefix name="cti2-sc1-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl#"/>
     <Prefix name="cti2-sc2-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario2-policy.owl#"/>
-    <Prefix name="cti2-sc1-senstive" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl#"/>
     <Declaration>
         <Class IRI="#ATMAssetInfrastructure"/>
     </Declaration>
@@ -1499,228 +1497,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ind-IndicatorPattern-stix"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ProxyAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DatabaseAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserDeviceAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FormeremployeeAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DiskmediaAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DHCPAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PartnerAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DirectoryAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RouterorswitchAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MailAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AuditorAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RTUAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CameraAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VoIPadapterAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MainframeAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#NetworkAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PeripheralAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LogAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UnknownAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RemoteaccessAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HSMAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CustomerAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ManagerAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BroadbandAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#WLANAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PaymentcardAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TabletAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#GasterminalAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PEDpadAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AuthtokenAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CashierAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SmartcardAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#POScontrollerAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AccessreaderAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LaptopAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ATMAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PLCAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PublicWANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CallcenterAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BackupAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#GuardAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HelpdeskAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PaymentswitchAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AdministratorAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DeveloperAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MobilephoneAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SCADAAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DCSAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DocumentsAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#IDSAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#End-userAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PBXAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ExecutiveAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FinanceAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MaintenanceAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VoIPphoneAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#POSterminalAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DesktopAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DNSAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PersonAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PrivateWANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DiskdriveAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TapesAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FlashdriveAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FirewallAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ServerAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PrintAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#KioskAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HumanresourcesAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FileAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TelephoneAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MediaAssetAsset"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#ATMAssetInfrastructure"/>

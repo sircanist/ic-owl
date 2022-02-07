@@ -6,20 +6,21 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl">
-    <Prefix name="cti" IRI="http://purl.org/cti-core#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="cti2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="cti-sc1" IRI="http://purl.org/cti-scenario1#"/>
     <Prefix name="pattern" IRI="http://www.w3id.org/ontolink/pattern.owl#"/>
     <Prefix name="cti2-sc1" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl#"/>
+    <Prefix name="cti2-sc2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2.owl#"/>
     <Prefix name="cti2-sc1-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl#"/>
-    <Prefix name="cti2-sc1-senstive" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl#"/>
+    <Prefix name="cti2-sc2-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2-bk.owl#"/>
+    <Prefix name="cti2-sc1-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl#"/>
+    <Prefix name="cti2-sc2-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario2-policy.owl#"/>
     <Declaration>
-        <Class IRI="#BK1_AttackAbleSensor"/>
+        <Class IRI="#BK1_AttackableSensor"/>
     </Declaration>
     <Declaration>
         <Class IRI="#BK2_HoneyPotSystem"/>
@@ -28,22 +29,10 @@
         <Class IRI="#BK3_HoneyPotSystem"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#BK4_AttackerInCTI"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="cti2-sc1:iIncidentGrouping"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:BusinessImpact-None"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:incident-status"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:confidence"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:IncidentGrouping"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:HoneyPotSensor"/>
@@ -55,16 +44,16 @@
         <DataProperty abbreviatedIRI="cti2:sensor_version"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:Sighting"/>
+        <Class abbreviatedIRI="cti2:BusinessImpact-None"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:Incident"/>
+        <DataProperty abbreviatedIRI="cti2:actor_name"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:has-impact"/>
+        <ObjectProperty abbreviatedIRI="cti2:incident-status"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:SnortSensor"/>
@@ -73,25 +62,28 @@
         <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:sensed-by"/>
+        <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:Actor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:confidence"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:IncidentStatus-Closed"/>
     </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+    </Declaration>
     <EquivalentClasses>
-        <Class IRI="#BK1_AttackAbleSensor"/>
+        <Class IRI="#BK1_AttackableSensor"/>
         <ObjectIntersectionOf>
-            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-                <ObjectIntersectionOf>
-                    <Class abbreviatedIRI="cti2:SnortSensor"/>
-                    <DataHasValue>
-                        <DataProperty abbreviatedIRI="cti2:sensor_version"/>
-                        <Literal>3.210X</Literal>
-                    </DataHasValue>
-                </ObjectIntersectionOf>
-            </ObjectSomeValuesFrom>
+            <Class abbreviatedIRI="cti2:SnortSensor"/>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="cti2:sensor_version"/>
+                <Literal>3.210X</Literal>
+            </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -100,13 +92,7 @@
             <Class abbreviatedIRI="cti2:IncidentGrouping"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-                <ObjectIntersectionOf>
-                    <Class abbreviatedIRI="cti2:Sighting"/>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty abbreviatedIRI="cti2:sensed-by"/>
-                        <Class abbreviatedIRI="cti2:HoneyPotSensor"/>
-                    </ObjectSomeValuesFrom>
-                </ObjectIntersectionOf>
+                <Class abbreviatedIRI="cti2:HoneyPotSensor"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -116,37 +102,50 @@
             <Class abbreviatedIRI="cti2:IncidentGrouping"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-                <ObjectIntersectionOf>
-                    <Class abbreviatedIRI="cti2:Incident"/>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty abbreviatedIRI="cti2:has-impact"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
+                    <ObjectIntersectionOf>
                         <ObjectSomeValuesFrom>
-                            <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
-                            <ObjectIntersectionOf>
-                                <ObjectSomeValuesFrom>
-                                    <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
-                                    <Class abbreviatedIRI="cti2:BusinessImpact-None"/>
-                                </ObjectSomeValuesFrom>
-                                <ObjectSomeValuesFrom>
-                                    <ObjectProperty abbreviatedIRI="cti2:confidence"/>
-                                    <Class abbreviatedIRI="cti2:Confidence-High"/>
-                                </ObjectSomeValuesFrom>
-                            </ObjectIntersectionOf>
+                            <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
+                            <Class abbreviatedIRI="cti2:BusinessImpact-None"/>
                         </ObjectSomeValuesFrom>
-                    </ObjectSomeValuesFrom>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
-                        <ObjectIntersectionOf>
-                            <ObjectSomeValuesFrom>
-                                <ObjectProperty abbreviatedIRI="cti2:confidence"/>
-                                <Class abbreviatedIRI="cti2:Confidence-High"/>
-                            </ObjectSomeValuesFrom>
-                            <ObjectSomeValuesFrom>
-                                <ObjectProperty abbreviatedIRI="cti2:incident-status"/>
-                                <Class abbreviatedIRI="cti2:IncidentStatus-Closed"/>
-                            </ObjectSomeValuesFrom>
-                        </ObjectIntersectionOf>
-                    </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty abbreviatedIRI="cti2:confidence"/>
+                            <Class abbreviatedIRI="cti2:Confidence-High"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
+                    <ObjectIntersectionOf>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty abbreviatedIRI="cti2:confidence"/>
+                            <Class abbreviatedIRI="cti2:Confidence-High"/>
+                        </ObjectSomeValuesFrom>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty abbreviatedIRI="cti2:incident-status"/>
+                            <Class abbreviatedIRI="cti2:IncidentStatus-Closed"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK4_AttackerInCTI"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="cti2:Actor"/>
+                    <DataHasValue>
+                        <DataProperty abbreviatedIRI="cti2:actor_name"/>
+                        <Literal>HackerGroupXYZ</Literal>
+                    </DataHasValue>
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl"
+     xml:base="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario2-policy.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl">
+     ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario2-policy.owl">
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -26,55 +26,43 @@
         <NamedIndividual IRI="#P2"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#P3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#P4"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:sighting-of"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:Sighting"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="cti2:Incident"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK1_AttackableSensor"/>
+        <ObjectProperty abbreviatedIRI="cti2:discovered-method"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK4_AttackerInCTI"/>
+        <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:sensed-by"/>
+        <Class abbreviatedIRI="cti2:DiscoveredMethod-Customer"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK3_HoneyPotSystem"/>
+        <Class abbreviatedIRI="cti2:BusinessImpact-Major"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:ImpactAssessment"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:IncidentGrouping"/>
     </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2-sc2-bk:BK_CompanyXVictim"/>
+    </Declaration>
     <ClassAssertion>
         <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2-sc2-bk:BK_CompanyXVictim"/>
             <Class abbreviatedIRI="cti2:IncidentGrouping"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
                 <ObjectIntersectionOf>
-                    <Class abbreviatedIRI="cti2:Sighting"/>
+                    <Class abbreviatedIRI="cti2:ImpactAssessment"/>
                     <ObjectSomeValuesFrom>
-                        <ObjectProperty abbreviatedIRI="cti2:sensed-by"/>
-                        <Class abbreviatedIRI="cti2-sc1-bk:BK1_AttackableSensor"/>
-                    </ObjectSomeValuesFrom>
-                    <ObjectSomeValuesFrom>
-                        <ObjectProperty abbreviatedIRI="cti2:sighting-of"/>
-                        <Class abbreviatedIRI="cti2:Incident"/>
+                        <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
+                        <Class abbreviatedIRI="cti2:BusinessImpact-Major"/>
                     </ObjectSomeValuesFrom>
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
@@ -82,16 +70,21 @@
         <NamedIndividual IRI="#P1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2-sc2-bk:BK_CompanyXVictim"/>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="cti2:Incident"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="cti2:discovered-method"/>
+                        <Class abbreviatedIRI="cti2:DiscoveredMethod-Customer"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#P2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK3_HoneyPotSystem"/>
-        <NamedIndividual IRI="#P3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK4_AttackerInCTI"/>
-        <NamedIndividual IRI="#P4"/>
     </ClassAssertion>
 </Ontology>
 

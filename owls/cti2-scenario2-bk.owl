@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2-bk.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2-bk.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="cti2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="pattern" IRI="http://www.w3id.org/ontolink/pattern.owl#"/>
+    <Prefix name="cti2-sc1" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl#"/>
+    <Prefix name="cti2-sc2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2.owl#"/>
+    <Prefix name="cti2-sc1-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl#"/>
+    <Prefix name="cti2-sc2-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2-bk.owl#"/>
+    <Prefix name="cti2-sc1-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl#"/>
+    <Prefix name="cti2-sc2-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario2-policy.owl#"/>
+    <Declaration>
+        <Class IRI="#BK1_WorksForCompanyXYZ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK2_IdentityCompanyAlias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK2_IdentityCompanyAliasResolve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK3_CompanyXVictim3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK4_CompanyXVictim3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK5_CompanyXVictim"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK6_CompanyXVictim"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK7_CompanyXVictim"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK8_CompanyXVictim"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK_CompanyXVictim"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_alias"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CompanyX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="cti2-sc2:iIncidentGrouping"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:works-for"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:Organization"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cti2:identity_name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:created-by"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:Incident"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:targets"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:victim"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#BK1_WorksForCompanyXYZ"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="cti2:identity_name"/>
+            <Literal>BobMayer</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK2_IdentityCompanyAlias"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="cti2:identity_name"/>
+            <Literal>CompanyXYZ</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK2_IdentityCompanyAliasResolve"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#has_alias"/>
+            <NamedIndividual IRI="#CompanyX"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK3_CompanyXVictim3"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="cti2:created-by"/>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="cti2:works-for"/>
+                        <NamedIndividual IRI="#CompanyX"/>
+                    </ObjectHasValue>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK4_CompanyXVictim3"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="cti2:created-by"/>
+                    <NamedIndividual IRI="#CompanyX"/>
+                </ObjectHasValue>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK5_CompanyXVictim"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="cti2:targets"/>
+                    <NamedIndividual IRI="#CompanyX"/>
+                </ObjectHasValue>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK6_CompanyXVictim"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="cti2:Incident"/>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="cti2:victim"/>
+                        <NamedIndividual IRI="#CompanyX"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK7_CompanyXVictim"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectHasValue>
+                    <ObjectProperty abbreviatedIRI="cti2:works-for"/>
+                    <NamedIndividual IRI="#CompanyX"/>
+                </ObjectHasValue>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK8_CompanyXVictim"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <NamedIndividual IRI="#CompanyX"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#BK1_WorksForCompanyXYZ"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="cti2:works-for"/>
+            <NamedIndividual IRI="#CompanyX"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BK2_IdentityCompanyAlias"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#has_alias"/>
+            <NamedIndividual IRI="#CompanyX"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BK2_IdentityCompanyAliasResolve"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#CompanyX"/>
+        </ObjectOneOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BK3_CompanyXVictim3"/>
+        <Class IRI="#BK_CompanyXVictim"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BK4_CompanyXVictim3"/>
+        <Class IRI="#BK_CompanyXVictim"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BK5_CompanyXVictim"/>
+        <Class IRI="#BK_CompanyXVictim"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BK6_CompanyXVictim"/>
+        <Class IRI="#BK_CompanyXVictim"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BK7_CompanyXVictim"/>
+        <Class IRI="#BK_CompanyXVictim"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BK8_CompanyXVictim"/>
+        <Class IRI="#BK_CompanyXVictim"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cti2:Organization"/>
+        <NamedIndividual IRI="#CompanyX"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+        <NamedIndividual abbreviatedIRI="cti2-sc2:iIncidentGrouping"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="cti2:identity_name"/>
+        <NamedIndividual IRI="#CompanyX"/>
+        <Literal>CompanyX</Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.16) https://github.com/owlcs/owlapi -->
+
