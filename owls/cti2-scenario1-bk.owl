@@ -23,28 +23,22 @@
         <Class IRI="#BK1_AttackableSensor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#BK2_HoneyPotSystem"/>
+        <Class IRI="#BK2_HoneyPotSystem1"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#BK3_HoneyPotSystem"/>
+        <Class IRI="#BK2_HoneyPotSystem2"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#BK4_AttackerInCTI"/>
+        <Class IRI="#BK2_HoneyPotSystem3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BK3_AttackerInCTI"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="cti2-sc1:iIncidentGrouping"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:HoneyPotSensor"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:Confidence-High"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:incident-status-target"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="cti2:sensor_version"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:BusinessImpact-None"/>
@@ -53,13 +47,28 @@
         <DataProperty abbreviatedIRI="cti2:actor_name"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:confidence"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:HoneyPotSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2:Confidence-High"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cti2:sensor_version"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="cti2:SnortSensor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:Actor"/>
@@ -68,13 +77,7 @@
         <ObjectProperty abbreviatedIRI="cti2:business-impact-target"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:confidence"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="cti2:IncidentStatus-Closed"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:IncidentGrouping"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#BK1_AttackableSensor"/>
@@ -87,7 +90,7 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#BK2_HoneyPotSystem"/>
+        <Class IRI="#BK2_HoneyPotSystem1"/>
         <ObjectIntersectionOf>
             <Class abbreviatedIRI="cti2:IncidentGrouping"/>
             <ObjectSomeValuesFrom>
@@ -97,7 +100,7 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#BK3_HoneyPotSystem"/>
+        <Class IRI="#BK2_HoneyPotSystem2"/>
         <ObjectIntersectionOf>
             <Class abbreviatedIRI="cti2:IncidentGrouping"/>
             <ObjectSomeValuesFrom>
@@ -135,7 +138,47 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#BK4_AttackerInCTI"/>
+        <Class IRI="#BK2_HoneyPotSystem3"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="cti2:business-impact-target"/>
+                    <Class abbreviatedIRI="cti2:BusinessImpact-None"/>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="cti2:confidence"/>
+                    <Class abbreviatedIRI="cti2:Confidence-High"/>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK2_HoneyPotSystem3"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:confidence"/>
+                <Class abbreviatedIRI="cti2:Confidence-High"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK2_HoneyPotSystem3"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:incident-status-target"/>
+                <Class abbreviatedIRI="cti2:IncidentStatus-Closed"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BK3_AttackerInCTI"/>
         <ObjectIntersectionOf>
             <Class abbreviatedIRI="cti2:IncidentGrouping"/>
             <ObjectSomeValuesFrom>

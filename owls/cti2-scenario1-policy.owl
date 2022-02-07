@@ -23,16 +23,28 @@
         <NamedIndividual IRI="#P1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#P2"/>
+        <NamedIndividual IRI="#P2_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P2_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P2_3"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#P3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#P4"/>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem2"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem3"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:sighting-of"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem1"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:Sighting"/>
@@ -44,19 +56,13 @@
         <Class abbreviatedIRI="cti2-sc1-bk:BK1_AttackableSensor"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK4_AttackerInCTI"/>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK3_AttackerInCTI"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:sensed-by"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK3_HoneyPotSystem"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:IncidentGrouping"/>
@@ -82,16 +88,20 @@
         <NamedIndividual IRI="#P1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem"/>
-        <NamedIndividual IRI="#P2"/>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem1"/>
+        <NamedIndividual IRI="#P2_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK3_HoneyPotSystem"/>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem2"/>
+        <NamedIndividual IRI="#P2_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK2_HoneyPotSystem3"/>
+        <NamedIndividual IRI="#P2_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cti2-sc1-bk:BK3_AttackerInCTI"/>
         <NamedIndividual IRI="#P3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="cti2-sc1-bk:BK4_AttackerInCTI"/>
-        <NamedIndividual IRI="#P4"/>
     </ClassAssertion>
 </Ontology>
 
