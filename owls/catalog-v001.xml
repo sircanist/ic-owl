@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1644146333890" name="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl" uri="cti2-scenario1-bk.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1644146333890" name="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl" uri="cti2-scenario1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1644146333890" name="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl" uri="cti2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1644146333890" name="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl" uri="cti2-scenario1-policy.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1644146333890" name="shadowed:https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl" uri="ontology_db/cti2-scenario1-bk.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1644146333890" name="shadowed:https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl" uri="ontology_db/cti2-scenario1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1644146333890" name="shadowed:https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl" uri="ontology_db/cti2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1644146333890" name="shadowed:https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl" uri="ontology_db/cti2-scenario1-policy.owl"/>
+    </group>
+</catalog>

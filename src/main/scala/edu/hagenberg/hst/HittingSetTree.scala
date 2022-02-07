@@ -6,7 +6,6 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 
 import scala.collection.immutable
 import scala.collection.immutable.Queue
-import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat
 sealed trait SearchIterator
 object BFS extends  SearchIterator
 object DFS extends  SearchIterator
@@ -83,7 +82,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
     val axioms: Set[OWLAxiom] = getAxioms(edges)// input -- edges
     val discover: Option[Option[Set[OWLAxiom]]] = discovered.collectFirst{
-      case i
+      case i: HittingSetTreeNode
         if check_intersection(edges_flatten(edges), i.justification) => i.justification
     }
     val just = discover match {

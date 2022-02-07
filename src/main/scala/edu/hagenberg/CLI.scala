@@ -1,14 +1,14 @@
 package edu.hagenberg
 
 import edu.hagenberg.Util.getAxiomsFromFile
-import edu.hagenberg.hst.{BFS, DFS}
+import edu.hagenberg.hst.BFS
 import openllet.owlapi.OpenlletReasonerFactory
 import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLDeclarationAxiom, OWLOntologyIRIMapper}
 import org.semanticweb.owlapi.util.SimpleIRIMapper
 
-import java.io.File
-import scala.io.Source
+import java.io.{File, FileOutputStream}
 import scala.collection.JavaConverters._
+import scala.io.Source
 
 /**
  * Hello world!
@@ -77,20 +77,49 @@ object CLI extends App {
   remove_axioms match {
     case Left(s) => println(s"ERROR: ${s.getMessage}")
     case Right(paths) => {
-      paths.foreach(
-        pathelements => {
-          println("\n\nNew path")
-          pathelements.foreach {
-            path => {
-              println("{")
-              println("Justifications:\n " + path.justifications)
-              println("selected:\n " + path.selected)
-              println("weakened:\n " + path.weakened)
-              println("}")
-            }
-          }
-        }
-      )
+      val distinct_paths = paths.map(path => path.flatMap { pe =>
+        val pathSet = Set(pe.selected)
+        if (pe.weakened.isDefined)
+          pathSet + pe.weakened.get
+        else
+          pathSet
+      }).distinct
+
+      val axioms_removed = paths.flatMap(path => path.map { pe =>
+        pe.selected
+      }).distinct
+      val axioms_added = paths.flatMap(path => path.map { pe =>
+        pe.weakened
+      }.filter(_.isDefined).map(_.get)).distinct
+      print(distinct_paths)
+      val tmp_ont: Set[OWLAxiom] =
+        cti_axioms -- axioms_removed ++ axioms_added
+      val outputStream = new FileOutputStream(new File("/tmp/test.tttl"))
+      Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
+
+//      paths.foreach(
+//        pathelements => {
+//          println("\n\nNew path")
+//          pathelements.foreach {
+//            path => {
+//              println("{")
+//              println("Justifications:\n " + path.justifications)
+//              println("selected:\n " + path.selected)
+//              println("weakened:\n " + path.weakened)
+//              println("}")
+//            }
+//          }
+
+//          val removed_axioms: Set[OWLAxiom] = pathelements.map(e => e.selected).toSet
+//          val added_axioms: Set[OWLAxiom] = pathelements.map(_.weakened).filter(_.isDefined).map(_.get).toSet
+//          val file = new File("/tmp/test.tttl")
+//          val outputStream = new FileOutputStream(file)
+//          val tmp_ont: Set[OWLAxiom] =
+//            static ++ attacker_knowledge_axioms ++ cti_axioms -- removed_axioms ++ added_axioms
+//          Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
+//          outputStream.close()
+//        }
+//      )
     }
   }
   System.exit(0)

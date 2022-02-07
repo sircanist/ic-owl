@@ -6,26 +6,24 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl"/>
     <Prefix name="cti" IRI="http://purl.org/cti-core#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="cti2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2.owl#"/>
+    <Prefix name="cti2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2.owl#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="cti-sc1" IRI="http://purl.org/cti-scenario1#"/>
     <Prefix name="pattern" IRI="http://www.w3id.org/ontolink/pattern.owl#"/>
-    <Prefix name="cti2-sc1" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1.owl#"/>
-    <Prefix name="cti2-sc2" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2.owl#"/>
-    <Prefix name="cti2-sc1-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario1-bk.owl#"/>
-    <Prefix name="cti2-sc2-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2-scenario2-bk.owl#"/>
-    <Prefix name="cti2-sc2-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario2-policy.owl#"/>
-    <Prefix name="cti2-sc1-senstive" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl#"/>
+    <Prefix name="cti2-sc1" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1.owl#"/>
+    <Prefix name="cti2-sc1-bk" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-bk.owl#"/>
+    <Prefix name="cti2-sc1-senstive" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/master/owls/cti2_scenario1-policy.owl#"/>
     <Declaration>
-        <Class IRI="#ATMAssetInfrastructure"/>
+        <Class IRI="#ATMAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AccessreaderAssetInfrastructure"/>
+        <Class IRI="#AccessreaderAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Actor"/>
@@ -34,7 +32,7 @@
         <Class IRI="#ActorUsable"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AdministratorAssetInfrastructure"/>
+        <Class IRI="#AdministratorAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AgreeOpinion"/>
@@ -67,13 +65,13 @@
         <Class IRI="#AttributionIndicator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AuditorAssetInfrastructure"/>
+        <Class IRI="#AuditorAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AuthtokenAssetInfrastructure"/>
+        <Class IRI="#AuthtokenAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#BackupAssetInfrastructure"/>
+        <Class IRI="#BackupAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#BenignIndicator"/>
@@ -82,7 +80,7 @@
         <Class IRI="#BotnetAttackerInfrastructure"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#BroadbandAssetInfrastructure"/>
+        <Class IRI="#BroadbandAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#BusinessImpact"/>
@@ -115,13 +113,13 @@
         <Class IRI="#CIAImpact-Integrity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CallcenterAssetInfrastructure"/>
+        <Class IRI="#CallcenterAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CameraAssetInfrastructure"/>
+        <Class IRI="#CameraAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CashierAssetInfrastructure"/>
+        <Class IRI="#CashierAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CoA"/>
@@ -169,19 +167,19 @@
         <Class IRI="#Controllable"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CustomerAssetInfrastructure"/>
+        <Class IRI="#CustomerAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DCSAssetInfrastructure"/>
+        <Class IRI="#DCSAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DHCPAssetInfrastructure"/>
+        <Class IRI="#DHCPAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DNSAssetInfrastructure"/>
+        <Class IRI="#DNSAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DatabaseAssetInfrastructure"/>
+        <Class IRI="#DatabaseAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Deliverable"/>
@@ -190,13 +188,13 @@
         <Class IRI="#Delivering"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DesktopAssetInfrastructure"/>
+        <Class IRI="#DesktopAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DeveloperAssetInfrastructure"/>
+        <Class IRI="#DeveloperAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DirectoryAssetInfrastructure"/>
+        <Class IRI="#DirectoryAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DisagreeOpinion"/>
@@ -256,22 +254,22 @@
         <Class IRI="#DiscoveredMethod-User"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DiskdriveAssetInfrastructure"/>
+        <Class IRI="#DiskdriveAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DiskmediaAssetInfrastructure"/>
+        <Class IRI="#DiskmediaAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DocumentsAssetInfrastructure"/>
+        <Class IRI="#DocumentsAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DomainName"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#End-userAssetInfrastructure"/>
+        <Class IRI="#End-userAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ExecutiveAssetInfrastructure"/>
+        <Class IRI="#ExecutiveAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ExfiltrationAttackerInfrastructure"/>
@@ -280,37 +278,37 @@
         <Class IRI="#File"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FileAssetInfrastructure"/>
+        <Class IRI="#FileAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FinanceAssetInfrastructure"/>
+        <Class IRI="#FinanceAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FirewallAssetInfrastructure"/>
+        <Class IRI="#FirewallAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FlashdriveAssetInfrastructure"/>
+        <Class IRI="#FlashdriveAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FormeremployeeAssetInfrastructure"/>
+        <Class IRI="#FormeremployeeAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GasterminalAssetInfrastructure"/>
+        <Class IRI="#GasterminalAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Grouping"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GuardAssetInfrastructure"/>
+        <Class IRI="#GuardAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HSMAssetInfrastructure"/>
+        <Class IRI="#HSMAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Hash"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HelpdeskAssetInfrastructure"/>
+        <Class IRI="#HelpdeskAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HoneyPotSensor"/>
@@ -325,10 +323,10 @@
         <Class IRI="#HostingTargetListAttackerInfrastructure"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HumanresourcesAssetInfrastructure"/>
+        <Class IRI="#HumanresourcesAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IDSAssetInfrastructure"/>
+        <Class IRI="#IDSAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#IPAddress"/>
@@ -418,13 +416,13 @@
         <Class IRI="#KillChainPhase"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#KioskAssetInfrastructure"/>
+        <Class IRI="#KioskAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LANAssetInfrastructure"/>
+        <Class IRI="#LANAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LaptopAssetInfrastructure"/>
+        <Class IRI="#LaptopAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Locateable"/>
@@ -433,19 +431,19 @@
         <Class IRI="#Location"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LogAssetInfrastructure"/>
+        <Class IRI="#LogAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MD5_Hash"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MailAssetInfrastructure"/>
+        <Class IRI="#MailAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MainframeAssetInfrastructure"/>
+        <Class IRI="#MainframeAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MaintenanceAssetInfrastructure"/>
+        <Class IRI="#MaintenanceAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MaliciousActivityIndicator"/>
@@ -469,22 +467,22 @@
         <Class IRI="#MalwareUseable"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ManagerAssetInfrastructure"/>
+        <Class IRI="#ManagerAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Marking"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MediaAssetInfrastructure"/>
+        <Class IRI="#MediaAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Mitigateable"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MobilephoneAssetInfrastructure"/>
+        <Class IRI="#MobilephoneAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#NetworkAssetInfrastructure"/>
+        <Class IRI="#NetworkAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#NeutralOpinion"/>
@@ -505,58 +503,58 @@
         <Class IRI="#Originateable"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PBXAssetInfrastructure"/>
+        <Class IRI="#PBXAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PEDpadAssetInfrastructure"/>
+        <Class IRI="#PEDpadAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PLCAssetInfrastructure"/>
+        <Class IRI="#PLCAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#POScontrollerAssetInfrastructure"/>
+        <Class IRI="#POScontrollerAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#POSterminalAssetInfrastructure"/>
+        <Class IRI="#POSterminalAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PartnerAssetInfrastructure"/>
+        <Class IRI="#PartnerAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PatchCoA"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PaymentcardAssetInfrastructure"/>
+        <Class IRI="#PaymentcardAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PaymentswitchAssetInfrastructure"/>
+        <Class IRI="#PaymentswitchAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PeripheralAssetInfrastructure"/>
+        <Class IRI="#PeripheralAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Person"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PersonAssetInfrastructure"/>
+        <Class IRI="#PersonAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PishingAttackerInfrastructure"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PrintAssetInfrastructure"/>
+        <Class IRI="#PrintAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PrivateWANAssetInfrastructure"/>
+        <Class IRI="#PrivateWANAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ProxyAssetInfrastructure"/>
+        <Class IRI="#ProxyAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PublicWANAssetInfrastructure"/>
+        <Class IRI="#PublicWANAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RTUAssetInfrastructure"/>
+        <Class IRI="#RTUAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ReceissanceAttackerInfrastructure"/>
@@ -565,16 +563,16 @@
         <Class IRI="#Relationship"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RemoteaccessAssetInfrastructure"/>
+        <Class IRI="#RemoteaccessAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RouterorswitchAssetInfrastructure"/>
+        <Class IRI="#RouterorswitchAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SANAssetInfrastructure"/>
+        <Class IRI="#SANAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SCADAAssetInfrastructure"/>
+        <Class IRI="#SCADAAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SCO"/>
@@ -616,13 +614,13 @@
         <Class IRI="#Sensor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ServerAssetInfrastructure"/>
+        <Class IRI="#ServerAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sighting"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SmartcardAssetInfrastructure"/>
+        <Class IRI="#SmartcardAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SnortSensor"/>
@@ -655,10 +653,10 @@
         <Class IRI="#TLSH_Hash"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TabletAssetInfrastructure"/>
+        <Class IRI="#TabletAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TapesAssetInfrastructure"/>
+        <Class IRI="#TapesAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Targetable"/>
@@ -667,7 +665,7 @@
         <Class IRI="#Targeting"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TelephoneAssetInfrastructure"/>
+        <Class IRI="#TelephoneAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ThreatActor"/>
@@ -676,7 +674,7 @@
         <Class IRI="#Tool"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#UnknownAssetInfrastructure"/>
+        <Class IRI="#UnknownAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#UnknownAttackerInfrastructure"/>
@@ -685,19 +683,19 @@
         <Class IRI="#UnknownIndicator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#UserDeviceAssetInfrastructure"/>
+        <Class IRI="#UserDeviceAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#VoIPadapterAssetInfrastructure"/>
+        <Class IRI="#VoIPadapterAssetAsset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#VoIPphoneAssetInfrastructure"/>
+        <Class IRI="#VoIPphoneAssetAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Vulnerability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#WLANAssetInfrastructure"/>
+        <Class IRI="#WLANAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#WebapplicationAssea"/>
@@ -1282,9 +1280,6 @@
         <DataProperty IRI="#identity_name"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#incident-description"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#incident-name"/>
     </Declaration>
     <Declaration>
@@ -1500,234 +1495,12 @@
     <Declaration>
         <NamedIndividual IRI="#ind-IndicatorPattern-stix"/>
     </Declaration>
-    <Declaration>
-        <Class IRI="#ProxyAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DatabaseAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserDeviceAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FormeremployeeAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DiskmediaAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DHCPAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PartnerAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DirectoryAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RouterorswitchAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MailAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AuditorAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RTUAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CameraAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VoIPadapterAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MainframeAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#NetworkAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PeripheralAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LogAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UnknownAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RemoteaccessAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HSMAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CustomerAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ManagerAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BroadbandAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#WLANAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PaymentcardAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TabletAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#GasterminalAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PEDpadAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AuthtokenAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CashierAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SmartcardAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#POScontrollerAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AccessreaderAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LaptopAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ATMAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PLCAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PublicWANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CallcenterAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BackupAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#GuardAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HelpdeskAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PaymentswitchAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AdministratorAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DeveloperAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MobilephoneAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SCADAAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DCSAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DocumentsAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#IDSAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#End-userAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PBXAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ExecutiveAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FinanceAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MaintenanceAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VoIPphoneAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#POSterminalAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DesktopAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DNSAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PersonAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PrivateWANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DiskdriveAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TapesAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FlashdriveAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FirewallAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ServerAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PrintAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#KioskAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HumanresourcesAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FileAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TelephoneAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MediaAssetAsset"/>
-    </Declaration>
     <SubClassOf>
-        <Class IRI="#ATMAssetInfrastructure"/>
+        <Class IRI="#ATMAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#AccessreaderAssetInfrastructure"/>
+        <Class IRI="#AccessreaderAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -1766,7 +1539,7 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#AdministratorAssetInfrastructure"/>
+        <Class IRI="#AdministratorAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -1837,15 +1610,15 @@
         <Class IRI="#Indicator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#AuditorAssetInfrastructure"/>
+        <Class IRI="#AuditorAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#AuthtokenAssetInfrastructure"/>
+        <Class IRI="#AuthtokenAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#BackupAssetInfrastructure"/>
+        <Class IRI="#BackupAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -1857,7 +1630,7 @@
         <Class IRI="#AttackerInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#BroadbandAssetInfrastructure"/>
+        <Class IRI="#BroadbandAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -1901,15 +1674,15 @@
         <Class IRI="#CIAImpact"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CallcenterAssetInfrastructure"/>
+        <Class IRI="#CallcenterAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CameraAssetInfrastructure"/>
+        <Class IRI="#CameraAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CashierAssetInfrastructure"/>
+        <Class IRI="#CashierAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -1991,23 +1764,23 @@
         <Class IRI="#Confidence"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CustomerAssetInfrastructure"/>
+        <Class IRI="#CustomerAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DCSAssetInfrastructure"/>
+        <Class IRI="#DCSAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DHCPAssetInfrastructure"/>
+        <Class IRI="#DHCPAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DNSAssetInfrastructure"/>
+        <Class IRI="#DNSAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DatabaseAssetInfrastructure"/>
+        <Class IRI="#DatabaseAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2015,15 +1788,15 @@
         <Class IRI="#container-delivers"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DesktopAssetInfrastructure"/>
+        <Class IRI="#DesktopAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DeveloperAssetInfrastructure"/>
+        <Class IRI="#DeveloperAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DirectoryAssetInfrastructure"/>
+        <Class IRI="#DirectoryAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2103,15 +1876,15 @@
         <Class IRI="#DiscoveredMethod"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DiskdriveAssetInfrastructure"/>
+        <Class IRI="#DiskdriveAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DiskmediaAssetInfrastructure"/>
+        <Class IRI="#DiskmediaAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DocumentsAssetInfrastructure"/>
+        <Class IRI="#DocumentsAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2134,11 +1907,11 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#End-userAssetInfrastructure"/>
+        <Class IRI="#End-userAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ExecutiveAssetInfrastructure"/>
+        <Class IRI="#ExecutiveAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2158,27 +1931,27 @@
         <Class IRI="#container-file-hash"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FileAssetInfrastructure"/>
+        <Class IRI="#FileAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FinanceAssetInfrastructure"/>
+        <Class IRI="#FinanceAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FirewallAssetInfrastructure"/>
+        <Class IRI="#FirewallAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FlashdriveAssetInfrastructure"/>
+        <Class IRI="#FlashdriveAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FormeremployeeAssetInfrastructure"/>
+        <Class IRI="#FormeremployeeAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GasterminalAssetInfrastructure"/>
+        <Class IRI="#GasterminalAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2197,11 +1970,11 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GuardAssetInfrastructure"/>
+        <Class IRI="#GuardAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HSMAssetInfrastructure"/>
+        <Class IRI="#HSMAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2216,7 +1989,7 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HelpdeskAssetInfrastructure"/>
+        <Class IRI="#HelpdeskAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2232,11 +2005,11 @@
         <Class IRI="#AttackerInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#HumanresourcesAssetInfrastructure"/>
+        <Class IRI="#HumanresourcesAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IDSAssetInfrastructure"/>
+        <Class IRI="#IDSAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2369,13 +2142,6 @@
             <ObjectProperty IRI="#victim"/>
             <Class IRI="#Identity"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#incident-description"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Incident"/>
@@ -2591,15 +2357,15 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#KioskAssetInfrastructure"/>
+        <Class IRI="#KioskAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#LANAssetInfrastructure"/>
+        <Class IRI="#LANAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#LaptopAssetInfrastructure"/>
+        <Class IRI="#LaptopAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2618,7 +2384,7 @@
         <Class IRI="#SDO"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#LogAssetInfrastructure"/>
+        <Class IRI="#LogAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2626,15 +2392,15 @@
         <Class IRI="#Hash"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MailAssetInfrastructure"/>
+        <Class IRI="#MailAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MainframeAssetInfrastructure"/>
+        <Class IRI="#MainframeAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MaintenanceAssetInfrastructure"/>
+        <Class IRI="#MaintenanceAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2726,19 +2492,19 @@
         <Class IRI="#Malware"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ManagerAssetInfrastructure"/>
+        <Class IRI="#ManagerAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MediaAssetInfrastructure"/>
+        <Class IRI="#MediaAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MobilephoneAssetInfrastructure"/>
+        <Class IRI="#MobilephoneAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#NetworkAssetInfrastructure"/>
+        <Class IRI="#NetworkAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2834,27 +2600,27 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PBXAssetInfrastructure"/>
+        <Class IRI="#PBXAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PEDpadAssetInfrastructure"/>
+        <Class IRI="#PEDpadAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PLCAssetInfrastructure"/>
+        <Class IRI="#PLCAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#POScontrollerAssetInfrastructure"/>
+        <Class IRI="#POScontrollerAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#POSterminalAssetInfrastructure"/>
+        <Class IRI="#POSterminalAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PartnerAssetInfrastructure"/>
+        <Class IRI="#PartnerAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2862,15 +2628,15 @@
         <Class IRI="#CoA"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PaymentcardAssetInfrastructure"/>
+        <Class IRI="#PaymentcardAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PaymentswitchAssetInfrastructure"/>
+        <Class IRI="#PaymentswitchAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PeripheralAssetInfrastructure"/>
+        <Class IRI="#PeripheralAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2882,7 +2648,7 @@
         <Class IRI="#container-works-for"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PersonAssetInfrastructure"/>
+        <Class IRI="#PersonAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -2890,23 +2656,23 @@
         <Class IRI="#AttackerInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PrintAssetInfrastructure"/>
+        <Class IRI="#PrintAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PrivateWANAssetInfrastructure"/>
+        <Class IRI="#PrivateWANAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProxyAssetInfrastructure"/>
+        <Class IRI="#ProxyAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PublicWANAssetInfrastructure"/>
+        <Class IRI="#PublicWANAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#RTUAssetInfrastructure"/>
+        <Class IRI="#RTUAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -3158,19 +2924,19 @@
         <Class IRI="#container-works-for"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#RemoteaccessAssetInfrastructure"/>
+        <Class IRI="#RemoteaccessAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#RouterorswitchAssetInfrastructure"/>
+        <Class IRI="#RouterorswitchAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SANAssetInfrastructure"/>
+        <Class IRI="#SANAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SCADAAssetInfrastructure"/>
+        <Class IRI="#SCADAAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -3273,7 +3039,7 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ServerAssetInfrastructure"/>
+        <Class IRI="#ServerAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -3332,7 +3098,7 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SmartcardAssetInfrastructure"/>
+        <Class IRI="#SmartcardAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -3409,11 +3175,11 @@
         <Class IRI="#Hash"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TabletAssetInfrastructure"/>
+        <Class IRI="#TabletAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TapesAssetInfrastructure"/>
+        <Class IRI="#TapesAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -3421,7 +3187,7 @@
         <Class IRI="#container-targets"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TelephoneAssetInfrastructure"/>
+        <Class IRI="#TelephoneAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -3476,7 +3242,7 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#UnknownAssetInfrastructure"/>
+        <Class IRI="#UnknownAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -3488,15 +3254,15 @@
         <Class IRI="#Indicator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#UserDeviceAssetInfrastructure"/>
+        <Class IRI="#UserDeviceAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#VoIPadapterAssetInfrastructure"/>
+        <Class IRI="#VoIPadapterAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#VoIPphoneAssetInfrastructure"/>
+        <Class IRI="#VoIPphoneAssetAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -3508,7 +3274,7 @@
         <Class IRI="#SDO"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#WLANAssetInfrastructure"/>
+        <Class IRI="#WLANAsset"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
@@ -5314,10 +5080,6 @@
         <Class IRI="#Identity"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#incident-description"/>
-        <Class IRI="#Incident"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#incident-name"/>
         <Class IRI="#Incident"/>
     </DataPropertyDomain>
@@ -5482,10 +5244,6 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#incident-description"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#incident-name"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -5589,5 +5347,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.16) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
