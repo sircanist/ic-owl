@@ -41,6 +41,9 @@
         <Class abbreviatedIRI="cti2:Confidence-High"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:incident-status-target"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="cti2:sensor_version"/>
     </Declaration>
     <Declaration>
@@ -48,12 +51,6 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="cti2:actor_name"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="cti2:incident-status"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:SnortSensor"/>
@@ -66,6 +63,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:Actor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:business-impact-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:confidence"/>
@@ -106,7 +106,7 @@
                     <ObjectProperty abbreviatedIRI="cti2:has-relationship"/>
                     <ObjectIntersectionOf>
                         <ObjectSomeValuesFrom>
-                            <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
+                            <ObjectProperty abbreviatedIRI="cti2:business-impact-target"/>
                             <Class abbreviatedIRI="cti2:BusinessImpact-None"/>
                         </ObjectSomeValuesFrom>
                         <ObjectSomeValuesFrom>
@@ -126,7 +126,7 @@
                             <Class abbreviatedIRI="cti2:Confidence-High"/>
                         </ObjectSomeValuesFrom>
                         <ObjectSomeValuesFrom>
-                            <ObjectProperty abbreviatedIRI="cti2:incident-status"/>
+                            <ObjectProperty abbreviatedIRI="cti2:incident-status-target"/>
                             <Class abbreviatedIRI="cti2:IncidentStatus-Closed"/>
                         </ObjectSomeValuesFrom>
                     </ObjectIntersectionOf>

@@ -701,235 +701,106 @@
         <Class IRI="#WebapplicationAssea"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#container-actor-hosts"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-actor-uses"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-affected-asset"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-attributed-to-actor"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-attributed-to-identity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-based-on"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-beacons-to"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-business-impact"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-cia-impact"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-coa-applied-by"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-coa-cost"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-communicates-with"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-compromises"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-coordinator"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-delivers"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-derived-from"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-discovered-method"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-downloads"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-duplicate-of"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-exfiltrate-to"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-exploits"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-file-hash"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-grouping-ref"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-has-impact"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-has-relationship"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-impersonates"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-incident-status"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-indicates"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-indicator-pattern"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-infrastructure-communicates-with"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-infrastructure-consists-of"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-infrastructure-controls"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-infrastructure-has"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-infrastructure-hosts"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-infrastructure-uses"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-investigates"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-kill-chain-phase"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-located-at"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-malware-drops"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-malware-uses"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-mitigates"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-observed-data"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-observed-object"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-opinion-author"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-opinion-on"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-originates-from"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-owns"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-related-to"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-reporter"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-resolves-to"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-responder"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-sample"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-sensed-by"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-sighting-of"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-targets"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-tool-delivers"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-variant-of"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-victim"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-where-sighted"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#container-works-for"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#actor-hosts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#actor-hosts-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#actor-uses"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#actor-uses-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#affected-asset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affected-asset-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#attributed-to-actor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#attributed-to-actor-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#attributed-to-identity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attributed-to-identity-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#based-on"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#based-on-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#beacons-to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#beacons-to-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#business-impact"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#business-impact-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#cia-impact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cia-impact-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#coa-applied-by"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#coa-applied-by-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#coa-cost"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coa-cost-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#communicates-with"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#communicates-with-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#compromises"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compromises-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#confidence"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#confidence-target"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#controls"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#coordinator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coordinator-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#created-by"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#delivers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#delivers-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#derived-from"/>
@@ -941,16 +812,28 @@
         <ObjectProperty IRI="#downloads"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#downloads-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#duplicate-of"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#exfiltrate-to"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#exfiltrate-to-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#exploits"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#exploits-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#file-hash"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#file-hash-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#grouping-ref"/>
@@ -959,16 +842,28 @@
         <ObjectProperty IRI="#has-impact"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#has-impact-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#has-relationship"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#impersonates"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#impersonates-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#incident-status"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#incident-status-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#indicates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#indicates-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#indicator-pattern"/>
@@ -977,22 +872,43 @@
         <ObjectProperty IRI="#infrastructure-communicates-with"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#infrastructure-communicates-with-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#infrastructure-consists-of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#infrastructure-consists-of-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#infrastructure-controls"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#infrastructure-controls-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#infrastructure-has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#infrastructure-has-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#infrastructure-hosts"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#infrastructure-hosts-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#infrastructure-uses"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#infrastructure-uses-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#investigates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investigates-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#is-a-actor-hosts"/>
@@ -1160,16 +1076,31 @@
         <ObjectProperty IRI="#kill-chain-phase"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#kill-chain-phase-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#located-at"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#located-at-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#malware-drops"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#malware-drops-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#malware-uses"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#malware-uses-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#mitigates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mitigates-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#object-marking"/>
@@ -1178,55 +1109,109 @@
         <ObjectProperty IRI="#observed-data"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#observed-data-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#observed-object"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#observed-object-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#opinion-author"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#opinion-author-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#opinion-on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#opinion-on-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#originates-from"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#originates-from-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#owns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owns-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#related-to"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#related-to-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#reporter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reporter-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#resolves-to"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#resolves-to-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#responder"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#responder-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#sample"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#sample-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#sensed-by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sensed-by-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#sighting-of"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#sighting-of-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#targets"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#targets-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#tool-delivers"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#tool-delivers-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#variant-of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#variant-of-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#victim"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#victim-target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#where-sighted"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#where-sighted-target"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#works-for"/>
@@ -1516,26 +1501,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Actor"/>
-        <Class IRI="#container-actor-hosts"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Actor"/>
-        <Class IRI="#container-actor-uses"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Actor"/>
-        <Class IRI="#container-compromises"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Actor"/>
-        <Class IRI="#container-impersonates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Actor"/>
-        <Class IRI="#container-owns"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Actor"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#actor_name"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -1694,22 +1659,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CoA"/>
-        <Class IRI="#container-coa-applied-by"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CoA"/>
-        <Class IRI="#container-coa-cost"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CoA"/>
-        <Class IRI="#container-investigates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CoA"/>
-        <Class IRI="#container-mitigates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CoA"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#coa_description"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -1785,10 +1734,6 @@
     <SubClassOf>
         <Class IRI="#DatabaseAssetInfrastructure"/>
         <Class IRI="#AssetInfrastructure"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Delivering"/>
-        <Class IRI="#container-delivers"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DesktopAssetInfrastructure"/>
@@ -1900,10 +1845,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DomainName"/>
-        <Class IRI="#container-resolves-to"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DomainName"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#domain_name_value"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -1928,10 +1869,6 @@
     <SubClassOf>
         <Class IRI="#File"/>
         <Class IRI="#SCO"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#File"/>
-        <Class IRI="#container-file-hash"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FileAssetInfrastructure"/>
@@ -1960,10 +1897,6 @@
     <SubClassOf>
         <Class IRI="#Grouping"/>
         <Class IRI="#SDO"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Grouping"/>
-        <Class IRI="#container-grouping-ref"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Grouping"/>
@@ -2054,48 +1987,8 @@
         <Class IRI="#SDO"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ImpactAssessment"/>
-        <Class IRI="#container-affected-asset"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ImpactAssessment"/>
-        <Class IRI="#container-business-impact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ImpactAssessment"/>
-        <Class IRI="#container-cia-impact"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Incident"/>
         <Class IRI="#SDO"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <Class IRI="#container-coordinator"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <Class IRI="#container-discovered-method"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <Class IRI="#container-has-impact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <Class IRI="#container-incident-status"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <Class IRI="#container-reporter"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <Class IRI="#container-responder"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <Class IRI="#container-victim"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Incident"/>
@@ -2214,22 +2107,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Indicator"/>
-        <Class IRI="#container-based-on"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Indicator"/>
-        <Class IRI="#container-indicates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Indicator"/>
-        <Class IRI="#container-indicator-pattern"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Indicator"/>
-        <Class IRI="#container-kill-chain-phase"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Indicator"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#indicates"/>
             <Class IRI="#Indicateable"/>
@@ -2311,30 +2188,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Infrastructure"/>
-        <Class IRI="#container-infrastructure-communicates-with"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Infrastructure"/>
-        <Class IRI="#container-infrastructure-consists-of"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Infrastructure"/>
-        <Class IRI="#container-infrastructure-controls"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Infrastructure"/>
-        <Class IRI="#container-infrastructure-has"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Infrastructure"/>
-        <Class IRI="#container-infrastructure-hosts"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Infrastructure"/>
-        <Class IRI="#container-infrastructure-uses"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Infrastructure"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#infrastructure_name"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -2343,10 +2196,6 @@
     <SubClassOf>
         <Class IRI="#IntrusionSet"/>
         <Class IRI="#Actor"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#IntrusionSet"/>
-        <Class IRI="#container-attributed-to-actor"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#KillChainPhase"/>
@@ -2377,10 +2226,6 @@
     <SubClassOf>
         <Class IRI="#LaptopAssetInfrastructure"/>
         <Class IRI="#AssetInfrastructure"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Locateable"/>
-        <Class IRI="#container-located-at"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Locateable"/>
@@ -2454,42 +2299,6 @@
         <Class IRI="#SDO"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-beacons-to"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-communicates-with"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-downloads"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-exfiltrate-to"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-exploits"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-malware-drops"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-malware-uses"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-sample"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Malware"/>
-        <Class IRI="#container-variant-of"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#MalwareAnalysisGrouping"/>
         <Class IRI="#Grouping"/>
     </SubClassOf>
@@ -2531,10 +2340,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ObservedData"/>
-        <Class IRI="#container-observed-object"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ObservedData"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#observed-object"/>
             <Class IRI="#SCO_SRO"/>
@@ -2567,14 +2372,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Opinion"/>
-        <Class IRI="#container-opinion-author"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Opinion"/>
-        <Class IRI="#container-opinion-on"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Opinion"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#opinion-author"/>
             <Class IRI="#Identity"/>
@@ -2597,10 +2394,6 @@
     <SubClassOf>
         <Class IRI="#Organization"/>
         <Class IRI="#Identity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Originateable"/>
-        <Class IRI="#container-originates-from"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Originateable"/>
@@ -2654,10 +2447,6 @@
         <Class IRI="#Identity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Person"/>
-        <Class IRI="#container-works-for"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#PersonAssetInfrastructure"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
@@ -2692,246 +2481,6 @@
     <SubClassOf>
         <Class IRI="#Relationship"/>
         <Class IRI="#SRO"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-actor-hosts"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-actor-uses"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-affected-asset"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-attributed-to-actor"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-attributed-to-identity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-based-on"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-beacons-to"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-business-impact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-cia-impact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-coa-applied-by"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-coa-cost"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-communicates-with"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-compromises"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-coordinator"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-delivers"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-derived-from"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-discovered-method"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-downloads"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-duplicate-of"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-exfiltrate-to"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-exploits"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-file-hash"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-grouping-ref"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-has-impact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-has-relationship"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-impersonates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-incident-status"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-indicates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-indicator-pattern"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-infrastructure-communicates-with"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-infrastructure-consists-of"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-infrastructure-controls"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-infrastructure-has"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-infrastructure-hosts"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-infrastructure-uses"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-investigates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-kill-chain-phase"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-located-at"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-malware-drops"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-malware-uses"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-mitigates"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-observed-data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-observed-object"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-opinion-author"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-opinion-on"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-originates-from"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-owns"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-related-to"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-reporter"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-resolves-to"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-responder"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-sample"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-sensed-by"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-sighting-of"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-targets"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-tool-delivers"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-variant-of"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-victim"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-where-sighted"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Relationship"/>
-        <Class IRI="#container-works-for"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RemoteaccessAssetInfrastructure"/>
@@ -3058,22 +2607,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sighting"/>
-        <Class IRI="#container-observed-data"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sighting"/>
-        <Class IRI="#container-sensed-by"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sighting"/>
-        <Class IRI="#container-sighting-of"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sighting"/>
-        <Class IRI="#container-where-sighted"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sighting"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#observed-data"/>
             <Class IRI="#ObservedData"/>
@@ -3136,22 +2669,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#StixThing"/>
-        <Class IRI="#container-derived-from"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#StixThing"/>
-        <Class IRI="#container-duplicate-of"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#StixThing"/>
-        <Class IRI="#container-has-relationship"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#StixThing"/>
-        <Class IRI="#container-related-to"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#StixThing"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#stix_id"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -3193,20 +2710,12 @@
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Targeting"/>
-        <Class IRI="#container-targets"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#TelephoneAssetInfrastructure"/>
         <Class IRI="#AssetInfrastructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ThreatActor"/>
         <Class IRI="#Actor"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ThreatActor"/>
-        <Class IRI="#container-attributed-to-identity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tool"/>
@@ -3239,10 +2748,6 @@
     <SubClassOf>
         <Class IRI="#Tool"/>
         <Class IRI="#SDO"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Tool"/>
-        <Class IRI="#container-tool-delivers"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tool"/>
@@ -3613,63 +3118,127 @@
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#actor-hosts"/>
-        <Class IRI="#container-actor-hosts"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#actor-hosts-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#actor-uses"/>
-        <Class IRI="#container-actor-uses"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#actor-uses-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#affected-asset"/>
-        <Class IRI="#container-affected-asset"/>
+        <Class IRI="#ImpactAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affected-asset-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#attributed-to-actor"/>
-        <Class IRI="#container-attributed-to-actor"/>
+        <Class IRI="#IntrusionSet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#attributed-to-actor-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#attributed-to-identity"/>
-        <Class IRI="#container-attributed-to-identity"/>
+        <Class IRI="#ThreatActor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#attributed-to-identity-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#based-on"/>
-        <Class IRI="#container-based-on"/>
+        <Class IRI="#Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#based-on-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#beacons-to"/>
-        <Class IRI="#container-beacons-to"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#beacons-to-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#business-impact"/>
-        <Class IRI="#container-business-impact"/>
+        <Class IRI="#ImpactAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#business-impact-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#cia-impact"/>
-        <Class IRI="#container-cia-impact"/>
+        <Class IRI="#ImpactAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#cia-impact-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#coa-applied-by"/>
-        <Class IRI="#container-coa-applied-by"/>
+        <Class IRI="#CoA"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coa-applied-by-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#coa-cost"/>
-        <Class IRI="#container-coa-cost"/>
+        <Class IRI="#CoA"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coa-cost-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#communicates-with"/>
-        <Class IRI="#container-communicates-with"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#communicates-with-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#compromises"/>
-        <Class IRI="#container-compromises"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#compromises-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#confidence"/>
         <Class IRI="#SDO_SRO"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#confidence-target"/>
+        <Class IRI="#Relationship"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#controls"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#coordinator"/>
-        <Class IRI="#container-coordinator"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coordinator-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#created-by"/>
@@ -3677,91 +3246,155 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#delivers"/>
-        <Class IRI="#container-delivers"/>
+        <Class IRI="#Delivering"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#delivers-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#derived-from"/>
-        <Class IRI="#container-derived-from"/>
+        <Class IRI="#StixThing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#discovered-method"/>
-        <Class IRI="#container-discovered-method"/>
+        <Class IRI="#Incident"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#downloads"/>
-        <Class IRI="#container-downloads"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#downloads-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#duplicate-of"/>
-        <Class IRI="#container-duplicate-of"/>
+        <Class IRI="#StixThing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#exfiltrate-to"/>
-        <Class IRI="#container-exfiltrate-to"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exfiltrate-to-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#exploits"/>
-        <Class IRI="#container-exploits"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exploits-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#file-hash"/>
-        <Class IRI="#container-file-hash"/>
+        <Class IRI="#File"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#file-hash-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#grouping-ref"/>
-        <Class IRI="#container-grouping-ref"/>
+        <Class IRI="#Grouping"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#has-impact"/>
-        <Class IRI="#container-has-impact"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has-impact-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#has-relationship"/>
-        <Class IRI="#container-has-relationship"/>
+        <Class IRI="#StixThing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#impersonates"/>
-        <Class IRI="#container-impersonates"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#impersonates-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#incident-status"/>
-        <Class IRI="#container-incident-status"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#incident-status-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#indicates"/>
-        <Class IRI="#container-indicates"/>
+        <Class IRI="#Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#indicates-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#indicator-pattern"/>
-        <Class IRI="#container-indicator-pattern"/>
+        <Class IRI="#Indicator"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#infrastructure-communicates-with"/>
-        <Class IRI="#container-infrastructure-communicates-with"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infrastructure-communicates-with-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#infrastructure-consists-of"/>
-        <Class IRI="#container-infrastructure-consists-of"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infrastructure-consists-of-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#infrastructure-controls"/>
-        <Class IRI="#container-infrastructure-controls"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infrastructure-controls-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#infrastructure-has"/>
-        <Class IRI="#container-infrastructure-has"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infrastructure-has-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#infrastructure-hosts"/>
-        <Class IRI="#container-infrastructure-hosts"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infrastructure-hosts-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#infrastructure-uses"/>
-        <Class IRI="#container-infrastructure-uses"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infrastructure-uses-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#investigates"/>
-        <Class IRI="#container-investigates"/>
+        <Class IRI="#CoA"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investigates-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#is-a-actor-hosts"/>
@@ -3981,23 +3614,43 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#kill-chain-phase"/>
-        <Class IRI="#container-kill-chain-phase"/>
+        <Class IRI="#Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#kill-chain-phase-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#located-at"/>
-        <Class IRI="#container-located-at"/>
+        <Class IRI="#Locateable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located-at-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#malware-drops"/>
-        <Class IRI="#container-malware-drops"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#malware-drops-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#malware-uses"/>
-        <Class IRI="#container-malware-uses"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#malware-uses-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#mitigates"/>
-        <Class IRI="#container-mitigates"/>
+        <Class IRI="#CoA"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mitigates-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#object-marking"/>
@@ -4005,82 +3658,158 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#observed-data"/>
-        <Class IRI="#container-observed-data"/>
+        <Class IRI="#Sighting"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#observed-data-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#observed-object"/>
-        <Class IRI="#container-observed-object"/>
+        <Class IRI="#ObservedData"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#observed-object-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#opinion-author"/>
-        <Class IRI="#container-opinion-author"/>
+        <Class IRI="#Opinion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opinion-author-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#opinion-on"/>
-        <Class IRI="#container-opinion-on"/>
+        <Class IRI="#Opinion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#opinion-on-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#originates-from"/>
-        <Class IRI="#container-originates-from"/>
+        <Class IRI="#Originateable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#originates-from-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#owns"/>
-        <Class IRI="#container-owns"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#owns-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#related-to"/>
-        <Class IRI="#container-related-to"/>
+        <Class IRI="#StixThing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#related-to-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#reporter"/>
-        <Class IRI="#container-reporter"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#reporter-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#resolves-to"/>
-        <Class IRI="#container-resolves-to"/>
+        <Class IRI="#DomainName"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resolves-to-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#responder"/>
-        <Class IRI="#container-responder"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#responder-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#sample"/>
-        <Class IRI="#container-sample"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sample-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#sensed-by"/>
-        <Class IRI="#container-sensed-by"/>
+        <Class IRI="#Sighting"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sensed-by-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#sighting-of"/>
-        <Class IRI="#container-sighting-of"/>
+        <Class IRI="#Sighting"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sighting-of-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#targets"/>
-        <Class IRI="#container-targets"/>
+        <Class IRI="#Targeting"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#targets-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#tool-delivers"/>
-        <Class IRI="#container-tool-delivers"/>
+        <Class IRI="#Tool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tool-delivers-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#variant-of"/>
-        <Class IRI="#container-variant-of"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#variant-of-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#victim"/>
-        <Class IRI="#container-victim"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#victim-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#where-sighted"/>
-        <Class IRI="#container-where-sighted"/>
+        <Class IRI="#Sighting"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#where-sighted-target"/>
+        <Class IRI="#Relationship"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#works-for"/>
-        <Class IRI="#container-works-for"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#actor-hosts"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#actor-hosts-target"/>
         <Class IRI="#Infrastructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4088,7 +3817,15 @@
         <Class IRI="#ActorUsable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#actor-uses-target"/>
+        <Class IRI="#ActorUsable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#affected-asset"/>
+        <Class IRI="#AssetInfrastructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affected-asset-target"/>
         <Class IRI="#AssetInfrastructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4096,7 +3833,15 @@
         <Class IRI="#Actor"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#attributed-to-actor-target"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#attributed-to-identity"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#attributed-to-identity-target"/>
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4104,7 +3849,15 @@
         <Class IRI="#ObservedData"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#based-on-target"/>
+        <Class IRI="#ObservedData"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#beacons-to"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#beacons-to-target"/>
         <Class IRI="#Infrastructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4112,7 +3865,15 @@
         <Class IRI="#BusinessImpact"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#business-impact-target"/>
+        <Class IRI="#BusinessImpact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#cia-impact"/>
+        <Class IRI="#CIAImpact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#cia-impact-target"/>
         <Class IRI="#CIAImpact"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4120,7 +3881,15 @@
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#coa-applied-by-target"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#coa-cost"/>
+        <Class IRI="#CoACost"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coa-cost-target"/>
         <Class IRI="#CoACost"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4128,11 +3897,15 @@
         <Class IRI="#Communicateable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#communicates-with"/>
-        <Class IRI="#Malware"/>
+        <ObjectProperty IRI="#communicates-with-target"/>
+        <Class IRI="#Communicateable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#compromises"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#compromises-target"/>
         <Class IRI="#Infrastructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4140,7 +3913,19 @@
         <Class IRI="#Confidence"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#confidence-target"/>
+        <Class IRI="#Confidence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#controls"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#coordinator"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coordinator-target"/>
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4149,6 +3934,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#delivers"/>
+        <Class IRI="#Deliverable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#delivers-target"/>
         <Class IRI="#Deliverable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4164,6 +3953,10 @@
         <Class IRI="#MalwareDownloadable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#downloads-target"/>
+        <Class IRI="#MalwareDownloadable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#duplicate-of"/>
         <Class IRI="#StixThing"/>
     </ObjectPropertyRange>
@@ -4172,11 +3965,23 @@
         <Class IRI="#Infrastructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#exfiltrate-to-target"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#exploits"/>
         <Class IRI="#Vulnerability"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#exploits-target"/>
+        <Class IRI="#Vulnerability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#file-hash"/>
+        <Class IRI="#Hash"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#file-hash-target"/>
         <Class IRI="#Hash"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4188,6 +3993,10 @@
         <Class IRI="#ImpactAssessment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#has-impact-target"/>
+        <Class IRI="#ImpactAssessment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#has-relationship"/>
         <Class IRI="#Relationship"/>
     </ObjectPropertyRange>
@@ -4196,11 +4005,23 @@
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#impersonates-target"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#incident-status"/>
         <Class IRI="#IncidentStatus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#incident-status-target"/>
+        <Class IRI="#IncidentStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#indicates"/>
+        <Class IRI="#Indicateable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#indicates-target"/>
         <Class IRI="#Indicateable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4212,7 +4033,15 @@
         <Class IRI="#Communicateable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#infrastructure-communicates-with-target"/>
+        <Class IRI="#Communicateable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#infrastructure-consists-of"/>
+        <Class IRI="#Consistable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#infrastructure-consists-of-target"/>
         <Class IRI="#Consistable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4220,7 +4049,15 @@
         <Class IRI="#Controllable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#infrastructure-controls-target"/>
+        <Class IRI="#Controllable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#infrastructure-has"/>
+        <Class IRI="#Vulnerability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#infrastructure-has-target"/>
         <Class IRI="#Vulnerability"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4228,11 +4065,23 @@
         <Class IRI="#Hostable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#infrastructure-hosts-target"/>
+        <Class IRI="#Hostable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#infrastructure-uses"/>
         <Class IRI="#Infrastructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#infrastructure-uses-target"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#investigates"/>
+        <Class IRI="#Indicator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investigates-target"/>
         <Class IRI="#Indicator"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4456,7 +4305,15 @@
         <Class IRI="#KillChainPhase"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#kill-chain-phase-target"/>
+        <Class IRI="#KillChainPhase"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#located-at"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#located-at-target"/>
         <Class IRI="#Location"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4464,11 +4321,23 @@
         <Class IRI="#MalwareDownloadable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#malware-drops-target"/>
+        <Class IRI="#MalwareDownloadable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#malware-uses"/>
         <Class IRI="#MalwareUseable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#malware-uses-target"/>
+        <Class IRI="#MalwareUseable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#mitigates"/>
+        <Class IRI="#Mitigateable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mitigates-target"/>
         <Class IRI="#Mitigateable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4480,7 +4349,15 @@
         <Class IRI="#ObservedData"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#observed-data-target"/>
+        <Class IRI="#ObservedData"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#observed-object"/>
+        <Class IRI="#SCO_SRO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#observed-object-target"/>
         <Class IRI="#SCO_SRO"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4488,7 +4365,15 @@
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#opinion-author-target"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#opinion-on"/>
+        <Class IRI="#StixThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#opinion-on-target"/>
         <Class IRI="#StixThing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4496,7 +4381,15 @@
         <Class IRI="#Location"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#originates-from-target"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#owns"/>
+        <Class IRI="#Infrastructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#owns-target"/>
         <Class IRI="#Infrastructure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4504,7 +4397,15 @@
         <Class IRI="#StixThing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#related-to-target"/>
+        <Class IRI="#StixThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#reporter"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#reporter-target"/>
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4512,7 +4413,15 @@
         <Class IRI="#IPAddress"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#resolves-to-target"/>
+        <Class IRI="#IPAddress"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#responder"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#responder-target"/>
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4520,7 +4429,15 @@
         <Class IRI="#File"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#sample-target"/>
+        <Class IRI="#File"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#sensed-by"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sensed-by-target"/>
         <Class IRI="#Sensor"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4528,7 +4445,15 @@
         <Class IRI="#SDO"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#sighting-of-target"/>
+        <Class IRI="#SDO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#targets"/>
+        <Class IRI="#Targetable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#targets-target"/>
         <Class IRI="#Targetable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4536,7 +4461,15 @@
         <Class IRI="#Malware"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#tool-delivers-target"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#variant-of"/>
+        <Class IRI="#Malware"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#variant-of-target"/>
         <Class IRI="#Malware"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4544,7 +4477,15 @@
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#victim-target"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#where-sighted"/>
+        <Class IRI="#Identity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#where-sighted-target"/>
         <Class IRI="#Identity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -4555,7 +4496,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-actor-hosts"/>
-            <ObjectProperty IRI="#actor-hosts"/>
+            <ObjectProperty IRI="#actor-hosts-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#actor-hosts"/>
     </SubObjectPropertyOf>
@@ -4563,7 +4504,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-actor-uses"/>
-            <ObjectProperty IRI="#actor-uses"/>
+            <ObjectProperty IRI="#actor-uses-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#actor-uses"/>
     </SubObjectPropertyOf>
@@ -4571,7 +4512,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-affected-asset"/>
-            <ObjectProperty IRI="#affected-asset"/>
+            <ObjectProperty IRI="#affected-asset-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#affected-asset"/>
     </SubObjectPropertyOf>
@@ -4579,7 +4520,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-attributed-to-actor"/>
-            <ObjectProperty IRI="#attributed-to-actor"/>
+            <ObjectProperty IRI="#attributed-to-actor-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#attributed-to-actor"/>
     </SubObjectPropertyOf>
@@ -4587,7 +4528,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-attributed-to-identity"/>
-            <ObjectProperty IRI="#attributed-to-identity"/>
+            <ObjectProperty IRI="#attributed-to-identity-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#attributed-to-identity"/>
     </SubObjectPropertyOf>
@@ -4595,7 +4536,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-based-on"/>
-            <ObjectProperty IRI="#based-on"/>
+            <ObjectProperty IRI="#based-on-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#based-on"/>
     </SubObjectPropertyOf>
@@ -4603,7 +4544,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-beacons-to"/>
-            <ObjectProperty IRI="#beacons-to"/>
+            <ObjectProperty IRI="#beacons-to-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#beacons-to"/>
     </SubObjectPropertyOf>
@@ -4611,7 +4552,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-business-impact"/>
-            <ObjectProperty IRI="#business-impact"/>
+            <ObjectProperty IRI="#business-impact-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#business-impact"/>
     </SubObjectPropertyOf>
@@ -4619,7 +4560,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-cia-impact"/>
-            <ObjectProperty IRI="#cia-impact"/>
+            <ObjectProperty IRI="#cia-impact-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#cia-impact"/>
     </SubObjectPropertyOf>
@@ -4627,7 +4568,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-coa-applied-by"/>
-            <ObjectProperty IRI="#coa-applied-by"/>
+            <ObjectProperty IRI="#coa-applied-by-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#coa-applied-by"/>
     </SubObjectPropertyOf>
@@ -4635,7 +4576,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-coa-cost"/>
-            <ObjectProperty IRI="#coa-cost"/>
+            <ObjectProperty IRI="#coa-cost-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#coa-cost"/>
     </SubObjectPropertyOf>
@@ -4643,7 +4584,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-communicates-with"/>
-            <ObjectProperty IRI="#communicates-with"/>
+            <ObjectProperty IRI="#communicates-with-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#communicates-with"/>
     </SubObjectPropertyOf>
@@ -4651,7 +4592,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-compromises"/>
-            <ObjectProperty IRI="#compromises"/>
+            <ObjectProperty IRI="#compromises-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#compromises"/>
     </SubObjectPropertyOf>
@@ -4659,7 +4600,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-confidence"/>
-            <ObjectProperty IRI="#confidence"/>
+            <ObjectProperty IRI="#confidence-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#confidence"/>
     </SubObjectPropertyOf>
@@ -4667,7 +4608,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-coordinator"/>
-            <ObjectProperty IRI="#coordinator"/>
+            <ObjectProperty IRI="#coordinator-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#coordinator"/>
     </SubObjectPropertyOf>
@@ -4675,7 +4616,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-delivers"/>
-            <ObjectProperty IRI="#delivers"/>
+            <ObjectProperty IRI="#delivers-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#delivers"/>
     </SubObjectPropertyOf>
@@ -4683,7 +4624,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-downloads"/>
-            <ObjectProperty IRI="#downloads"/>
+            <ObjectProperty IRI="#downloads-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#downloads"/>
     </SubObjectPropertyOf>
@@ -4691,7 +4632,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-exfiltrate-to"/>
-            <ObjectProperty IRI="#exfiltrate-to"/>
+            <ObjectProperty IRI="#exfiltrate-to-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#exfiltrate-to"/>
     </SubObjectPropertyOf>
@@ -4699,7 +4640,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-exploits"/>
-            <ObjectProperty IRI="#exploits"/>
+            <ObjectProperty IRI="#exploits-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#exploits"/>
     </SubObjectPropertyOf>
@@ -4707,7 +4648,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-file-hash"/>
-            <ObjectProperty IRI="#file-hash"/>
+            <ObjectProperty IRI="#file-hash-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#file-hash"/>
     </SubObjectPropertyOf>
@@ -4715,7 +4656,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-has-impact"/>
-            <ObjectProperty IRI="#has-impact"/>
+            <ObjectProperty IRI="#has-impact-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#has-impact"/>
     </SubObjectPropertyOf>
@@ -4723,7 +4664,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-impersonates"/>
-            <ObjectProperty IRI="#impersonates"/>
+            <ObjectProperty IRI="#impersonates-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#impersonates"/>
     </SubObjectPropertyOf>
@@ -4731,7 +4672,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-incident-status"/>
-            <ObjectProperty IRI="#incident-status"/>
+            <ObjectProperty IRI="#incident-status-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#incident-status"/>
     </SubObjectPropertyOf>
@@ -4739,7 +4680,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-indicates"/>
-            <ObjectProperty IRI="#indicates"/>
+            <ObjectProperty IRI="#indicates-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#indicates"/>
     </SubObjectPropertyOf>
@@ -4747,7 +4688,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-infrastructure-communicates-with"/>
-            <ObjectProperty IRI="#infrastructure-communicates-with"/>
+            <ObjectProperty IRI="#infrastructure-communicates-with-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#infrastructure-communicates-with"/>
     </SubObjectPropertyOf>
@@ -4755,7 +4696,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-infrastructure-consists-of"/>
-            <ObjectProperty IRI="#infrastructure-consists-of"/>
+            <ObjectProperty IRI="#infrastructure-consists-of-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#infrastructure-consists-of"/>
     </SubObjectPropertyOf>
@@ -4763,7 +4704,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-infrastructure-controls"/>
-            <ObjectProperty IRI="#infrastructure-controls"/>
+            <ObjectProperty IRI="#infrastructure-controls-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#infrastructure-controls"/>
     </SubObjectPropertyOf>
@@ -4771,7 +4712,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-infrastructure-has"/>
-            <ObjectProperty IRI="#infrastructure-has"/>
+            <ObjectProperty IRI="#infrastructure-has-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#infrastructure-has"/>
     </SubObjectPropertyOf>
@@ -4779,7 +4720,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-infrastructure-hosts"/>
-            <ObjectProperty IRI="#infrastructure-hosts"/>
+            <ObjectProperty IRI="#infrastructure-hosts-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#infrastructure-hosts"/>
     </SubObjectPropertyOf>
@@ -4787,7 +4728,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-infrastructure-uses"/>
-            <ObjectProperty IRI="#infrastructure-uses"/>
+            <ObjectProperty IRI="#infrastructure-uses-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#infrastructure-uses"/>
     </SubObjectPropertyOf>
@@ -4795,7 +4736,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-investigates"/>
-            <ObjectProperty IRI="#investigates"/>
+            <ObjectProperty IRI="#investigates-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#investigates"/>
     </SubObjectPropertyOf>
@@ -4803,7 +4744,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-kill-chain-phase"/>
-            <ObjectProperty IRI="#kill-chain-phase"/>
+            <ObjectProperty IRI="#kill-chain-phase-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#kill-chain-phase"/>
     </SubObjectPropertyOf>
@@ -4811,7 +4752,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-located-at"/>
-            <ObjectProperty IRI="#located-at"/>
+            <ObjectProperty IRI="#located-at-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#located-at"/>
     </SubObjectPropertyOf>
@@ -4819,7 +4760,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-malware-drops"/>
-            <ObjectProperty IRI="#malware-drops"/>
+            <ObjectProperty IRI="#malware-drops-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#malware-drops"/>
     </SubObjectPropertyOf>
@@ -4827,7 +4768,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-malware-uses"/>
-            <ObjectProperty IRI="#malware-uses"/>
+            <ObjectProperty IRI="#malware-uses-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#malware-uses"/>
     </SubObjectPropertyOf>
@@ -4835,7 +4776,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-mitigates"/>
-            <ObjectProperty IRI="#mitigates"/>
+            <ObjectProperty IRI="#mitigates-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#mitigates"/>
     </SubObjectPropertyOf>
@@ -4843,7 +4784,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-observed-data"/>
-            <ObjectProperty IRI="#observed-data"/>
+            <ObjectProperty IRI="#observed-data-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#observed-data"/>
     </SubObjectPropertyOf>
@@ -4851,7 +4792,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-observed-object"/>
-            <ObjectProperty IRI="#observed-object"/>
+            <ObjectProperty IRI="#observed-object-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#observed-object"/>
     </SubObjectPropertyOf>
@@ -4859,7 +4800,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-opinion-author"/>
-            <ObjectProperty IRI="#opinion-author"/>
+            <ObjectProperty IRI="#opinion-author-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#opinion-author"/>
     </SubObjectPropertyOf>
@@ -4867,7 +4808,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-opinion-on"/>
-            <ObjectProperty IRI="#opinion-on"/>
+            <ObjectProperty IRI="#opinion-on-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#opinion-on"/>
     </SubObjectPropertyOf>
@@ -4875,7 +4816,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-originates-from"/>
-            <ObjectProperty IRI="#originates-from"/>
+            <ObjectProperty IRI="#originates-from-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#originates-from"/>
     </SubObjectPropertyOf>
@@ -4883,7 +4824,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-owns"/>
-            <ObjectProperty IRI="#owns"/>
+            <ObjectProperty IRI="#owns-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#owns"/>
     </SubObjectPropertyOf>
@@ -4891,7 +4832,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-related-to"/>
-            <ObjectProperty IRI="#related-to"/>
+            <ObjectProperty IRI="#related-to-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#related-to"/>
     </SubObjectPropertyOf>
@@ -4899,7 +4840,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-reporter"/>
-            <ObjectProperty IRI="#reporter"/>
+            <ObjectProperty IRI="#reporter-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#reporter"/>
     </SubObjectPropertyOf>
@@ -4907,7 +4848,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-resolves-to"/>
-            <ObjectProperty IRI="#resolves-to"/>
+            <ObjectProperty IRI="#resolves-to-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#resolves-to"/>
     </SubObjectPropertyOf>
@@ -4915,7 +4856,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-responder"/>
-            <ObjectProperty IRI="#responder"/>
+            <ObjectProperty IRI="#responder-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#responder"/>
     </SubObjectPropertyOf>
@@ -4923,7 +4864,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-sample"/>
-            <ObjectProperty IRI="#sample"/>
+            <ObjectProperty IRI="#sample-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#sample"/>
     </SubObjectPropertyOf>
@@ -4931,7 +4872,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-sensed-by"/>
-            <ObjectProperty IRI="#sensed-by"/>
+            <ObjectProperty IRI="#sensed-by-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#sensed-by"/>
     </SubObjectPropertyOf>
@@ -4939,7 +4880,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-sighting-of"/>
-            <ObjectProperty IRI="#sighting-of"/>
+            <ObjectProperty IRI="#sighting-of-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#sighting-of"/>
     </SubObjectPropertyOf>
@@ -4947,7 +4888,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-targets"/>
-            <ObjectProperty IRI="#targets"/>
+            <ObjectProperty IRI="#targets-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#targets"/>
     </SubObjectPropertyOf>
@@ -4955,7 +4896,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-tool-delivers"/>
-            <ObjectProperty IRI="#tool-delivers"/>
+            <ObjectProperty IRI="#tool-delivers-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#tool-delivers"/>
     </SubObjectPropertyOf>
@@ -4963,7 +4904,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-variant-of"/>
-            <ObjectProperty IRI="#variant-of"/>
+            <ObjectProperty IRI="#variant-of-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#variant-of"/>
     </SubObjectPropertyOf>
@@ -4971,7 +4912,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-victim"/>
-            <ObjectProperty IRI="#victim"/>
+            <ObjectProperty IRI="#victim-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#victim"/>
     </SubObjectPropertyOf>
@@ -4979,7 +4920,7 @@
         <ObjectPropertyChain>
             <ObjectProperty IRI="#has-relationship"/>
             <ObjectProperty IRI="#is-a-where-sighted"/>
-            <ObjectProperty IRI="#where-sighted"/>
+            <ObjectProperty IRI="#where-sighted-target"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#where-sighted"/>
     </SubObjectPropertyOf>

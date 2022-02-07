@@ -105,226 +105,184 @@
         <NamedIndividual IRI="#iTool"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:ProxyAsset"/>
+        <Class abbreviatedIRI="cti2:container-owns"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:DatabaseAsset"/>
+        <Class abbreviatedIRI="cti2:container-sample"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:UserDeviceAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-responder"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:FormeremployeeAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-exfiltrate-to"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:DiskmediaAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-mitigates"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:DHCPAsset"/>
+        <Class abbreviatedIRI="cti2:container-where-sighted"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:PartnerAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-targets"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:DirectoryAsset"/>
+        <Class abbreviatedIRI="cti2:container-related-to"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:RouterorswitchAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-coa-applied-by"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:MailAsset"/>
+        <Class abbreviatedIRI="cti2:container-infrastructure-communicates-with"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:AuditorAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-business-impact"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:LANAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-exploits"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:RTUAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-observed-object"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:CameraAsset"/>
+        <Class abbreviatedIRI="cti2:container-affected-asset"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:VoIPadapterAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-attributed-to-actor"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:MainframeAsset"/>
+        <Class abbreviatedIRI="cti2:container-delivers"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:NetworkAsset"/>
+        <Class abbreviatedIRI="cti2:container-works-for"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:PeripheralAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-victim"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:LogAsset"/>
+        <Class abbreviatedIRI="cti2:container-infrastructure-hosts"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:UnknownAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-located-at"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:RemoteaccessAsset"/>
+        <Class abbreviatedIRI="cti2:container-based-on"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:HSMAsset"/>
+        <Class abbreviatedIRI="cti2:container-reporter"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:CustomerAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-sensed-by"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:ManagerAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-compromises"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:BroadbandAsset"/>
+        <Class abbreviatedIRI="cti2:container-downloads"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:WLANAsset"/>
+        <Class abbreviatedIRI="cti2:container-kill-chain-phase"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:PaymentcardAsset"/>
+        <Class abbreviatedIRI="cti2:container-malware-drops"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:TabletAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-sighting-of"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:GasterminalAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-has-impact"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:PEDpadAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-beacons-to"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:AuthtokenAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-infrastructure-uses"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:SANAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-impersonates"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:CashierAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-cia-impact"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:SmartcardAsset"/>
+        <Class abbreviatedIRI="cti2:container-indicates"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:POScontrollerAsset"/>
+        <Class abbreviatedIRI="cti2:container-has-relationship"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:AccessreaderAsset"/>
+        <Class abbreviatedIRI="cti2:container-coa-cost"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:LaptopAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-discovered-method"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:ATMAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-infrastructure-controls"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:PLCAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-attributed-to-identity"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:PublicWANAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-observed-data"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:CallcenterAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-variant-of"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:BackupAsset"/>
+        <Class abbreviatedIRI="cti2:container-derived-from"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:GuardAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-opinion-author"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:HelpdeskAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-originates-from"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:PaymentswitchAsset"/>
+        <Class abbreviatedIRI="cti2:container-communicates-with"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:AdministratorAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-file-hash"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:DeveloperAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-resolves-to"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:MobilephoneAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-duplicate-of"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:SCADAAsset"/>
+        <Class abbreviatedIRI="cti2:container-investigates"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:DCSAsset"/>
+        <Class abbreviatedIRI="cti2:container-actor-hosts"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:DocumentsAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-incident-status"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:IDSAsset"/>
+        <Class abbreviatedIRI="cti2:container-infrastructure-consists-of"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:End-userAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-infrastructure-has"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:PBXAsset"/>
+        <Class abbreviatedIRI="cti2:container-actor-uses"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:ExecutiveAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-coordinator"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:FinanceAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-indicator-pattern"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:MaintenanceAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-tool-delivers"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:VoIPphoneAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-malware-uses"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:POSterminalAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-grouping-ref"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="cti2:DesktopAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:DNSAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:PersonAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:PrivateWANAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:DiskdriveAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:TapesAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:FlashdriveAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:FirewallAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:ServerAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:PrintAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:KioskAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:HumanresourcesAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:FileAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:TelephoneAssetAsset"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="cti2:MediaAssetAsset"/>
+        <Class abbreviatedIRI="cti2:container-opinion-on"/>
     </Declaration>
     <ClassAssertion>
         <Class abbreviatedIRI="cti2:AttackPattern"/>
@@ -467,7 +425,7 @@
         <NamedIndividual IRI="#iCompanyXYZ"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
+        <ObjectProperty abbreviatedIRI="cti2:business-impact-target"/>
         <NamedIndividual IRI="#iBusinessImpactRelationship"/>
         <NamedIndividual abbreviatedIRI="cti2:ind-BusinessImpact-None"/>
     </ObjectPropertyAssertion>
@@ -580,6 +538,11 @@
         <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
         <NamedIndividual IRI="#iIncidentGrouping"/>
         <NamedIndividual IRI="#iBobMayerIdentity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+        <NamedIndividual IRI="#iIncidentGrouping"/>
+        <NamedIndividual IRI="#iBusinessImpactRelationship"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
@@ -702,7 +665,7 @@
         <NamedIndividual abbreviatedIRI="cti2:ind-Confidence-High"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="cti2:incident-status"/>
+        <ObjectProperty abbreviatedIRI="cti2:incident-status-target"/>
         <NamedIndividual IRI="#iIncidentStatusRelationship"/>
         <NamedIndividual abbreviatedIRI="cti2:ind-IncidentStatus-Closed"/>
     </ObjectPropertyAssertion>
