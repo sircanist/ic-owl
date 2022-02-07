@@ -20,10 +20,22 @@
     <Prefix name="cti2-sc1-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario1-policy.owl#"/>
     <Prefix name="cti2-sc2-policy" IRI="https://raw.githubusercontent.com/sircanist/ic-owl/dev/owls/cti2_scenario2-policy.owl#"/>
     <Declaration>
-        <NamedIndividual IRI="#P1"/>
+        <NamedIndividual IRI="#P1_1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#P2"/>
+        <NamedIndividual IRI="#P1_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P1_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P2_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P2_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P2_3"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="cti2:Incident"/>
@@ -33,6 +45,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cti2:has-impact"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
@@ -58,6 +73,20 @@
             <Class abbreviatedIRI="cti2:IncidentGrouping"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
+                    <Class abbreviatedIRI="cti2:BusinessImpact-Major"/>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#P1_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2-sc2-bk:BK_CompanyXVictim"/>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
                 <ObjectIntersectionOf>
                     <Class abbreviatedIRI="cti2:ImpactAssessment"/>
                     <ObjectSomeValuesFrom>
@@ -67,7 +96,27 @@
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
-        <NamedIndividual IRI="#P1"/>
+        <NamedIndividual IRI="#P1_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2-sc2-bk:BK_CompanyXVictim"/>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="cti2:Incident"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="cti2:has-impact"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty abbreviatedIRI="cti2:business-impact"/>
+                            <Class abbreviatedIRI="cti2:BusinessImpact-Major"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#P1_3"/>
     </ClassAssertion>
     <ClassAssertion>
         <ObjectIntersectionOf>
@@ -84,7 +133,32 @@
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
-        <NamedIndividual IRI="#P2"/>
+        <NamedIndividual IRI="#P2_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2-sc2-bk:BK_CompanyXVictim"/>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="cti2:discovered-method"/>
+                    <Class abbreviatedIRI="cti2:DiscoveredMethod-Customer"/>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#P2_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="cti2-sc2-bk:BK_CompanyXVictim"/>
+            <Class abbreviatedIRI="cti2:IncidentGrouping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="cti2:grouping-ref"/>
+                <Class abbreviatedIRI="cti2:DiscoveredMethod-Customer"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#P2_3"/>
     </ClassAssertion>
 </Ontology>
 
