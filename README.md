@@ -1,6 +1,6 @@
 # IC-OWL
 
-This application generates repairs fro CTI-ontologies by using the Hitting-Set-Algorithmus.
+This application generates repairs for CTI-ontologies by using the Hitting-Set-Algorithmus.
 
 # Setup
 
