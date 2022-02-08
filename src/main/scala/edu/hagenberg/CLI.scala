@@ -1,7 +1,6 @@
 package edu.hagenberg
 
 import edu.hagenberg.Util.getAxiomsFromFile
-import edu.hagenberg.hst.BFS
 import openllet.owlapi.OpenlletReasonerFactory
 import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLDeclarationAxiom, OWLOntologyIRIMapper}
 import org.semanticweb.owlapi.util.SimpleIRIMapper
@@ -18,6 +17,7 @@ import scala.io.Source
 object CLI extends App {
 
   def createIriMappers(path: String): List[OWLOntologyIRIMapper]  ={
+    println("Fetching iris from file: " + path)
     val lines = Source.fromFile(path).getLines()
     lines.map{
       line =>
@@ -33,9 +33,10 @@ object CLI extends App {
   }
 
   Console.println("Commandline-Arguments: " + (args mkString ", "))
-  if (args.length != 4 && args.length != 5)
+  if (args.length != 7 && args.length != 6)
   {
-    println("Supply path for 4 ontologies in form: base-ontology, abox-share, attacker-bk attacker-policy")
+    println("Supply path for 4 ontologies in form: base-ontology[*.owl], abox-share[*.owl], attacker-bk[*.owl] attacker-policy[*.owl]")
+    println("then: SearchMethod[BFS||DFS] number-of-/ic-owl/repairs[1-n]  ")
     println("Additionally provide an argument for an iri-mapping to ontology with lines in form \"iri filepath\"")
     println("spaces are not allowed atm for iri-mapping")
     System.exit(-1)
@@ -44,9 +45,16 @@ object CLI extends App {
   val aboxSharePath = args(1)
   val attackerBkPath = args(2)
   val attackerPolicyPath = args(3)
+  val searchMethodString = args(4)
+  val stopAfter = args(5).toInt
+  val searchMethod = {
+    if (searchMethodString.equals("BFS"))
+      edu.hagenberg.hst.BFS
+    else edu.hagenberg.hst.DFS
+  }
   val iriMappers =
-    if (args.length == 5)
-      createIriMappers(args(4))
+    if (args.length == 7)
+      createIriMappers(args(6))
     else
       null
 
@@ -69,7 +77,7 @@ object CLI extends App {
     reasonerFactory = new OpenlletReasonerFactory,
     expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
     contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-    algorithm = Algorithm.hittingSet(true, BFS)
+    algorithm = Algorithm.hittingSet(true, searchMethod, stop_after = stopAfter)
     //algorithm = Algorithm.simple
     //algorithm = Algorithm.simpleWeakening
   )
@@ -85,42 +93,44 @@ object CLI extends App {
           pathSet
       }).distinct
 
-      val axioms_removed = paths.flatMap(path => path.map { pe =>
-        pe.selected
-      }).distinct
-      val axioms_added = paths.flatMap(path => path.map { pe =>
-        pe.weakened
-      }.filter(_.isDefined).map(_.get)).distinct
-      print(distinct_paths)
-      val tmp_ont: Set[OWLAxiom] =
-        cti_axioms -- axioms_removed ++ axioms_added
-      val outputStream = new FileOutputStream(new File("/tmp/test.tttl"))
-      Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
+//       val axioms_removed = paths.flatMap(path => path.map { pe =>
+//         pe.selected
+//       }).distinct
+//       val axioms_added = paths.flatMap(path => path.map { pe =>
+//         pe.weakened
+//       }.filter(_.isDefined).map(_.get)).distinct
+//       val tmp_ont: Set[OWLAxiom] =
+//         cti_axioms -- axioms_removed ++ axioms_added
+//       val outputStream = new FileOutputStream(new File("/tmp/test.tttl"))
+//       Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
 
-//      paths.foreach(
-//        pathelements => {
-//          println("\n\nNew path")
-//          pathelements.foreach {
-//            path => {
-//              println("{")
-//              println("Justifications:\n " + path.justifications)
-//              println("selected:\n " + path.selected)
-//              println("weakened:\n " + path.weakened)
-//              println("}")
-//            }
-//          }
+      paths.zipWithIndex.foreach{
+       case (pathelements, idx) =>  {
+          println("\n\nNew path")
+          pathelements.foreach {
+            path => {
+              println("{")
+              println("Justifications:\n " + path.justifications)
+              println("selected:\n " + path.selected)
+              println("weakened:\n " + path.weakened)
+              println("}")
+            }
+          }
 
-//          val removed_axioms: Set[OWLAxiom] = pathelements.map(e => e.selected).toSet
-//          val added_axioms: Set[OWLAxiom] = pathelements.map(_.weakened).filter(_.isDefined).map(_.get).toSet
-//          val file = new File("/tmp/test.tttl")
-//          val outputStream = new FileOutputStream(file)
-//          val tmp_ont: Set[OWLAxiom] =
-//            static ++ attacker_knowledge_axioms ++ cti_axioms -- removed_axioms ++ added_axioms
-//          Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
-//          outputStream.close()
-//        }
-//      )
+
+
+          val removed_axioms: Set[OWLAxiom] = pathelements.map(e => e.selected).toSet
+          val added_axioms: Set[OWLAxiom] = pathelements.map(_.weakened).filter(_.isDefined).map(_.get).toSet
+          val file = new File("repair/" + idx + ".owl")
+          val outputStream = new FileOutputStream(file)
+          val tmp_ont: Set[OWLAxiom] =
+            cti_axioms -- removed_axioms ++ added_axioms
+          Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
+          outputStream.close()
+       }
+      }
     }
   }
+  println("Finished")
   System.exit(0)
 }

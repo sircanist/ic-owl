@@ -14,7 +14,8 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
                            finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
                            reasonerFactory: OWLReasonerFactory,
                            weaken:Boolean =true,
-                           searchIterator: SearchIterator) {
+                           searchIterator: SearchIterator,
+                           stop_after: Int) {
 
   def getJustification(axioms:Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
     finder.searchOneJustification(axioms)
@@ -37,12 +38,14 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
     def createChildForEdge(root: HittingSetTreeNode, edge: Edge) = {
       new HittingSetTreeNode(Some(RootConnection(root, edge)))
     }
-    justifications.flatMap {
+    val children = justifications.flatMap {
       just =>{
         val edges = getEdges(axioms, justifications, just)
         edges.map(edge => createChildForEdge(root, edge))
       }
     }
+    println("creating children finished")
+    children
   }
 
   def getAxioms(edges: List[Edge]): Set[OWLAxiom] = {
@@ -52,8 +55,12 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
   }
 
 
-  def processNode(node:HittingSetTreeNode, discovered: Set[HittingSetTreeNode]): (HittingSetTreeNode, Set[OWLAxiom]) = {
+  def processNode(node:HittingSetTreeNode,
+                  discovered: Set[HittingSetTreeNode],
+                  closedPaths: Set[HittingSetTreeNode]): (HittingSetTreeNode, Set[OWLAxiom]) = {
     val edges = node.edges
+    println("edges length: " +edges.length)
+    val axioms: Set[OWLAxiom] = getAxioms(edges)// input -- edges
 
     def toSet(selected: OWLAxiom, weakened: Option[OWLAxiom]) = {
       weakened match {
@@ -70,7 +77,6 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       justNode match {
         case Some(just) => {
           val intersection = just1.intersect(just)
-          println(intersection.toString())
           if (intersection.isEmpty)
             true
           else
@@ -80,16 +86,42 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       }
     }
 
-    val axioms: Set[OWLAxiom] = getAxioms(edges)// input -- edges
-    val discover: Option[Option[Set[OWLAxiom]]] = discovered.collectFirst{
-      case i: HittingSetTreeNode
-        if check_intersection(edges_flatten(edges), i.justification) => i.justification
+
+    var node_stat = {
+      if (edges.nonEmpty  &&
+        discovered.exists(node => node.edges.equals(edges)))
+        {
+          NodeStatus.Cancelled
+        }
+      else if (closedPaths.exists(cp => node.edges == node.edges.intersect(cp.edges)))
+        NodeStatus.Cancelled
+      else
+        NodeStatus.Open
     }
-    val just = discover match {
-      case Some(justification) => justification
-      case None => getJustification(axioms)
+
+
+
+    val just = {
+      if (node_stat == NodeStatus.Cancelled)
+        None
+      else {
+        val discover: Option[Option[Set[OWLAxiom]]] = discovered.collectFirst{
+          case i: HittingSetTreeNode
+            if check_intersection(edges_flatten(edges), i.justification) => i.justification
+        }
+        discover match {
+          case Some(justification) => justification
+          case None => getJustification(axioms)
+        }
+
+      }
     }
-    (new HittingSetTreeNode(node.root, just), axioms)
+    if (just.isEmpty && node_stat == NodeStatus.Open){
+      node_stat = NodeStatus.Closed
+    }
+    val newNode = new HittingSetTreeNode(node.root, just)
+    newNode.status = node_stat
+    (newNode, axioms)
   }
 
 
@@ -97,29 +129,28 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
     def common(head: HittingSetTreeNode, discovered: Set[HittingSetTreeNode],
                closedPaths: Set[HittingSetTreeNode]): (Set[HittingSetTreeNode], Set[HittingSetTreeNode], immutable.Iterable[HittingSetTreeNode]) = {
-      val (newNode, axioms) = processNode(head, discovered)
+      val (newNode, axioms) = processNode(head, discovered, closedPaths)
       val dn = discovered + newNode
-      val children = {
-        newNode.justification match {
-          case Some(just) => getChildren(newNode, axioms, just)
-          case None =>  List.empty
+        val children = {
+          if (newNode.status == NodeStatus.Open) {
+            newNode.justification match {
+              case Some(just) => getChildren(newNode, axioms, just)
+              case None => List.empty
+            }
+          }
+          else
+            List.empty
         }
-      }
+      println("created children nodes: " + children.size)
+      val cp = if (newNode.status == NodeStatus.Closed) closedPaths + newNode else closedPaths
+//      val n = children.filter{
+//        child =>
+//          !closedPaths.exists(closed => child.edges.toSet.subsetOf(closed.edges.toSet))}
+//      if (!n.eq(children)){
+//        println("Children were removed by filter!")
+//      }
+      (dn, cp, children)
 
-      // if no justifications were found for the newNode it cannot have children
-      // if a justification was found it must have a mutation were the justification is not to be found
-      // so it must have children
-      assert(newNode.justification.nonEmpty == children.nonEmpty)
-      val cp = if (newNode.justification.isEmpty) closedPaths + newNode  else closedPaths
-      val n = children.filter{
-        child =>
-          !closedPaths.exists(closed => child.edges.toSet.subsetOf(closed.edges.toSet))}
-      if (!n.eq(children)){
-        println("Children were removed by filter!")
-      }
-      (dn, cp, n)
-
-      // TODO if explanation enclosed, reuse
 
     }
 
@@ -128,9 +159,11 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val (head, nq) = q.dequeue
       val (dn, cp, children) = common(head, discovered, closedPaths)
-//      // TODO if explanation enclosed, reuse
+      println("children were enqueued")
       val nq2 = nq.enqueue(children)
-      if (nq2.nonEmpty)
+      println("enqued: " + nq2.size)
+      println("cp: " + cp.size)
+      if (nq2.nonEmpty && cp.size <= stop_after)
         bfs(nq2, dn, cp)
       else
         cp
@@ -141,8 +174,11 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val head::nq = l
       val (dn, cp, children) = common(head, discovered, closedPaths)
+      println("children were enqueued")
       val nq2 = List.concat(children,nq)
-      if (nq2.nonEmpty)
+      println("enqued: " + nq2.size)
+      println("cp: " + cp.size)
+      if (nq2.nonEmpty && cp.size <= stop_after)
         dfs(nq2, dn, cp)
       else
         cp

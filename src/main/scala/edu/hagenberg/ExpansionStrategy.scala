@@ -31,7 +31,8 @@ object ExpansionStrategy {
 
   def structuralExpansionStrategy: ExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom]  = {
     (axioms, checker) => {
-      def addWhile(ont: OWLOntology, expansion: Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
+      val (static, refutable) = axioms.partition(checker.getStatic)
+      def addWhile(ont: OWLOntology, expansion: Set[OWLAxiom], static: Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
         if (checker.isEntailed(expansion))
           Some(expansion)
         else if (expansion.equals(axioms))
@@ -46,13 +47,12 @@ object ExpansionStrategy {
               }
             )
           )
-          addWhile(ont, new_expansion)
+          addWhile(ont, new_expansion, static)
           }
         }
-      val (static, _) = axioms.partition(checker.getStatic)
       val manager = createManager
       val ont: OWLOntology = manager.createOntology(axioms.asJava)
-      addWhile(ont, static)
+      addWhile(ont, checker.getModule(refutable), static)
     }
   }
 }

@@ -1,4 +1,0 @@
-https://raw.githubusercontent.com/sircanist/cti-ontology/master/cti.owl /owls/cti2.owl
-https://raw.githubusercontent.com/sircanist/cti-ontology/master/cti2_scenario1.owl /owls/cti2-scenario1.owl
-https://raw.githubusercontent.com/sircanist/cti-ontology/master/cti2_scenario1-bk.owl /owls/cti2-scenario1-bk.owl
-https://raw.githubusercontent.com/sircanist/cti-ontology/master/cti2_scenario1-sensitive.owl /owls/cti2-scenario1-policy.owl

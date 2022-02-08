@@ -8,10 +8,17 @@ import scala.annotation.tailrec
 case class RootConnection(root: HittingSetTreeNode, edge: Edge)
 case class Edge(selected: OWLAxiom, weakened: Option[OWLAxiom])
 
+object NodeStatus extends Enumeration {
+  type NodeStatus = Value
+  val Open, Closed, Cancelled = Value
+}
+
 class HittingSetTreeNode(val root: Option[RootConnection],
                          var justification: Option[Set[OWLAxiom]] = None) {
 
   val edges: List[Edge] = getEdgesToRoot
+
+  var status: NodeStatus.Value = NodeStatus.Open
 
   def getNodesToRoot: List[HittingSetTreeNode] = {
     HittingSetTreeNode.getNodesToRoot(this, List.empty)

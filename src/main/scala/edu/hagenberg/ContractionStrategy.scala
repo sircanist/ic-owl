@@ -68,7 +68,7 @@ object ContractionStrategy {
                 removeWhile(xs, new_contraction, static, remove_count)
               } else {
                 // increase speed because culprit was found
-                println(x)
+                //println(x)
                 removeWhile(xs, contraction, static, remove_count*2)
               }
             }
@@ -76,7 +76,6 @@ object ContractionStrategy {
         }
       }
       val (static, refutable) = axioms.partition(checker.getStatic)
-      println("contracting")
       removeWhile(refutable.toSeq, refutable, static, WINDOW_SIZE)
     }
   }

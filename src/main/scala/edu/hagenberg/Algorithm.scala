@@ -50,10 +50,10 @@ object Algorithm {
       List(all)
     }
 
-  def hittingSet(weaken: Boolean, searchIterator: SearchIterator):Algorithm[java.util.Set[OWLAxiom], OWLAxiom] = {
+  def hittingSet(weaken: Boolean, searchIterator: SearchIterator, stop_after: Int):Algorithm[java.util.Set[OWLAxiom], OWLAxiom] = {
     (input, finder, reasonerFactory) => {
       val rootNode = new HittingSetTreeNode(root = None)
-      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory, weaken, searchIterator)
+      val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory, weaken, searchIterator, stop_after)
       tree.search().toList.map(el => el.getPathElementsToRoot)
     }
   }

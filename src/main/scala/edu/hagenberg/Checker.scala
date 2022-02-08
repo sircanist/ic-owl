@@ -1,14 +1,11 @@
 package edu.hagenberg
 
 import edu.hagenberg.Util.createManager
-import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat
 import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.reasoner._
 import uk.ac.manchester.cs.owlapi.modularity.{ModuleType, SyntacticLocalityModuleExtractor}
 
 import scala.collection.JavaConverters.{asScalaSetConverter, setAsJavaSetConverter}
-
-import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat
 
 trait Checker[E, I]{
   def getEntailment: E
@@ -95,10 +92,12 @@ class AnyAxiomCEChecker(reasonerFactory: OWLReasonerFactory,
   val ces = entailment.asScala.map( axiom => axiom.asInstanceOf[OWLClassAssertionAxiom].getClassExpression)
 
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
+    //println("checking if is entailed")
+    //val t1 = System.nanoTime
     m = createManager
     val ont: OWLOntology = m.createOntology(input.asJava)
-
-    val entailed = ces.exists(ce => !reasonerFactory.createReasoner(ont, reasoner_config).getInstances(ce).isEmpty)
+    val factory = reasonerFactory.createReasoner(ont, reasoner_config)
+    val entailed = ces.exists(ce => !factory.getInstances(ce).isEmpty)
 
     /*val check_entailed = (axiom: OWLAxiom) => {
 
@@ -120,6 +119,10 @@ class AnyAxiomCEChecker(reasonerFactory: OWLReasonerFactory,
     val entailed = entailment.parallelStream.anyMatch((axiom: OWLAxiom) =>  check_entailed(axiom))*/
 
     m.removeOntology(ont)
+    factory.dispose()
+    //println("checking if is entailed finished")
+    //val duration = (System.nanoTime - t1) / 1e9d
+    //println("entailment search took " + duration +"  input-size: "+ input.size + "  entailed = " + entailed)
     entailed
   }
 }

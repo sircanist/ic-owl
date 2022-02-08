@@ -9,6 +9,7 @@ import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 
 import java.io.File
+import java.util
 import java.util.function.BiPredicate
 import java.util.stream.Collectors
 import java.util.{Optional, Random}
@@ -28,7 +29,7 @@ object Util {
     if (c.size <= 0)
       None
     else {
-      val n = util.Random.nextInt(c.size)
+      val n = scala.util.Random.nextInt(c.size)
       Some(c.iterator.drop(n).next)
     }
   }
@@ -85,7 +86,12 @@ object Util {
                                 concept: ELConceptDescription,
                                 reasonerFactory: OWLReasonerFactory,
                                 factory: OWLDataFactory,
-                              n:Integer = Integer.MAX_VALUE) = {
+                              n:Integer = Integer.MAX_VALUE): util.Set[ELConceptDescription] = {
+
+    if (concept.isTop){
+      val emptySet: java.util.Set[ELConceptDescription] =  java.util.Collections.emptySet()
+      return emptySet
+    }
     val concepts_reduced: java.util.Set[ELConceptDescription] =
       m_upperNNeighborsOntology(ontology, concept, reasonerFactory, factory, n)
     concepts_reduced
@@ -213,7 +219,9 @@ object Util {
             .collect(Collectors.toSet()),
           predicate);
       }
-    m_upperNNeighborsReduced(concept, n)
+    val upper_neighbors = m_upperNNeighborsReduced(concept, n)
+    reasoner.dispose()
+    upper_neighbors
   }
 }
 

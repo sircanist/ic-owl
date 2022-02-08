@@ -107,6 +107,7 @@ object WeakeningRelation {
 
       val testOntology = Util.createManager.createOntology((baseAxioms).asJava)
 //      val reasoner = reasonerFactory.createReasoner(testOntology)
+      println("fetching new candidates for weakening")
       var nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
         Util.upperNNeighborsOntology(testOntology,
           conclusion: ELConceptDescription,
@@ -129,6 +130,7 @@ object WeakeningRelation {
               candidate: ELConceptDescription,
               reasonerFactory: OWLReasonerFactory,
               dataFactory: OWLDataFactory))
+          println("fetching new candidates for weakening")
           nextCandidates.addAll(new_next_candidates)
         } else
           weakenedRHS add candidate

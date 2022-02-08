@@ -10,21 +10,46 @@ class JustificationFinder[E, I](val checker: Checker[E,I],
                                 expansionStrategy: ExpansionStrategy[E, I],
                                 contractionStrategy: ContractionStrategy[E, I]){
     private[this] def expand(workingAxioms: Set[I]): Option[Set[I]] = {
+      println("starting expanding")
+    val t1 = System.nanoTime
     val expanded = expansionStrategy.doExpansion(workingAxioms, checker)
+    val duration = (System.nanoTime - t1) / 1e9d
+    val size = {
+      if (expanded.isDefined)
+        expanded.get.size
+      else
+        0
+    }
+    println("expansion took " + duration +", expansion candidates amount: " + size)
     expanded
   }
 
 
   private[this] def contract(expandedAxioms: Set[I]): Option[Set[I]] = {
+    println("starting contraction")
+    val t1 = System.nanoTime
     val removeCandidates = expandedAxioms
-    contractionStrategy.doPruning(removeCandidates, checker)
+    val pruned = contractionStrategy.doPruning(removeCandidates, checker)
+    val duration = (System.nanoTime - t1) / 1e9d
+    val size = {
+      if (pruned.isDefined)
+        pruned.get.size
+      else
+        0
+    }
+    println("contraction took " + duration +", pruned candidates amount: " + size)
+    pruned
   }
 
   def searchOneJustification(input: Set[I]): Option[Set[I]] = {
-    expand(input) match {
+    val t1 = System.nanoTime
+    val just = expand(input) match {
       case Some(axioms) => contract(axioms)
       case None => None
     }
+    val duration = (System.nanoTime - t1) / 1e9d
+    println("just search took " + duration +", just found " + just.toString)
+    just
   }
 }
 
@@ -40,6 +65,7 @@ class BlackBoxGenerator[E, I](input: Set[I],
     val checker: Checker[E, I] = checkerFactory.createChecker(entailment, static)
     val algorithmInput = if (useModularisation) checker.getModule(input) else input
     val finder: JustificationFinder[E, I] = new JustificationFinder(checker, expansionStrategy, contractionStrategy)
+    println("checking start conditions")
     if (checker.isTautology)
       Left(new Error("Tautology"))
     else if (!checker.isEntailed(algorithmInput))
