@@ -47,7 +47,7 @@ object ExpansionStrategy {
               }
             )
           )
-          // cannot expand further
+          // cannot expand further, take all axioms to be sure that we can go on
           if (expansion.size == new_expansion.size){
             new_expansion = axioms
           }
