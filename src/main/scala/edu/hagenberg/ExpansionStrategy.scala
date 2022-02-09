@@ -47,6 +47,10 @@ object ExpansionStrategy {
               }
             )
           )
+          // cannot expand further
+          if (expansion.size == new_expansion.size){
+            new_expansion = axioms
+          }
           addWhile(ont, new_expansion, static)
           }
         }

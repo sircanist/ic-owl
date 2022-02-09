@@ -27,7 +27,11 @@ object CLI extends App {
           System.exit(-1)
         }
         val iri = split_line(0)
-        val path = split_line(1)
+        var path = split_line(1)
+        if (!path.startsWith("/"))
+          path = System.getProperty("user.dir").concat("/").concat(path)
+        else if (!path.startsWith("."))
+          path = System.getProperty("user.dir").concat("/").concat(path.substring(1))
         new SimpleIRIMapper(IRI.create(iri), IRI.create("file:///" + path))
     }.toList
   }
