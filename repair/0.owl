@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="urn:unnamed:ontology#ont12647983970197#"
-     xml:base="urn:unnamed:ontology#ont12647983970197"
+<rdf:RDF xmlns="urn:unnamed:ontology#ont16501286339581#"
+     xml:base="urn:unnamed:ontology#ont16501286339581"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:cti2="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="urn:unnamed:ontology#ont12647983970197"/>
+    <owl:Ontology rdf:about="urn:unnamed:ontology#ont16501286339581"/>
     
 
 
@@ -467,13 +467,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#HoneyPotSensor -->
-
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#HoneyPotSensor"/>
-    
-
-
     <!-- https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#IPv4Address -->
 
 
@@ -569,6 +562,13 @@
 
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#Relationship"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#Sensor -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#Sensor"/>
     
 
 
@@ -729,7 +729,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iHoneypotSensor">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#HoneyPotSensor"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#Sensor"/>
         <cti2:created-by rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iBobMayerIdentity"/>
     </owl:NamedIndividual>
     
@@ -777,6 +777,7 @@
         <cti2:grouping-ref rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iDomainNameAttacker"/>
         <cti2:grouping-ref rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iFile"/>
         <cti2:grouping-ref rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iFileHash"/>
+        <cti2:grouping-ref rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iHoneypotSensor"/>
         <cti2:grouping-ref rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iImpactAssessment"/>
         <cti2:grouping-ref rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncident"/>
         <cti2:grouping-ref rdf:resource="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentStatusRelationship"/>
