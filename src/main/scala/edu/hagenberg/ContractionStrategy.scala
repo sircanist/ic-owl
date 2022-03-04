@@ -36,7 +36,7 @@ object ContractionStrategy {
   def newSlidingContractionStrategy[E, I]: ContractionStrategy[E, I] = {
     (axioms, checker) => {
 
-      val WINDOW_SIZE = 10
+      val WINDOW_SIZE = 20
       @tailrec
       def removeWhile(refutable: Seq[I], contraction: Set[I], static: Set[I], remove_count: Int): Option[Set[I]] ={
         refutable match{
