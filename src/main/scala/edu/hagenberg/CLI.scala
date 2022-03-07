@@ -40,7 +40,7 @@ object CLI extends App {
   }
 
   Console.println("Commandline-Arguments: " + (args mkString ", "))
-  if (args.length != 7 && args.length != 6)
+  if (args.length != 8)
   {
     println("Supply path for 4 ontologies in form: base-ontology[*.owl], abox-share[*.owl], attacker-bk[*.owl] attacker-policy[*.owl]")
     println("then: SearchMethod[BFS||DFS] number-of-/ic-owl/repairs[1-n]  ")
@@ -53,17 +53,20 @@ object CLI extends App {
   val attackerBkPath = args(2)
   val attackerPolicyPath = args(3)
   val searchMethodString = args(4)
-  val stopAfter = args(5).toInt
+  val weakenString = args(5)
+  val stopAfter = args(6).toInt
   val searchMethod = {
     if (searchMethodString.equals("BFS"))
       edu.hagenberg.hst.BFS
     else edu.hagenberg.hst.DFS
   }
+  val weaken = {
+    if (weakenString.equals("weaken"))
+      true
+    else false
+  }
   val iriMappers =
-    if (args.length == 7)
-      createIriMappers(args(6))
-    else
-      null
+      createIriMappers(args(7))
 
   val base_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(baseOntologyPath), iriMappers)
   val attacker_knowledge_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(attackerBkPath), iriMappers)
@@ -86,7 +89,7 @@ object CLI extends App {
     reasonerFactory = new OpenlletReasonerFactory,
     expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
     contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-    algorithm = Algorithm.hittingSet(weaken=true, searchMethod, stop_after = stopAfter)
+    algorithm = Algorithm.hittingSet(weaken=weaken, searchMethod, stop_after = stopAfter)
     //algorithm = Algorithm.simple
     //algorithm = Algorithm.simpleWeakening
   )
