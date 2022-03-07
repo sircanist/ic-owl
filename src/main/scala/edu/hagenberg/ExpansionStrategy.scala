@@ -3,6 +3,7 @@ package edu.hagenberg
 import edu.hagenberg.Util.createManager
 import org.semanticweb.owlapi.model.{OWLAxiom, OWLOntology}
 
+import scala.annotation.tailrec
 import scala.collection.JavaConverters.{asScalaSetConverter, setAsJavaSetConverter}
 
 
@@ -32,7 +33,7 @@ object ExpansionStrategy {
   def structuralExpansionStrategy: ExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom]  = {
     (axioms, checker) => {
       val (static, refutable) = axioms.partition(checker.getStatic)
-      def addWhile(ont: OWLOntology, expansion: Set[OWLAxiom], static: Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
+      @tailrec def addWhile(ont: OWLOntology, expansion: Set[OWLAxiom], static: Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
         if (checker.isEntailed(expansion))
           Some(expansion)
         else if (expansion.equals(axioms))

@@ -9,8 +9,7 @@ trait ContractionStrategy[E, I]{
 object ContractionStrategy {
   def simpleContractionStrategy[E, I]: ContractionStrategy[E, I] = {
     (axioms, checker) => {
-      @tailrec
-      def removeWhile(refutable: Seq[I], contraction: Set[I], static: Set[I]): Option[Set[I]] ={
+      @tailrec def removeWhile(refutable: Seq[I], contraction: Set[I], static: Set[I]): Option[Set[I]] ={
         refutable match{
           case x +: Seq() =>
             val new_contraction = contraction - x
@@ -37,8 +36,8 @@ object ContractionStrategy {
     (axioms, checker) => {
 
       val WINDOW_SIZE = 20
-      @tailrec
-      def removeWhile(refutable: Seq[I], contraction: Set[I], static: Set[I], remove_count: Int): Option[Set[I]] ={
+
+      @tailrec def removeWhile(refutable: Seq[I], contraction: Set[I], static: Set[I], remove_count: Int): Option[Set[I]] ={
         refutable match{
           case x +: Seq() =>
             val new_contraction = contraction - x
