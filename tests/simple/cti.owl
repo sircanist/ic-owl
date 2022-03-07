@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/ontology"
+     xml:base="http://example.com/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:example="http://example.com/"
+     xmlns:ontology="http://example.com/ontology#">
+    <owl:Ontology rdf:about="http://example.com/ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/ontologyr -->
+
+    <owl:AnnotationProperty rdf:about="http://example.com/ontologyr"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/ontology#r -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/ontology#r">
+        <rdfs:range rdf:resource="http://example.com/ontology#B"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/ontology#d1 -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/ontology#d1">
+        <rdfs:domain rdf:resource="http://example.com/ontology#A"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/ontology#d2 -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/ontology#d2">
+        <rdfs:domain rdf:resource="http://example.com/ontology#A"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/ontology#A -->
+
+    <owl:Class rdf:about="http://example.com/ontology#A"/>
+    
+
+
+    <!-- http://example.com/ontology#B -->
+
+    <owl:Class rdf:about="http://example.com/ontology#B">
+        <rdfs:subClassOf rdf:resource="http://example.com/ontology#Bup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/ontology#Bup -->
+
+    <owl:Class rdf:about="http://example.com/ontology#Bup"/>
+    
+
+
+    <!-- http://example.com/ontology#policy -->
+
+    <owl:Class rdf:about="http://example.com/ontology#policy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/ontology#A"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/ontology#r"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://example.com/ontology#B"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://example.com/ontology#r"/>
+                                        <owl:someValuesFrom rdf:resource="http://example.com/ontology#B"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/ontology#policy2 -->
+
+    <owl:Class rdf:about="http://example.com/ontology#policy2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/ontology#d1"/>
+                <owl:hasValue>d</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/ontology#policy3 -->
+
+    <owl:Class rdf:about="http://example.com/ontology#policy3">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/ontology#d2"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

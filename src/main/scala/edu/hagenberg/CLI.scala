@@ -2,7 +2,7 @@ package edu.hagenberg
 
 import edu.hagenberg.Util.getAxiomsFromFile
 import openllet.owlapi.OpenlletReasonerFactory
-import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLDeclarationAxiom, OWLOntologyIRIMapper}
+import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLClassAssertionAxiom, OWLDeclarationAxiom, OWLOntologyIRIMapper}
 import org.semanticweb.owlapi.util.SimpleIRIMapper
 
 import java.io.{File, FileOutputStream}
@@ -18,8 +18,9 @@ object CLI extends App {
 
   def createIriMappers(path: String): List[OWLOntologyIRIMapper]  ={
     println("Fetching iris from file: " + path)
-    val lines = Source.fromFile(path).getLines()
-    lines.map{
+    val source = Source.fromFile(path)
+    val lines = source.getLines()
+    val iris = lines.map{
       line =>
         val split_line = line.split(" ")
         if (split_line.length != 2) {
@@ -34,6 +35,8 @@ object CLI extends App {
           path = System.getProperty("user.dir").concat("/").concat(path.substring(1))
         new SimpleIRIMapper(IRI.create(iri), IRI.create("file:///" + path))
     }.toList
+    source.close()
+    iris
   }
 
   Console.println("Commandline-Arguments: " + (args mkString ", "))
@@ -72,7 +75,9 @@ object CLI extends App {
   //val static: Set[OWLAxiom] = static_without_cti ++ cti_axioms.intersect(static_without_cti)
   val static: Set[OWLAxiom] = static_without_cti // removing intersections leads to also possible delete instances
 
-  val entailment = (unwanted_ontology_axioms -- static).filter(axiom => !axiom.isInstanceOf[OWLDeclarationAxiom]).asJava
+  val entailment = (unwanted_ontology_axioms -- static)
+    //.filter(axiom => axiom.isInstanceOf[OWLClassAssertionAxiom])
+    .asJava
 
   val generator: BlackBoxGenerator[java.util.Set[OWLAxiom], OWLAxiom] = new BlackBoxGenerator(
     input,
@@ -81,14 +86,14 @@ object CLI extends App {
     reasonerFactory = new OpenlletReasonerFactory,
     expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
     contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-    algorithm = Algorithm.hittingSet(true, searchMethod, stop_after = stopAfter)
+    algorithm = Algorithm.hittingSet(weaken=true, searchMethod, stop_after = stopAfter)
     //algorithm = Algorithm.simple
     //algorithm = Algorithm.simpleWeakening
   )
   val remove_axioms = generator.executeAlgorithm(entailment)
   remove_axioms match {
     case Left(s) => println(s"ERROR: ${s.getMessage}")
-    case Right(paths) => {
+    case Right(paths) =>
       val distinct_paths = paths.map(path => path.flatMap { pe =>
         val pathSet = Set(pe.selected)
         if (pe.weakened.isDefined)
@@ -109,7 +114,7 @@ object CLI extends App {
 //       Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
 
       paths.zipWithIndex.foreach{
-       case (pathelements, idx) =>  {
+       case (pathelements, idx) =>
           println("\n\nNew path")
           pathelements.foreach {
             path => {
@@ -121,19 +126,15 @@ object CLI extends App {
             }
           }
 
-
-
           val removed_axioms: Set[OWLAxiom] = pathelements.map(e => e.selected).toSet
           val added_axioms: Set[OWLAxiom] = pathelements.map(_.weakened).filter(_.isDefined).map(_.get).toSet
           val file = new File("repair/" + idx + ".owl")
           val outputStream = new FileOutputStream(file)
           val tmp_ont: Set[OWLAxiom] =
             cti_axioms -- removed_axioms ++ added_axioms
-          Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
+          Util.createManager.createOntology(tmp_ont.asJava).saveOntology(outputStream)
           outputStream.close()
-       }
       }
-    }
   }
   println("Finished")
   System.exit(0)

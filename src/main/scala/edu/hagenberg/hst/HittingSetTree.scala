@@ -4,6 +4,7 @@ import edu.hagenberg.{JustificationFinder, Util}
 import org.semanticweb.owlapi.model.OWLAxiom
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 
+import scala.annotation.tailrec
 import scala.collection.immutable
 import scala.collection.immutable.Queue
 sealed trait SearchIterator
@@ -75,13 +76,12 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
     def check_intersection(just1: Set[OWLAxiom], justNode: Option[Set[OWLAxiom]]) = {
       justNode match {
-        case Some(just) => {
+        case Some(just) =>
           val intersection = just1.intersect(just)
           if (intersection.isEmpty)
             true
           else
             false
-        }
         case None => false // no intersection possible because one element is None
       }
     }
@@ -89,11 +89,11 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
     var node_stat = {
       if (edges.nonEmpty  &&
-        discovered.exists(node => node.edges.equals(edges)))
+        discovered.exists(d => d.edges.equals(edges)))
         {
           NodeStatus.Cancelled
         }
-      else if (closedPaths.exists(cp => node.edges == node.edges.intersect(cp.edges)))
+      else if (closedPaths.exists(cp => cp.edges == cp.edges.intersect(edges)))
         NodeStatus.Cancelled
       else
         NodeStatus.Open
@@ -154,7 +154,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
     }
 
-    def bfs(q: Queue[HittingSetTreeNode],
+    @tailrec def bfs(q: Queue[HittingSetTreeNode],
              discovered: Set[HittingSetTreeNode],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val (head, nq) = q.dequeue
@@ -169,7 +169,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
         cp
     }
 
-    def dfs(l: List[HittingSetTreeNode],
+    @tailrec def dfs(l: List[HittingSetTreeNode],
              discovered: Set[HittingSetTreeNode],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val head::nq = l

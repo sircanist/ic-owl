@@ -5,10 +5,11 @@ import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.reasoner._
 import uk.ac.manchester.cs.owlapi.modularity.{ModuleType, SyntacticLocalityModuleExtractor}
 
+import java.util
 import scala.collection.JavaConverters.{asScalaSetConverter, setAsJavaSetConverter}
+import scala.collection.mutable
 
 trait Checker[E, I]{
-  def getEntailment: E
   def getStatic: Set[I]
   def isEntailed(input: Set[I]): Boolean
   def isTautology:Boolean
@@ -42,8 +43,6 @@ abstract class OWLSetChecker(reasonerFactory: OWLReasonerFactory,
     extractor.extract(signatures).asScala.toSet
   }
 
-  override def getEntailment: java.util.Set[OWLAxiom] = entailment
-
   override def getStatic: Set[OWLAxiom] = static
 }
 
@@ -54,11 +53,18 @@ class AxiomsAtOnceChecker(reasonerFactory: OWLReasonerFactory,
                              static: Set[OWLAxiom],
                              timeOutMS: Long = Long.MaxValue) extends OWLSetChecker(reasonerFactory, entailment, static, timeOutMS){
 
+  val filtered_entailment: util.Set[OWLAxiom] = entailment.asScala
+    .filter(axiom => axiom.isInstanceOf[OWLIndividualAxiom]).asJava
+
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
     m = createManager
     val ont: OWLOntology = m.createOntology(input.asJava)
-    val check_entailed = (axiom: java.util.Set[OWLAxiom]) => reasonerFactory.createReasoner(ont,reasoner_config)
-      .isEntailed(axiom)
+    val check_entailed = (axiom: java.util.Set[OWLAxiom]) => {
+      val reasoner = reasonerFactory.createReasoner(ont,reasoner_config)
+      val is_entailed = reasoner.isEntailed(axiom)
+      reasoner.dispose()
+      is_entailed
+    }
 
     val entailed = check_entailed(entailment)
     m.removeOntology(ont)
@@ -71,13 +77,20 @@ class AnyAxiomChecker(reasonerFactory: OWLReasonerFactory,
                     static: Set[OWLAxiom],
                     timeOutMS: Long = Long.MaxValue) extends OWLSetChecker(reasonerFactory, entailment, static, timeOutMS){
 
+  val filtered_entailment: util.Set[OWLAxiom] = entailment.asScala
+    .filter(axiom => axiom.isInstanceOf[OWLIndividualAxiom]).asJava
+
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
     m = createManager
     val ont: OWLOntology = m.createOntology(input.asJava)
-    val check_entailed = (axiom: OWLAxiom) => reasonerFactory.createReasoner(ont,reasoner_config)
-      .isEntailed(axiom)
+    val check_entailed = (axiom: OWLAxiom) => {
+      val reasoner = reasonerFactory.createReasoner(ont,reasoner_config)
+      val is_entailed = reasoner.isEntailed(axiom)
+      reasoner.dispose()
+      is_entailed
+    }
 
-    val entailed = entailment.parallelStream.anyMatch((axiom: OWLAxiom) =>  check_entailed(axiom))
+    val entailed = filtered_entailment.parallelStream.anyMatch((axiom: OWLAxiom) =>  check_entailed(axiom))
     m.removeOntology(ont)
     entailed
   }
@@ -89,7 +102,9 @@ class AnyAxiomCEChecker(reasonerFactory: OWLReasonerFactory,
                       static: Set[OWLAxiom],
                       timeOutMS: Long = Long.MaxValue) extends OWLSetChecker(reasonerFactory, entailment, static, timeOutMS){
 
-  val ces = entailment.asScala.map( axiom => axiom.asInstanceOf[OWLClassAssertionAxiom].getClassExpression)
+  val ces: mutable.Set[OWLClassExpression] = entailment.asScala
+    .filter(axiom => axiom.isInstanceOf[OWLClassAssertionAxiom])
+    .map( axiom => axiom.asInstanceOf[OWLClassAssertionAxiom].getClassExpression)
 
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
     //println("checking if is entailed")
