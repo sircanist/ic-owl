@@ -17,7 +17,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
                            weaken:Boolean =true,
                            searchIterator: SearchIterator,
                            stop_after: Int) {
-
+  val dont_stop: Boolean = stop_after == -1
   def getJustification(axioms:Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
     finder.searchOneJustification(axioms)
   }
@@ -163,7 +163,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       val nq2 = nq.enqueue(children)
       println("enqued: " + nq2.size)
       println("cp: " + cp.size)
-      if (nq2.nonEmpty && cp.size <= stop_after)
+      if (nq2.nonEmpty && (dont_stop || cp.size <= stop_after))
         bfs(nq2, dn, cp)
       else
         cp
@@ -178,7 +178,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       val nq2 = List.concat(children,nq)
       println("enqued: " + nq2.size)
       println("cp: " + cp.size)
-      if (nq2.nonEmpty && cp.size <= stop_after)
+      if (nq2.nonEmpty && (dont_stop || cp.size <= stop_after))
         dfs(nq2, dn, cp)
       else
         cp

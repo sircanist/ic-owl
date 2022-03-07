@@ -1,6 +1,8 @@
 package edu.hagenberg
 
+import edu.hagenberg.CLI.{aboxSharePath, attackerBkPath, attackerPolicyPath, baseOntologyPath, iriMappersPath, searchMethod}
 import edu.hagenberg.Util.getAxiomsFromFile
+import edu.hagenberg.hst.SearchIterator
 import openllet.owlapi.OpenlletReasonerFactory
 import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLClassAssertionAxiom, OWLDeclarationAxiom, OWLOntologyIRIMapper}
 import org.semanticweb.owlapi.util.SimpleIRIMapper
@@ -14,7 +16,7 @@ import scala.io.Source
  *
  */
 
-object CLI extends App {
+object Main {
 
   def createIriMappers(path: String): List[OWLOntologyIRIMapper]  ={
     println("Fetching iris from file: " + path)
@@ -39,6 +41,101 @@ object CLI extends App {
     iris
   }
 
+  def main(baseOntologyPath: String,
+           aboxSharePath: String,
+           attackerBkPath: String,
+           attackerPolicyPath: String,
+           searchMethod: SearchIterator,
+           iriMappersPath: String,
+           weaken: Boolean,
+           stopAfter: Int = -1,
+           create_files: Boolean = true): Unit ={
+
+    val iriMappers =
+      createIriMappers(iriMappersPath)
+
+    val base_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(baseOntologyPath), iriMappers)
+    val attacker_knowledge_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(attackerBkPath), iriMappers)
+    val cti_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(aboxSharePath), iriMappers)
+    val unwanted_ontology_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(attackerPolicyPath), iriMappers)
+
+    val static_without_cti: Set[OWLAxiom] = base_axioms ++ attacker_knowledge_axioms
+    val input: Set[OWLAxiom] = static_without_cti ++ cti_axioms
+    //val static: Set[OWLAxiom] = static_without_cti ++ cti_axioms.intersect(static_without_cti)
+    val static: Set[OWLAxiom] = static_without_cti // removing intersections leads to also possible delete instances
+
+    val entailment = (unwanted_ontology_axioms -- static)
+      //.filter(axiom => axiom.isInstanceOf[OWLClassAssertionAxiom])
+      .asJava
+
+    val generator: BlackBoxGenerator[java.util.Set[OWLAxiom], OWLAxiom] = new BlackBoxGenerator(
+      input,
+      static,
+      checkerFactory = CheckerFactory.AnyAxiomCheckerCEStrategy(new OpenlletReasonerFactory),
+      reasonerFactory = new OpenlletReasonerFactory,
+      expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
+      contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
+      algorithm = Algorithm.hittingSet(weaken=weaken, searchMethod, stop_after = stopAfter)
+      //algorithm = Algorithm.simple
+      //algorithm = Algorithm.simpleWeakening
+    )
+    val t1 = System.nanoTime
+    val remove_axioms = generator.executeAlgorithm(entailment)
+    remove_axioms match {
+      case Left(s) => println(s"ERROR: ${s.getMessage}")
+      case Right(paths) =>
+        val distinct_paths = paths.map(path => path.flatMap { pe =>
+          val pathSet = Set(pe.selected)
+          if (pe.weakened.isDefined)
+            pathSet + pe.weakened.get
+          else
+            pathSet
+        }).distinct
+
+        val duration = (System.nanoTime - t1) / 1e9d
+        //       val axioms_removed = paths.flatMap(path => path.map { pe =>
+        //         pe.selected
+        //       }).distinct
+        //       val axioms_added = paths.flatMap(path => path.map { pe =>
+        //         pe.weakened
+        //       }.filter(_.isDefined).map(_.get)).distinct
+        //       val tmp_ont: Set[OWLAxiom] =
+        //         cti_axioms -- axioms_removed ++ axioms_added
+        //       val outputStream = new FileOutputStream(new File("/tmp/test.tttl"))
+        //       Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
+
+        if(create_files){
+          paths.zipWithIndex.foreach{
+            case (pathelements, idx) =>
+              println("\n\nNew path")
+              pathelements.foreach {
+                path => {
+                  println("{")
+                  println("Justifications:\n " + path.justifications)
+                  println("selected:\n " + path.selected)
+                  println("weakened:\n " + path.weakened)
+                  println("}")
+                }
+              }
+
+              val removed_axioms: Set[OWLAxiom] = pathelements.map(e => e.selected).toSet
+              val added_axioms: Set[OWLAxiom] = pathelements.map(_.weakened).filter(_.isDefined).map(_.get).toSet
+              val file = new File("repair/" + idx + ".owl")
+              val outputStream = new FileOutputStream(file)
+              val tmp_ont: Set[OWLAxiom] =
+                cti_axioms -- removed_axioms ++ added_axioms
+              Util.createManager.createOntology(tmp_ont.asJava).saveOntology(outputStream)
+              outputStream.close()
+          }
+        }
+        println("process took "+ duration + " seconds.")
+    }
+  }
+}
+
+object CLI extends App {
+
+
   Console.println("Commandline-Arguments: " + (args mkString ", "))
   if (args.length != 8)
   {
@@ -60,85 +157,23 @@ object CLI extends App {
       edu.hagenberg.hst.BFS
     else edu.hagenberg.hst.DFS
   }
+  val iriMappersPath = args(7)
+
   val weaken = {
     if (weakenString.equals("weaken"))
       true
     else false
   }
-  val iriMappers =
-      createIriMappers(args(7))
+  Main.main(baseOntologyPath,
+    aboxSharePath,
+    attackerBkPath,
+    attackerPolicyPath,
+    searchMethod,
+    iriMappersPath,
+    weaken,
+    stopAfter)
 
-  val base_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(baseOntologyPath), iriMappers)
-  val attacker_knowledge_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(attackerBkPath), iriMappers)
-  val cti_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(aboxSharePath), iriMappers)
-  val unwanted_ontology_axioms: Set[OWLAxiom] = getAxiomsFromFile(new File(attackerPolicyPath), iriMappers)
-
-  val static_without_cti: Set[OWLAxiom] = base_axioms ++ attacker_knowledge_axioms
-  val input: Set[OWLAxiom] = static_without_cti ++ cti_axioms
-  //val static: Set[OWLAxiom] = static_without_cti ++ cti_axioms.intersect(static_without_cti)
-  val static: Set[OWLAxiom] = static_without_cti // removing intersections leads to also possible delete instances
-
-  val entailment = (unwanted_ontology_axioms -- static)
-    //.filter(axiom => axiom.isInstanceOf[OWLClassAssertionAxiom])
-    .asJava
-
-  val generator: BlackBoxGenerator[java.util.Set[OWLAxiom], OWLAxiom] = new BlackBoxGenerator(
-    input,
-    static,
-    checkerFactory = CheckerFactory.AnyAxiomCheckerCEStrategy(new OpenlletReasonerFactory),
-    reasonerFactory = new OpenlletReasonerFactory,
-    expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
-    contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-    algorithm = Algorithm.hittingSet(weaken=weaken, searchMethod, stop_after = stopAfter)
-    //algorithm = Algorithm.simple
-    //algorithm = Algorithm.simpleWeakening
-  )
-  val remove_axioms = generator.executeAlgorithm(entailment)
-  remove_axioms match {
-    case Left(s) => println(s"ERROR: ${s.getMessage}")
-    case Right(paths) =>
-      val distinct_paths = paths.map(path => path.flatMap { pe =>
-        val pathSet = Set(pe.selected)
-        if (pe.weakened.isDefined)
-          pathSet + pe.weakened.get
-        else
-          pathSet
-      }).distinct
-
-//       val axioms_removed = paths.flatMap(path => path.map { pe =>
-//         pe.selected
-//       }).distinct
-//       val axioms_added = paths.flatMap(path => path.map { pe =>
-//         pe.weakened
-//       }.filter(_.isDefined).map(_.get)).distinct
-//       val tmp_ont: Set[OWLAxiom] =
-//         cti_axioms -- axioms_removed ++ axioms_added
-//       val outputStream = new FileOutputStream(new File("/tmp/test.tttl"))
-//       Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
-
-      paths.zipWithIndex.foreach{
-       case (pathelements, idx) =>
-          println("\n\nNew path")
-          pathelements.foreach {
-            path => {
-              println("{")
-              println("Justifications:\n " + path.justifications)
-              println("selected:\n " + path.selected)
-              println("weakened:\n " + path.weakened)
-              println("}")
-            }
-          }
-
-          val removed_axioms: Set[OWLAxiom] = pathelements.map(e => e.selected).toSet
-          val added_axioms: Set[OWLAxiom] = pathelements.map(_.weakened).filter(_.isDefined).map(_.get).toSet
-          val file = new File("repair/" + idx + ".owl")
-          val outputStream = new FileOutputStream(file)
-          val tmp_ont: Set[OWLAxiom] =
-            cti_axioms -- removed_axioms ++ added_axioms
-          Util.createManager.createOntology(tmp_ont.asJava).saveOntology(outputStream)
-          outputStream.close()
-      }
-  }
   println("Finished")
   System.exit(0)
+
 }

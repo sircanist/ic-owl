@@ -1,9 +1,9 @@
 #!/bin/bash
 params="$@"
 
-#if [[ "$(podman images -q ic-owl 2> /dev/null)" == "" ]]; then
+if [[ "$(podman images -q ic-owl 2> /dev/null)" == "" ]]; then
     podman build -t ic-owl . 
-#fi
+fi
 
 
 echo "running with arguments $params"
