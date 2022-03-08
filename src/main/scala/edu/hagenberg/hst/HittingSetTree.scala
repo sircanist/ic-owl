@@ -45,7 +45,6 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
         edges.map(edge => createChildForEdge(root, edge))
       }
     }
-    println("creating children finished")
     children
   }
 
@@ -60,7 +59,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
                   discovered: Set[HittingSetTreeNode],
                   closedPaths: Set[HittingSetTreeNode]): (HittingSetTreeNode, Set[OWLAxiom]) = {
     val edges = node.edges
-    println("edges length: " +edges.length)
+    val edges_set = node.edges_set
     val axioms: Set[OWLAxiom] = getAxioms(edges)// input -- edges
 
     def toSet(selected: OWLAxiom, weakened: Option[OWLAxiom]) = {
@@ -70,8 +69,8 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       }
     }
     // this probably does not work for non laconic axioms
-    def edges_flatten(edges: List[Edge]) = {
-      edges.flatMap(e => toSet(e.selected, e.weakened)).toSet
+    def edges_flatten(edges: Set[Edge]) = {
+      edges.flatMap(e => toSet(e.selected, e.weakened))
     }
 
     def check_intersection(just1: Set[OWLAxiom], justNode: Option[Set[OWLAxiom]]) = {
@@ -88,12 +87,12 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
 
     var node_stat = {
-      if (edges.nonEmpty  &&
-        discovered.exists(d => d.edges.equals(edges)))
+      if (edges_set.nonEmpty  &&
+        discovered.exists(d => d.edges_set.equals(edges_set)))
         {
           NodeStatus.Cancelled
         }
-      else if (closedPaths.exists(cp => cp.edges == cp.edges.intersect(edges)))
+      else if (closedPaths.exists(cp => cp.edges_set == cp.edges_set.intersect(edges_set)))
         NodeStatus.Cancelled
       else
         NodeStatus.Open
@@ -107,7 +106,9 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       else {
         val discover: Option[Option[Set[OWLAxiom]]] = discovered.collectFirst{
           case i: HittingSetTreeNode
-            if check_intersection(edges_flatten(edges), i.justification) => i.justification
+            if check_intersection(edges_flatten(edges_set), i.justification) &&
+                i.justification.get.forall(ijust => axioms.contains(ijust))
+                => i.justification
         }
         discover match {
           case Some(justification) => justification
@@ -141,7 +142,6 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
           else
             List.empty
         }
-      println("created children nodes: " + children.size)
       val cp = if (newNode.status == NodeStatus.Closed) closedPaths + newNode else closedPaths
 //      val n = children.filter{
 //        child =>
@@ -159,10 +159,14 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val (head, nq) = q.dequeue
       val (dn, cp, children) = common(head, discovered, closedPaths)
-      println("children were enqueued")
-      val nq2 = nq.enqueue(children)
-      println("enqued: " + nq2.size)
-      println("cp: " + cp.size)
+      var nq2 = nq
+      if (children.nonEmpty) {
+        nq2 = nq.enqueue(children)
+        println("children were enqueued" + nq2.size)
+        println("edges length: " +head.edges.length)
+        println("processed: " + discovered.size)
+        println("cp: " + cp.size)
+      }
       if (nq2.nonEmpty && (dont_stop || cp.size <= stop_after))
         bfs(nq2, dn, cp)
       else
@@ -174,9 +178,14 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
              closedPaths: Set[HittingSetTreeNode]): Set[HittingSetTreeNode] = {
       val head::nq = l
       val (dn, cp, children) = common(head, discovered, closedPaths)
-      println("children were enqueued")
-      val nq2 = List.concat(children,nq)
-      println("enqued: " + nq2.size)
+      var nq2 = nq
+      if (children.nonEmpty) {
+        nq2 = List.concat(children,nq)
+        println("children were enqueued" + nq2.size)
+        println("edges length: " +head.edges.length)
+        println("processed: " + discovered.size)
+        println("cp: " + cp.size)
+      }
       println("cp: " + cp.size)
       if (nq2.nonEmpty && (dont_stop || cp.size <= stop_after))
         dfs(nq2, dn, cp)

@@ -2,7 +2,6 @@ package edu.hagenberg
 
 
 import org.scalatest.funsuite.AnyFunSuite
-import edu.hagenberg.CLI
 import edu.hagenberg.hst.{BFS, SearchIterator}
 
 class Szenario1 extends AnyFunSuite   {

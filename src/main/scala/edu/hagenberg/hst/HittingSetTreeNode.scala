@@ -17,6 +17,7 @@ class HittingSetTreeNode(val root: Option[RootConnection],
                          var justification: Option[Set[OWLAxiom]] = None) {
 
   val edges: List[Edge] = getEdgesToRoot
+  val edges_set: Set[Edge] = edges.toSet
 
   var status: NodeStatus.Value = NodeStatus.Open
 
