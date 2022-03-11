@@ -53,6 +53,7 @@ object Util {
                   selected: OWLAxiom,
                   finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
                   reasoner: OWLReasonerFactory): Set[OWLAxiom] = {
+    println("fetching new candidates for weakening, selected: " + selected)
     val currentWeakeningRelation =
       selected.getAxiomType match {
         case AxiomType.CLASS_ASSERTION | AxiomType.SUBCLASS_OF =>
@@ -61,6 +62,7 @@ object Util {
         case _ => WeakeningRelation.classicalWeakeningRelation
       }
     val weakenedSet: Set[OWLAxiom] = currentWeakeningRelation.getWeakened(input, finder, just, selected, reasoner)
+    println("fetched weakened set: " + weakenedSet)
     weakenedSet
 //
 //    val chosen_weakened = Util.getRandomElement(weakened)
@@ -111,14 +113,14 @@ object Util {
                                 concept: ELConceptDescription,
                                 reasonerFactory: OWLReasonerFactory,
                                 factory: OWLDataFactory,
-                                n:Integer) = {
+                                n:Integer): util.Set[ELConceptDescription] = {
 
     val reasoner = reasonerFactory.createReasoner(ontology)
 
 
     val predicate = new BiPredicate[ELConceptDescription, ELConceptDescription] {
-      def test(x: ELConceptDescription, y: ELConceptDescription) =
-        (x.subsumes((y)) && y.subsumes(x)) //  || subsumedBy(x.toOWLClassExpression, y.toOWLClassExpression)
+      def test(x: ELConceptDescription, y: ELConceptDescription): Boolean =
+        x.subsumes(y) && y.subsumes(x) //  || subsumedBy(x.toOWLClassExpression, y.toOWLClassExpression)
     }
 
     def get_super_classes(iri: IRI) = {
@@ -144,7 +146,7 @@ object Util {
             val superClasses = get_super_classes(A)
             val upperNeighbor = reducedForm.clone()
             upperNeighbor.getConceptNames.remove(A)
-            upperNeighbor.getConceptNames.addAll((superClasses.entities().map[IRI](_.getIRI)).collect(Collectors.toSet[IRI]))
+            upperNeighbor.getConceptNames.addAll(superClasses.entities().map[IRI](_.getIRI).collect(Collectors.toSet[IRI]))
 
             val orig_concepts: java.util.Set[IRI] = new java.util.HashSet(upperNeighbor.getConceptNames)
             upperNeighbor.getConceptNames.removeIf(
@@ -217,8 +219,8 @@ object Util {
         .representatives(
           stream
             .collect(Collectors.toSet()),
-          predicate);
-      }
+          predicate)
+    }
     val upper_neighbors = m_upperNNeighborsReduced(concept, n)
     reasoner.dispose()
     upper_neighbors

@@ -10,7 +10,7 @@ case class Edge(selected: OWLAxiom, weakened: Option[OWLAxiom])
 
 object NodeStatus extends Enumeration {
   type NodeStatus = Value
-  val Open, Closed, Cancelled = Value
+  val Open, Closed, Cancelled, Removed = Value
 }
 
 class HittingSetTreeNode(val root: Option[RootConnection],

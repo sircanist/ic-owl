@@ -105,9 +105,8 @@ object WeakeningRelation {
 
       val baseAxioms = static ++ justification - axiom
 
-      val testOntology = Util.createManager.createOntology((baseAxioms).asJava)
+      val testOntology = Util.createManager.createOntology(baseAxioms.asJava)
 //      val reasoner = reasonerFactory.createReasoner(testOntology)
-      println("fetching new candidates for weakening")
       var nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
         Util.upperNNeighborsOntology(testOntology,
           conclusion: ELConceptDescription,
