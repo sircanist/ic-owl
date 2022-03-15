@@ -18,6 +18,7 @@ import scala.collection.JavaConverters.asScalaSetConverter
 object Util {
 
   private val random: Random = new Random()
+  private val manager = OWLManager.createOWLOntologyManager()
 
   def getRandomElement[E](c: java.util.Collection[E]): Optional[E] = {
     if (c.isEmpty)
@@ -35,18 +36,29 @@ object Util {
   }
 
   def getAxiomsFromFile(file: File, irimapper: List[OWLOntologyIRIMapper] = null): Set[OWLAxiom] = {
-    val manager = createManager
+    var manager = getManager
     if (irimapper != null){
       irimapper.foreach{
         manager.getIRIMappers.add(_)
       }
     }
-    manager.loadOntologyFromOntologyDocument(file).getAxioms().asScala.toSet
+    var ontology = manager.loadOntologyFromOntologyDocument(file)
+    val axioms = ontology.getAxioms().asScala.toSet
+    //val ids = manager.getOntologies().stream().map(_.getOntologyID)
+    //ids.forEach(id => manager.removeOntology(id))
+    manager.removeOntology(ontology)
+    ontology = null
+    axioms
   }
 
   def createManager: OWLOntologyManager = {
     OWLManager.createOWLOntologyManager()
   }
+
+  def getManager: OWLOntologyManager = {
+    manager
+  }
+
 
   def getWeakened(input: Set[OWLAxiom],
                   just: Set[OWLAxiom],

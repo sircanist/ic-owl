@@ -1,7 +1,7 @@
 package edu.hagenberg
 
 import edu.hagenberg.CLI.{aboxSharePath, attackerBkPath, attackerPolicyPath, baseOntologyPath, iriMappersPath, searchMethod}
-import edu.hagenberg.Util.getAxiomsFromFile
+import edu.hagenberg.Util.{getAxiomsFromFile, getManager}
 import edu.hagenberg.hst.SearchIterator
 import openllet.owlapi.OpenlletReasonerFactory
 import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLClassAssertionAxiom, OWLDeclarationAxiom, OWLOntologyIRIMapper}
@@ -71,8 +71,8 @@ object Main {
     val generator: BlackBoxGenerator[java.util.Set[OWLAxiom], OWLAxiom] = new BlackBoxGenerator(
       input,
       static,
-      checkerFactory = CheckerFactory.AnyAxiomCheckerCEStrategy(new OpenlletReasonerFactory),
-      reasonerFactory = new OpenlletReasonerFactory,
+      checkerFactory = CheckerFactory.AnyAxiomCheckerCEStrategy(OpenlletReasonerFactory.getInstance()),
+      reasonerFactory = OpenlletReasonerFactory.getInstance(),
       expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
       contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
       algorithm = Algorithm.hittingSet(weaken=weaken, searchMethod, stop_after = stopAfter)
@@ -124,7 +124,12 @@ object Main {
               val outputStream = new FileOutputStream(file)
               val tmp_ont: Set[OWLAxiom] =
                 cti_axioms -- removed_axioms ++ added_axioms
-              Util.createManager.createOntology(tmp_ont.asJava).saveOntology(outputStream)
+              var m = getManager
+              var owlOntology = m.createOntology(tmp_ont.asJava)
+              owlOntology.saveOntology(outputStream)
+              m.removeOntology(owlOntology)
+              owlOntology = null
+              m = null
               outputStream.close()
           }
         }

@@ -37,7 +37,8 @@ object ContractionStrategy {
 
       val WINDOW_SIZE = 20
 
-      @tailrec def removeWhile(refutable: Seq[I], contraction: Set[I], static: Set[I], remove_count: Int): Option[Set[I]] ={
+      val (static, refutable) = axioms.partition(checker.getStatic)
+      def removeWhile(refutable: Seq[I], contraction: Set[I], remove_count: Int): Option[Set[I]] ={
         refutable match{
           case x +: Seq() =>
             val new_contraction = contraction - x
@@ -53,10 +54,10 @@ object ContractionStrategy {
               if (checker.isEntailed(new_contraction_set ++ static)) {
                 // increase speed for removements if nothing is in the Window
                 val min_remove_count = Math.min(WINDOW_SIZE, remove_count*2)
-                removeWhile(new_list, new_contraction_set, static, min_remove_count)
+                removeWhile(new_list, new_contraction_set, min_remove_count)
               } else
               // reduce speed for removements if culprit was found in Window
-                removeWhile(refutable, contraction, static, remove_count/2)
+                removeWhile(refutable, contraction, remove_count/2)
             }
             else {
               val new_contraction = contraction - x
@@ -64,18 +65,18 @@ object ContractionStrategy {
                 // if entailment is true after removing some item from contraction
                 // it was not the culprit which lead to slow down, so cannot increase
                 // speed
-                removeWhile(xs, new_contraction, static, remove_count)
+                removeWhile(xs, new_contraction, remove_count)
               } else {
                 // increase speed because culprit was found
                 //println(x)
-                removeWhile(xs, contraction, static, remove_count*2)
+                removeWhile(xs, contraction, remove_count*2)
               }
             }
 
         }
       }
-      val (static, refutable) = axioms.partition(checker.getStatic)
-      removeWhile(refutable.toSeq, refutable, static, WINDOW_SIZE)
+      val removed_set = removeWhile(refutable.toSeq, refutable, WINDOW_SIZE)
+      removed_set
     }
   }
 }

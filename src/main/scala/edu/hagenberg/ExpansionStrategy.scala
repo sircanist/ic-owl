@@ -1,6 +1,7 @@
 package edu.hagenberg
 
-import edu.hagenberg.Util.createManager
+import edu.hagenberg.Util.{createManager, getManager}
+import org.semanticweb.owlapi.apibinding.OWLFunctionalSyntaxFactory
 import org.semanticweb.owlapi.model.{OWLAxiom, OWLOntology}
 
 import scala.annotation.tailrec
@@ -13,6 +14,7 @@ trait ExpansionStrategy[E, I]{
 
 
 object ExpansionStrategy {
+  val expansion_ontology: OWLOntology = getManager.createOntology(OWLFunctionalSyntaxFactory.IRI("expansion"))
   def simpleExpansionStrategy[E, I]: ExpansionStrategy[E, I] = {
     (axioms, checker) => {
       def addWhile(axioms: Seq[I], newelems: Set[I]): Option[Set[I]] ={
@@ -32,8 +34,7 @@ object ExpansionStrategy {
 
   def structuralExpansionStrategy: ExpansionStrategy[java.util.Set[OWLAxiom], OWLAxiom]  = {
     (axioms, checker) => {
-      val (static, refutable) = axioms.partition(checker.getStatic)
-      @tailrec def addWhile(ont: OWLOntology, expansion: Set[OWLAxiom], static: Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
+      @tailrec def addWhile(ont: OWLOntology, expansion: Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
         if (checker.isEntailed(expansion))
           Some(expansion)
         else if (expansion.equals(axioms))
@@ -52,12 +53,15 @@ object ExpansionStrategy {
           if (expansion.size == new_expansion.size){
             new_expansion = axioms
           }
-          addWhile(ont, new_expansion, static)
+          addWhile(ont, new_expansion)
           }
         }
-      val manager = createManager
-      val ont: OWLOntology = manager.createOntology(axioms.asJava)
-      addWhile(ont, checker.getModule(refutable), static)
+      val axiomsJava = axioms.asJava
+      expansion_ontology.addAxioms(axiomsJava)
+      var (_, refutable) = axioms.partition(checker.getStatic)
+      val result = addWhile(expansion_ontology, checker.getModule(refutable))
+      expansion_ontology.removeAxioms(axiomsJava)
+      result
     }
   }
 }

@@ -1,6 +1,7 @@
 package edu.hagenberg
 
-import edu.hagenberg.Util.createManager
+import edu.hagenberg.Util.{createManager, getManager}
+import org.semanticweb.owlapi.apibinding.{OWLFunctionalSyntaxFactory, OWLManager}
 import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.reasoner._
 import uk.ac.manchester.cs.owlapi.modularity.{ModuleType, SyntacticLocalityModuleExtractor}
@@ -25,7 +26,9 @@ abstract class OWLSetChecker(reasonerFactory: OWLReasonerFactory,
                     entailment: java.util.Set[OWLAxiom],
                     static: Set[OWLAxiom],
                     timeOutMS: Long = Long.MaxValue) extends Checker[java.util.Set[OWLAxiom],OWLAxiom] {
-  var m: OWLOntologyManager = createManager
+  var m: OWLOntologyManager = getManager
+  val module_manager: OWLOntologyManager = createManager
+  val reasoner_ontology: OWLOntology = m.createOntology(OWLFunctionalSyntaxFactory.IRI("default"))
   val signatures: java.util.Set[OWLEntity]  = entailment.asScala.flatMap(_.getSignature.asScala).asJava
   val reasoner_config = new SimpleConfiguration(
     new NullReasonerProgressMonitor, FreshEntityPolicy.ALLOW, timeOutMS, IndividualNodeSetPolicy.BY_SAME_AS)
@@ -38,9 +41,13 @@ abstract class OWLSetChecker(reasonerFactory: OWLReasonerFactory,
 
   override def getModule(input: Set[OWLAxiom]): Set[OWLAxiom] = {
     val moduleType = ModuleType.STAR
-    val jInput: java.util.Set[OWLAxiom] = input.asJava
-    val extractor = new SyntacticLocalityModuleExtractor(createManager,jInput.stream() , moduleType)
-    extractor.extract(signatures).asScala.toSet
+    var jInput: java.util.Set[OWLAxiom] = input.asJava
+    var extractor = new SyntacticLocalityModuleExtractor(module_manager,jInput.stream() , moduleType)
+    val moduleSet = extractor.extract(signatures).asScala.toSet
+    extractor = null
+    jInput = null
+    module_manager.clearOntologies()
+    moduleSet
   }
 
   override def getStatic: Set[OWLAxiom] = static
@@ -57,10 +64,9 @@ class AxiomsAtOnceChecker(reasonerFactory: OWLReasonerFactory,
     .filter(axiom => axiom.isInstanceOf[OWLIndividualAxiom]).asJava
 
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
-    m = createManager
     val ont: OWLOntology = m.createOntology(input.asJava)
     val check_entailed = (axiom: java.util.Set[OWLAxiom]) => {
-      val reasoner = reasonerFactory.createReasoner(ont,reasoner_config)
+      val reasoner = reasonerFactory.createNonBufferingReasoner(ont,reasoner_config)
       val is_entailed = reasoner.isEntailed(axiom)
       reasoner.dispose()
       is_entailed
@@ -81,7 +87,6 @@ class AnyAxiomChecker(reasonerFactory: OWLReasonerFactory,
     .filter(axiom => axiom.isInstanceOf[OWLIndividualAxiom]).asJava
 
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
-    m = createManager
     val ont: OWLOntology = m.createOntology(input.asJava)
     val check_entailed = (axiom: OWLAxiom) => {
       val reasoner = reasonerFactory.createReasoner(ont,reasoner_config)
@@ -109,32 +114,13 @@ class AnyAxiomCEChecker(reasonerFactory: OWLReasonerFactory,
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
     //println("checking if is entailed")
     //val t1 = System.nanoTime
-    m = createManager
-    val ont: OWLOntology = m.createOntology(input.asJava)
-    val factory = reasonerFactory.createReasoner(ont, reasoner_config)
+    val inputJava = input.asJava
+    reasoner_ontology.addAxioms(inputJava)
+    var factory = reasonerFactory.createReasoner(reasoner_ontology, reasoner_config)
     val entailed = ces.exists(ce => !factory.getInstances(ce).isEmpty)
-
-    /*val check_entailed = (axiom: OWLAxiom) => {
-
-      // this silently skips non class expressions, risky
-      val ce =
-        if (axiom.getAxiomType.equals(AxiomType.CLASS_ASSERTION))
-         axiom.asInstanceOf[OWLClassAssertionAxiom].getClassExpression
-        else null
-      //ont.saveOntology(new FunctionalSyntaxDocumentFormat, System.out)
-      if (ce != null) {
-        val instances = reasonerFactory.createReasoner(ont,reasoner_config).getInstances(ce, false)
-        return !instances.isEmpty
-      }
-      else {
-        print("OMG here we go")
-        return false
-      }
-    }
-    val entailed = entailment.parallelStream.anyMatch((axiom: OWLAxiom) =>  check_entailed(axiom))*/
-
-    m.removeOntology(ont)
+    reasoner_ontology.removeAxioms(inputJava)
     factory.dispose()
+    factory = null
     //println("checking if is entailed finished")
     //val duration = (System.nanoTime - t1) / 1e9d
     //println("entailment search took " + duration +"  input-size: "+ input.size + "  entailed = " + entailed)
