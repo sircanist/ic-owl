@@ -1,7 +1,9 @@
 package edu.hagenberg
 
 import edu.hagenberg.Util.{createManager, getManager}
+import org.semanticweb.elk.owlapi.ElkReasonerFactory
 import org.semanticweb.owlapi.apibinding.{OWLFunctionalSyntaxFactory, OWLManager}
+import org.semanticweb.elk.reasoner.ReasonerFactory
 import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.reasoner._
 import uk.ac.manchester.cs.owlapi.modularity.{ModuleType, SyntacticLocalityModuleExtractor}
@@ -110,17 +112,22 @@ class AnyAxiomCEChecker(reasonerFactory: OWLReasonerFactory,
   val ces: mutable.Set[OWLClassExpression] = entailment.asScala
     .filter(axiom => axiom.isInstanceOf[OWLClassAssertionAxiom])
     .map( axiom => axiom.asInstanceOf[OWLClassAssertionAxiom].getClassExpression)
+  val factory2: OWLReasonerFactory = new ElkReasonerFactory
 
   override def isEntailed(input: Set[OWLAxiom]): Boolean = {
     //println("checking if is entailed")
     //val t1 = System.nanoTime
     val inputJava = input.asJava
     reasoner_ontology.addAxioms(inputJava)
-    var factory = reasonerFactory.createReasoner(reasoner_ontology, reasoner_config)
-    val entailed = ces.exists(ce => !factory.getInstances(ce).isEmpty)
+    var reasoner = reasonerFactory.createNonBufferingReasoner(reasoner_ontology, reasoner_config)
+    //var reasoner2 = factory2.createNonBufferingReasoner(reasoner_ontology, reasoner_config)
+    //val entailed = ces.par.exists(ce => !reasoner2.getInstances(ce).isEmpty || !reasoner.getInstances(ce).isEmpty)
+    val entailed = ces.par.exists(ce => !reasoner.getInstances(ce).isEmpty)
     reasoner_ontology.removeAxioms(inputJava)
-    factory.dispose()
-    factory = null
+    reasoner.dispose()
+    //reasoner2.dispose()
+    reasoner = null
+    //reasoner2 = null
     //println("checking if is entailed finished")
     //val duration = (System.nanoTime - t1) / 1e9d
     //println("entailment search took " + duration +"  input-size: "+ input.size + "  entailed = " + entailed)

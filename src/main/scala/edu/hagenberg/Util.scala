@@ -7,6 +7,7 @@ import edu.hagenberg.weaken.WeakeningRelation
 import org.semanticweb.owlapi.apibinding.OWLManager
 import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
+import wvlet.log.LogSupport
 
 import java.io.File
 import java.util
@@ -15,7 +16,7 @@ import java.util.stream.Collectors
 import java.util.{Optional, Random}
 import scala.collection.JavaConverters.asScalaSetConverter
 
-object Util {
+object Util extends LogSupport{
 
   private val random: Random = new Random()
   private val manager = OWLManager.createOWLOntologyManager()
@@ -65,7 +66,7 @@ object Util {
                   selected: OWLAxiom,
                   finder: JustificationFinder[java.util.Set[OWLAxiom], OWLAxiom],
                   reasoner: OWLReasonerFactory): Set[OWLAxiom] = {
-    println("fetching new candidates for weakening, selected: " + selected)
+    debug("fetching new candidates for weakening, selected: " + selected)
     val currentWeakeningRelation =
       selected.getAxiomType match {
         case AxiomType.CLASS_ASSERTION | AxiomType.SUBCLASS_OF =>
@@ -74,7 +75,7 @@ object Util {
         case _ => WeakeningRelation.classicalWeakeningRelation
       }
     val weakenedSet: Set[OWLAxiom] = currentWeakeningRelation.getWeakened(input, finder, just, selected, reasoner)
-    println("fetched weakened set: " + weakenedSet)
+    debug("fetched weakened set: " + weakenedSet)
     weakenedSet
 //
 //    val chosen_weakened = Util.getRandomElement(weakened)

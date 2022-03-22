@@ -6,14 +6,14 @@ import org.semanticweb.owlapi.model.{OWLAxiom, OWLOntology}
 
 import scala.annotation.tailrec
 import scala.collection.JavaConverters.{asScalaSetConverter, setAsJavaSetConverter}
-
+import wvlet.log.LogSupport
 
 trait ExpansionStrategy[E, I]{
   def doExpansion(axioms: Set[I], checker: Checker[E, I] ): Option[Set[I]]
 }
 
 
-object ExpansionStrategy {
+object ExpansionStrategy extends LogSupport{
   val expansion_ontology: OWLOntology = getManager.createOntology(OWLFunctionalSyntaxFactory.IRI("expansion"))
   def simpleExpansionStrategy[E, I]: ExpansionStrategy[E, I] = {
     (axioms, checker) => {
@@ -22,6 +22,7 @@ object ExpansionStrategy {
           case x +: Seq() =>
             Some(newelems + x).filter(checker.isEntailed)
           case x +: xs =>
+            debug("executing expansion")
             Some(newelems + x).filter(checker.isEntailed).orElse(addWhile(xs, newelems + x))
           case _ =>
             None
@@ -40,6 +41,7 @@ object ExpansionStrategy {
         else if (expansion.equals(axioms))
           None
         else {
+          debug("executing structural expansion")
           var new_expansion = expansion
           expansion.foreach(
             axiom =>  axiom.getSignature.forEach(

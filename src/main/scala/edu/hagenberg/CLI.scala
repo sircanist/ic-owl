@@ -1,25 +1,23 @@
 package edu.hagenberg
 
-import edu.hagenberg.CLI.{aboxSharePath, attackerBkPath, attackerPolicyPath, baseOntologyPath, iriMappersPath, searchMethod}
 import edu.hagenberg.Util.{getAxiomsFromFile, getManager}
 import edu.hagenberg.hst.SearchIterator
 import openllet.owlapi.OpenlletReasonerFactory
-import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLClassAssertionAxiom, OWLDeclarationAxiom, OWLOntologyIRIMapper}
+import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLOntologyIRIMapper}
 import org.semanticweb.owlapi.util.SimpleIRIMapper
+import wvlet.log.LogFormatter.AppLogFormatter
+import wvlet.log.{FileHandler, LogLevel, LogSupport, Logger}
 
 import java.io.{File, FileOutputStream}
 import scala.collection.JavaConverters._
 import scala.io.Source
 
-/**
- * Hello world!
- *
- */
-
-object Main {
+object Main extends LogSupport{
+  Logger.rootLogger.resetHandler(new FileHandler(fileName = "/tmp/app.log", formatter = AppLogFormatter))
+  Logger.rootLogger.setLogLevel(LogLevel.DEBUG)
 
   def createIriMappers(path: String): List[OWLOntologyIRIMapper]  ={
-    println("Fetching iris from file: " + path)
+    debug("Fetching iris from file: $path")
     val source = Source.fromFile(path)
     val lines = source.getLines()
     val iris = lines.map{
@@ -75,7 +73,8 @@ object Main {
       reasonerFactory = OpenlletReasonerFactory.getInstance(),
       expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
       contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
-      algorithm = Algorithm.hittingSet(weaken=weaken, searchMethod, stop_after = stopAfter)
+      algorithm = Algorithm.hittingSet(weaken=weaken, searchMethod, stop_after = stopAfter),
+      useModularisation = true
       //algorithm = Algorithm.simple
       //algorithm = Algorithm.simpleWeakening
     )
@@ -93,34 +92,26 @@ object Main {
         }).distinct
 
         val duration = (System.nanoTime - t1) / 1e9d
-        //       val axioms_removed = paths.flatMap(path => path.map { pe =>
-        //         pe.selected
-        //       }).distinct
-        //       val axioms_added = paths.flatMap(path => path.map { pe =>
-        //         pe.weakened
-        //       }.filter(_.isDefined).map(_.get)).distinct
-        //       val tmp_ont: Set[OWLAxiom] =
-        //         cti_axioms -- axioms_removed ++ axioms_added
-        //       val outputStream = new FileOutputStream(new File("/tmp/test.tttl"))
-        //       Util.createManager.createOntology((tmp_ont.asJava)).saveOntology(outputStream)
-
         if(create_files){
           paths.zipWithIndex.foreach{
             case (pathelements, idx) =>
-              println("\n\nNew path")
-              pathelements.foreach {
-                path => {
-                  println("{")
-                  println("Justifications:\n " + path.justifications)
-                  println("selected:\n " + path.selected)
-                  println("weakened:\n " + path.weakened)
-                  println("}")
-                }
-              }
 
               val removed_axioms: Set[OWLAxiom] = pathelements.map(e => e.selected).toSet
               val added_axioms: Set[OWLAxiom] = pathelements.map(_.weakened).filter(_.isDefined).map(_.get).toSet
               val file = new File("repair/" + idx + ".owl")
+
+              var logout = ""
+              logout += s"New path\n, file: $file\n, length: ${pathelements.size}"
+              pathelements.foreach {
+                path => {
+                  logout += "\n{"
+                  logout += "\nJustifications:\n " + path.justifications
+                  logout += "\nselected:\n " + path.selected
+                  logout += "\nweakened:\n " + path.weakened
+                  logout += "\n}"
+                }
+              }
+              warn(logout)
               val outputStream = new FileOutputStream(file)
               val tmp_ont: Set[OWLAxiom] =
                 cti_axioms -- removed_axioms ++ added_axioms
@@ -178,7 +169,7 @@ object CLI extends App {
     weaken,
     stopAfter)
 
-  println("Finished")
+  println("Finished, see /tmp/app.log for details")
   System.exit(0)
 
 }
