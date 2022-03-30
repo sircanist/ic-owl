@@ -30,11 +30,17 @@ abstract class OWLSetChecker(reasonerFactory: OWLReasonerFactory,
                     timeOutMS: Long = Long.MaxValue) extends Checker[java.util.Set[OWLAxiom],OWLAxiom] {
   var m: OWLOntologyManager = getManager
   val module_manager: OWLOntologyManager = createManager
-  val reasoner_ontology: OWLOntology = m.createOntology(OWLFunctionalSyntaxFactory.IRI("default"))
+  val iriOntology: IRI = OWLFunctionalSyntaxFactory.IRI("reasoner")
+  val reasoner_ontology: OWLOntology = {
+    if (m.getOntology(iriOntology) == null)
+      m.createOntology()
+    else
+      m.getOntology(iriOntology)
+  }
+
   val signatures: java.util.Set[OWLEntity]  = entailment.asScala.flatMap(_.getSignature.asScala).asJava
   val reasoner_config = new SimpleConfiguration(
     new NullReasonerProgressMonitor, FreshEntityPolicy.ALLOW, timeOutMS, IndividualNodeSetPolicy.BY_SAME_AS)
-
 
 
   override def isTautology: Boolean = {
@@ -122,7 +128,8 @@ class AnyAxiomCEChecker(reasonerFactory: OWLReasonerFactory,
     var reasoner = reasonerFactory.createNonBufferingReasoner(reasoner_ontology, reasoner_config)
     //var reasoner2 = factory2.createNonBufferingReasoner(reasoner_ontology, reasoner_config)
     //val entailed = ces.par.exists(ce => !reasoner2.getInstances(ce).isEmpty || !reasoner.getInstances(ce).isEmpty)
-    val entailed = ces.par.exists(ce => !reasoner.getInstances(ce).isEmpty)
+    val entailed = ces.exists{
+      ce => !reasoner.getInstances(ce).isEmpty}
     reasoner_ontology.removeAxioms(inputJava)
     reasoner.dispose()
     //reasoner2.dispose()

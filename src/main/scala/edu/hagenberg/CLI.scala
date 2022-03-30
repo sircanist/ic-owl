@@ -3,6 +3,7 @@ package edu.hagenberg
 import edu.hagenberg.Util.{getAxiomsFromFile, getManager}
 import edu.hagenberg.hst.SearchIterator
 import openllet.owlapi.OpenlletReasonerFactory
+import org.semanticweb.HermiT
 import org.semanticweb.owlapi.model.{IRI, OWLAxiom, OWLOntologyIRIMapper}
 import org.semanticweb.owlapi.util.SimpleIRIMapper
 import wvlet.log.LogFormatter.AppLogFormatter
@@ -14,7 +15,7 @@ import scala.io.Source
 
 object Main extends LogSupport{
   Logger.rootLogger.resetHandler(new FileHandler(fileName = "/tmp/app.log", formatter = AppLogFormatter))
-  Logger.rootLogger.setLogLevel(LogLevel.DEBUG)
+  Logger.rootLogger.setLogLevel(LogLevel.INFO)
 
   def createIriMappers(path: String): List[OWLOntologyIRIMapper]  ={
     debug("Fetching iris from file: $path")
@@ -49,6 +50,7 @@ object Main extends LogSupport{
            stopAfter: Int = -1,
            create_files: Boolean = true): Unit ={
 
+    val t1 = System.nanoTime
     val iriMappers =
       createIriMappers(iriMappersPath)
 
@@ -65,12 +67,12 @@ object Main extends LogSupport{
     val entailment = (unwanted_ontology_axioms -- static)
       //.filter(axiom => axiom.isInstanceOf[OWLClassAssertionAxiom])
       .asJava
-
+    val reasonerFactory = new HermiT.ReasonerFactory
     val generator: BlackBoxGenerator[java.util.Set[OWLAxiom], OWLAxiom] = new BlackBoxGenerator(
       input,
       static,
-      checkerFactory = CheckerFactory.AnyAxiomCheckerCEStrategy(OpenlletReasonerFactory.getInstance()),
-      reasonerFactory = OpenlletReasonerFactory.getInstance(),
+      checkerFactory = CheckerFactory.AnyAxiomCheckerCEStrategy(reasonerFactory),
+      reasonerFactory = reasonerFactory,
       expansionStrategy = ExpansionStrategy.structuralExpansionStrategy,
       contractionStrategy = ContractionStrategy.newSlidingContractionStrategy[java.util.Set[OWLAxiom], OWLAxiom],
       algorithm = Algorithm.hittingSet(weaken=weaken, searchMethod, stop_after = stopAfter),
@@ -78,7 +80,9 @@ object Main extends LogSupport{
       //algorithm = Algorithm.simple
       //algorithm = Algorithm.simpleWeakening
     )
-    val t1 = System.nanoTime
+    val duration1 = (System.nanoTime - t1) / 1e9d
+    println("loading took "+ duration1 + " seconds.")
+    val t2 = System.nanoTime
     val remove_axioms = generator.executeAlgorithm(entailment)
     remove_axioms match {
       case Left(s) => println(s"ERROR: ${s.getMessage}")
@@ -91,27 +95,27 @@ object Main extends LogSupport{
             pathSet
         }).distinct
 
-        val duration = (System.nanoTime - t1) / 1e9d
+        val duration2 = (System.nanoTime - t2) / 1e9d
         if(create_files){
+
           paths.zipWithIndex.foreach{
             case (pathelements, idx) =>
 
               val removed_axioms: Set[OWLAxiom] = pathelements.map(e => e.selected).toSet
               val added_axioms: Set[OWLAxiom] = pathelements.map(_.weakened).filter(_.isDefined).map(_.get).toSet
               val file = new File("repair/" + idx + ".owl")
-
-              var logout = ""
-              logout += s"New path\n, file: $file\n, length: ${pathelements.size}"
+              var out = ""
+              out += s"New path\n, file: $file\n, length: ${pathelements.size}"
               pathelements.foreach {
                 path => {
-                  logout += "\n{"
-                  logout += "\nJustifications:\n " + path.justifications
-                  logout += "\nselected:\n " + path.selected
-                  logout += "\nweakened:\n " + path.weakened
-                  logout += "\n}"
+                  out += "\n{"
+                  out += "\nJustifications:\n " + path.justifications
+                  out += "\nselected:\n " + path.selected
+                  out += "\nweakened:\n " + path.weakened
+                  out += "\n}"
                 }
               }
-              warn(logout)
+              warn(out)
               val outputStream = new FileOutputStream(file)
               val tmp_ont: Set[OWLAxiom] =
                 cti_axioms -- removed_axioms ++ added_axioms
@@ -124,7 +128,7 @@ object Main extends LogSupport{
               outputStream.close()
           }
         }
-        println("process took "+ duration + " seconds.")
+        println("processing took "+ duration2 + " seconds.")
     }
   }
 }

@@ -11,6 +11,7 @@ import org.semanticweb.owlapi.reasoner.{OWLReasoner, OWLReasonerFactory}
 import wvlet.log.LogSupport
 
 import scala.collection.JavaConverters.{asScalaSetConverter, setAsJavaSetConverter}
+import scala.collection.mutable
 
 trait WeakeningRelation {
 
@@ -23,6 +24,8 @@ trait WeakeningRelation {
 }
 
 object WeakeningRelation extends LogSupport{
+
+  val weakeningCache = new mutable.HashMap[String, Set[OWLAxiom]]
 
   def semanticELConceptInclusionWeakeningRelation: WeakeningRelation =
     nthELConceptInclusionWeakeningRelation3()
@@ -104,101 +107,115 @@ object WeakeningRelation extends LogSupport{
       val weakenedRHS: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet()
 
       //val (static, _) = input.partition(checker.getStatic)
-      val static = finder.checker.getStatic
+      //val static = finder.checker.getStatic.intersect(input)
+      val static = finder.checker.getStatic // needs static for superclasses
+
+      val key = justification.map(j => j.toString).toList.sorted.mkString("|") +
+        "||" +
+        axiom.toString
+
 
       val baseAxioms = static ++ justification - axiom
+      weakeningCache.get(key) match {
+        case Some(content) => content
+        case None => {
 
-      val testOntology = ontologyManager.createOntology(baseAxioms.asJava, OWLFunctionalSyntaxFactory.IRI("weakening"))
-//      val reasoner = reasonerFactory.createReasoner(testOntology)
-      var nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
-        Util.upperNNeighborsOntology(testOntology,
-          conclusion: ELConceptDescription,
-          reasonerFactory: OWLReasonerFactory,
-          dataFactory: OWLDataFactory))
-//      val conceptnames_1 = conclusion.getConceptNames
-//      val existentialrestricions_1 = conclusion.getExistentialRestrictions
-//      dataFactory.getowlobjectin
-//      reasoner.isSatisfiable(classExpression.getClassesInSignature.toArray()(0).asInstanceOf[OWLClassExpression])
 
-      while (!nextCandidates.isEmpty) {
-        val processedCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(nextCandidates)
-        nextCandidates.parallelStream().forEach(candidate ⇒ {
-        val weakenedAxiom: OWLAxiom =
-          createWeakenedAxiom(axiom, candidate, dataFactory)
-        if (checker.isEntailed(baseAxioms + weakenedAxiom)) {
-
-          val new_next_candidates: java.util.Set[ELConceptDescription] = Sets.newHashSet(
+          val testOntology = ontologyManager.createOntology(baseAxioms.asJava, OWLFunctionalSyntaxFactory.IRI("weakening"))
+          //      val reasoner = reasonerFactory.createReasoner(testOntology)
+          var nextCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(
             Util.upperNNeighborsOntology(testOntology,
-              candidate: ELConceptDescription,
+              conclusion: ELConceptDescription,
               reasonerFactory: OWLReasonerFactory,
               dataFactory: OWLDataFactory))
-          //debug("fetching new candidates for weakening")
-          nextCandidates.addAll(new_next_candidates)
-        } else
-          weakenedRHS add candidate
+          //      val conceptnames_1 = conclusion.getConceptNames
+          //      val existentialrestricions_1 = conclusion.getExistentialRestrictions
+          //      dataFactory.getowlobjectin
+          //      reasoner.isSatisfiable(classExpression.getClassesInSignature.toArray()(0).asInstanceOf[OWLClassExpression])
 
-        })
-        nextCandidates = Sets.newConcurrentHashSet(nextCandidates)
-        nextCandidates.removeAll(processedCandidates)
-      }
-      def isStrictlyMoreSpecific(c: ELConceptDescription, d: ELConceptDescription): Boolean = (c compareTo d) == -1
-      val nonMinimalRHS: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet()
-      weakenedRHS.parallelStream().forEach(c ⇒ {
-        weakenedRHS.parallelStream().forEach(d ⇒ {
-          if (isStrictlyMoreSpecific(c, d))
-            nonMinimalRHS add d
-        })
-      })
-      weakenedRHS removeAll nonMinimalRHS
+          while (!nextCandidates.isEmpty) {
+            val processedCandidates: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet(nextCandidates)
+            nextCandidates.parallelStream().forEach(candidate ⇒ {
+              val weakenedAxiom: OWLAxiom =
+                createWeakenedAxiom(axiom, candidate, dataFactory)
+              if (checker.isEntailed(baseAxioms + weakenedAxiom)) {
 
-      val weakening: java.util.Set[OWLAxiom] = Sets.newConcurrentHashSet()
-      weakenedRHS.parallelStream().forEach(c ⇒ {
-        weakening add createWeakenedAxiom(axiom, c, dataFactory)
-      })
-      testOntology.removeAxioms(baseAxioms.asJava)
-      ontologyManager.removeOntology(testOntology)
-      val manager = createManager
-      val order: MatrixRelation[OWLAxiom, OWLAxiom] = new MatrixRelation(true)
-      order.rowHeads().addAll(weakening)
-      weakening.stream().parallel().forEach(weakening1 ⇒ {
-        val reasoner: OWLReasoner =
-          reasonerFactory.createReasoner(manager.createOntology((baseAxioms + weakening1).asJava))
-        weakening.stream().sequential().forEach(weakening2 ⇒ {
-          if (!(weakening1 equals weakening2))
-            if (reasoner isEntailed weakening2)
-              order.add(weakening1, weakening2)
-        })
-        reasoner.dispose()
-      })
-      manager.clearOntologies()
-      val notNecessaryWeakenings: java.util.Set[OWLAxiom] = Sets.newConcurrentHashSet()
-//      weakening.stream().parallel().forEach(weakening2 ⇒ {
-//        // weakening1 subsumes weakening2 and therefore is more general or same general
-//        order.col(weakening2).stream().sequential().forEach(weakening1 ⇒ {
-//              notNecessaryWeakenings add weakening1
-//        })
-//      })
+                val new_next_candidates: java.util.Set[ELConceptDescription] = Sets.newHashSet(
+                  Util.upperNNeighborsOntology(testOntology,
+                    candidate: ELConceptDescription,
+                    reasonerFactory: OWLReasonerFactory,
+                    dataFactory: OWLDataFactory))
+                //debug("fetching new candidates for weakening")
+                nextCandidates.addAll(new_next_candidates)
+              } else
+                weakenedRHS add candidate
 
-      // remove all weakening < other weakening (with subsumption)
-      weakening.stream().parallel().forEach(weakening2 ⇒ {
-        val reasoner: OWLReasoner =
-          reasonerFactory.createReasoner(manager.createOntology((baseAxioms + weakening2).asJava))
-        order.col(weakening2).stream().sequential().forEach(weakening1 ⇒ {
-          if (!(weakening1 equals weakening2)) {
-            if (!(reasoner isEntailed weakening1))
-              notNecessaryWeakenings add weakening2
-            else{
-              if (!(notNecessaryWeakenings contains weakening1) &&
-                  !(notNecessaryWeakenings contains weakening2)) {
-                notNecessaryWeakenings add weakening1
-              }
-            }
+            })
+            nextCandidates = Sets.newConcurrentHashSet(nextCandidates)
+            nextCandidates.removeAll(processedCandidates)
           }
-        })
-        reasoner.dispose()
-      })
-      manager.clearOntologies()
-      weakening.removeAll(notNecessaryWeakenings)
-      weakening.asScala.toSet
+          def isStrictlyMoreSpecific(c: ELConceptDescription, d: ELConceptDescription): Boolean = (c compareTo d) == -1
+          val nonMinimalRHS: java.util.Set[ELConceptDescription] = Sets.newConcurrentHashSet()
+          weakenedRHS.parallelStream().forEach(c ⇒ {
+            weakenedRHS.parallelStream().forEach(d ⇒ {
+              if (isStrictlyMoreSpecific(c, d))
+                nonMinimalRHS add d
+            })
+          })
+          weakenedRHS removeAll nonMinimalRHS
+
+          val weakening: java.util.Set[OWLAxiom] = Sets.newConcurrentHashSet()
+          weakenedRHS.parallelStream().forEach(c ⇒ {
+            weakening add createWeakenedAxiom(axiom, c, dataFactory)
+          })
+          testOntology.removeAxioms(baseAxioms.asJava)
+          ontologyManager.removeOntology(testOntology)
+          val manager = createManager
+          val order: MatrixRelation[OWLAxiom, OWLAxiom] = new MatrixRelation(true)
+          order.rowHeads().addAll(weakening)
+          weakening.stream().parallel().forEach(weakening1 ⇒ {
+            val reasoner: OWLReasoner =
+              reasonerFactory.createReasoner(manager.createOntology((baseAxioms + weakening1).asJava))
+            weakening.stream().sequential().forEach(weakening2 ⇒ {
+              if (!(weakening1 equals weakening2))
+                if (reasoner isEntailed weakening2)
+                  order.add(weakening1, weakening2)
+            })
+            reasoner.dispose()
+          })
+          manager.clearOntologies()
+          val notNecessaryWeakenings: java.util.Set[OWLAxiom] = Sets.newConcurrentHashSet()
+          //      weakening.stream().parallel().forEach(weakening2 ⇒ {
+          //        // weakening1 subsumes weakening2 and therefore is more general or same general
+          //        order.col(weakening2).stream().sequential().forEach(weakening1 ⇒ {
+          //              notNecessaryWeakenings add weakening1
+          //        })
+          //      })
+
+          // remove all weakening < other weakening (with subsumption)
+          weakening.stream().parallel().forEach(weakening2 ⇒ {
+            val reasoner: OWLReasoner =
+              reasonerFactory.createReasoner(manager.createOntology((baseAxioms + weakening2).asJava))
+            order.col(weakening2).stream().sequential().forEach(weakening1 ⇒ {
+              if (!(weakening1 equals weakening2)) {
+                if (!(reasoner isEntailed weakening1))
+                  notNecessaryWeakenings add weakening2
+                else{
+                  if (!(notNecessaryWeakenings contains weakening1) &&
+                    !(notNecessaryWeakenings contains weakening2)) {
+                    notNecessaryWeakenings add weakening1
+                  }
+                }
+              }
+            })
+            reasoner.dispose()
+          })
+          manager.clearOntologies()
+          weakening.removeAll(notNecessaryWeakenings)
+          val return_set = weakening.asScala.toSet
+          weakeningCache.put(key, return_set)
+          return_set
+        }
+      }
     }
 }

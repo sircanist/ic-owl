@@ -1,6 +1,8 @@
 package edu.hagenberg.hst
 
 import edu.hagenberg.PathElement
+import org.apache.tinkerpop.gremlin.structure.Vertex
+import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerVertex
 import org.semanticweb.owlapi.model.OWLAxiom
 
 import scala.annotation.tailrec
@@ -14,7 +16,8 @@ object NodeStatus extends Enumeration {
 }
 
 class HittingSetTreeNode(val root: Option[RootConnection],
-                         var justification: Option[Set[OWLAxiom]] = None) {
+                         var justification: Option[Set[OWLAxiom]] = None,
+                         var id: Vertex = null) {
 
   val edges_set: Set[Edge] = getEdgesToRoot.toSet
 

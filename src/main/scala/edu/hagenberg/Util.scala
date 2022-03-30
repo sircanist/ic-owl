@@ -47,7 +47,11 @@ object Util extends LogSupport{
     val axioms = ontology.getAxioms().asScala.toSet
     //val ids = manager.getOntologies().stream().map(_.getOntologyID)
     //ids.forEach(id => manager.removeOntology(id))
+    ontology.getImports.forEach(
+      ont => manager.removeOntology(ont)
+    )
     manager.removeOntology(ontology)
+
     ontology = null
     axioms
   }

@@ -1,11 +1,15 @@
 package edu.hagenberg.hst
 
 import edu.hagenberg.{JustificationFinder, Util}
+//import org.apache.tinkerpop.gremlin.tinkergraph.structure.{TinkerFactory, TinkerGraph, TinkerVertex}
+//import gremlin.scala._
 import org.semanticweb.owlapi.model.OWLAxiom
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory
 import wvlet.log.LogFormatter.AppLogFormatter
 import wvlet.log.LogSupport
 
+
+import scala.language.postfixOps
 import scala.annotation.tailrec
 import scala.collection.{immutable, mutable}
 import scala.collection.JavaConverters._
@@ -29,6 +33,14 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
   def getJustification(axioms:Set[OWLAxiom]): Option[Set[OWLAxiom]] ={
     finder.searchOneJustification(axioms)
   }
+  val counts: mutable.Map[String, Int] = mutable.HashMap("R" -> 0, "X" -> 0, "O" -> 0, "C" -> 0)
+
+
+  //implicit val graph = TinkerGraph.open().asScala
+  //val SelectedLabel = Key[String]("selected")
+  //val JustificationLabel = Key[String]("just")
+  //val WeakenedLabel = Key[String]("weakened")
+  //val g = graph.traversal
 
   def getEdges(axioms:Set[OWLAxiom], justification: Set[OWLAxiom], selected: OWLAxiom): List[Edge] ={
     // get the new input = axioms - justification + selected
@@ -80,21 +92,13 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
     val edges_set = node.edges_set
     val axioms: Set[OWLAxiom] = getAxioms(edges_set)// input -- edges
 
+
     def toSet(selected: OWLAxiom, weakened: Option[OWLAxiom]) = {
       weakened match {
         case Some(w) => Set(selected, w)
         case None => Set(selected)
       }
     }
-    // this probably does not work for non laconic axioms
-    def edges_flatten(edges: Stream[Edge]) = {
-      edges.flatMap(e => toSet(e.selected, e.weakened))
-    }
-
-    def check_intersection(just1: Set[OWLAxiom], justNode: Set[OWLAxiom]) = {
-      just1.intersect(justNode).isEmpty
-    }
-
 
     var node_stat = {
       if (edges_set.nonEmpty  &&
@@ -102,10 +106,12 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
         {
           NodeStatus.Removed
         }
-      else if (closedPaths.exists(cp => cp.edges_set == cp.edges_set.intersect(edges_set)))
+      else if (closedPaths.exists(cp => cp.edges_set == cp.edges_set.intersect(edges_set))) {
         NodeStatus.Cancelled
-      else
+      }
+      else {
         NodeStatus.Open
+      }
     }
 
 
@@ -131,15 +137,29 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
     if (just.isEmpty && node_stat == NodeStatus.Open){
       node_stat = NodeStatus.Closed
       // TODO, manual debug only
-//      if (edges_set.size > 8) {
-//        val o = Util.createManager.createOntology()
-//        o.addAxioms(axioms.asJava)
-//        o.saveOntology(new FileOutputStream("/tmp/ont.owl"))
-//      }
+      if (edges_set.size > 8) {
+        val o = Util.createManager.createOntology()
+        o.addAxioms(axioms.asJava)
+        o.saveOntology(new FileOutputStream("/tmp/ont.owl"))
+      }
+    }
+    node_stat match {
+      case NodeStatus.Open => counts("O") += 1
+      case NodeStatus.Closed => counts("C") +=1
+      case NodeStatus.Removed => counts("R") += 1
+      case NodeStatus.Cancelled => counts("X") += 1
     }
     if (just.isDefined)
       justifications += just.get
-    val newNode = new HittingSetTreeNode(node.root, just)
+    /*val new_v = graph + node_stat.toString
+    new_v.setProperty(JustificationLabel, just.toString())
+    if (node.root.isDefined) {
+      val edge = node.root.get.edge
+      val rootid: Vertex = node.root.get.root.id
+      rootid --- ("child", SelectedLabel ->edge.selected.toString, WeakenedLabel -> edge.weakened.toString) --> new_v
+    }*/
+    val new_v = null
+    val newNode = new HittingSetTreeNode(node.root, just, new_v)
     newNode.status = node_stat
     (newNode, axioms)
   }
@@ -176,6 +196,15 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
 
     }
 
+    def printOverallStats(): Unit = {
+      info(s"""Overall state:
+        cancelled: ${counts("X")}
+        removed: ${counts("R")}
+        open: ${counts("O")}
+        closed: ${counts("C")}
+        iteration count: $iterations""")
+    }
+
     @tailrec def bfs(q: Queue[HittingSetTreeNode],
              discovered: mutable.HashSet[Set[Edge]],
              closedPaths: Set[HittingSetTreeNode],
@@ -185,8 +214,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       val (cp, children) = common(head, discovered, closedPaths, justifications)
       iterations += 1
       if (iterations % 1000 == 0) {
-        warn(s"iteration count: $iterations")
-        info(s"cp: ${cp.size}" )
+        printOverallStats()
       }
       val new_depth = head.edges_set.size
       val dn_new =
@@ -194,13 +222,16 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
             info(s"queue size: ${nq.size}")
             info(s"edges length: ${head.edges_set.size}")
             info(s"processed: ${discovered.size}")
-            info(s"cp: ${cp.size}" )
+            printOverallStats()
             discovered
               .filter(node => node.size == new_depth)
               .filterNot(node => cp.exists(c => c.edges_set == c.edges_set.intersect(node)))
           } else discovered
-      if (dn_new != discovered)
+      if (dn_new != discovered) {
+        info("cleaning system space")
         discovered.clear()
+        System.gc()
+      }
       var nq2 = nq
       if (children.nonEmpty) {
         nq2 = nq.enqueue(children)
@@ -208,36 +239,57 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       if (nq2.nonEmpty && (dont_stop || cp.size < stop_after))
         bfs(nq2, dn_new, cp, justifications, new_depth)
       else {
-        warn(s"iteration count: $iterations")
+        printOverallStats()
+        /*val file = "/tmp/graphile"
+        g.underlying.io("graph.xml").write().iterate()*/
         cp
       }
     }
 
-    /*@tailrec def dfs(l: List[HittingSetTreeNode],
-             discovered: Set[HittingSetTreeNode],
-             closedPaths: Set[HittingSetTreeNode],
-             justifications: mutable.Set[Set[OWLAxiom]]): Set[HittingSetTreeNode] = {
+    @tailrec def dfs(l: List[HittingSetTreeNode],
+                     discovered: mutable.HashSet[Set[Edge]],
+                     closedPaths: Set[HittingSetTreeNode],
+                     justifications: mutable.Set[Set[OWLAxiom]],
+                     depth: Integer): Set[HittingSetTreeNode] = {
       val head::nq = l
-      val (dn, cp, children) = common(head, discovered, closedPaths, justifications)
+      val (cp, children) = common(head, discovered, closedPaths, justifications)
+      iterations += 1
+      if (iterations % 1000 == 0) {
+        printOverallStats()
+      }
+      val new_depth = head.edges_set.size
+      val dn_new =
+        if (new_depth != depth ) {
+          info(s"queue size: ${nq.size}")
+          info(s"edges length: ${head.edges_set.size}")
+          info(s"processed: ${discovered.size}")
+          printOverallStats()
+          discovered
+            .filter(node => node.size == new_depth)
+            .filterNot(node => cp.exists(c => c.edges_set == c.edges_set.intersect(node)))
+        } else discovered
+      if (dn_new != discovered) {
+        info("cleaning system space")
+        discovered.clear()
+        System.gc()
+      }
       var nq2 = nq
       if (children.nonEmpty) {
         nq2 = List.concat(children,nq)
-        println("queue size: " + nq2.size)
-        println("edges length: " +head.edges.length)
-        println("processed: " + discovered.size)
-        println("cp: " + cp.size)
       }
       if (nq2.nonEmpty && (dont_stop || cp.size < stop_after))
-        dfs(nq2, dn, cp, justifications)
-      else
+        dfs(nq2, dn_new, cp, justifications, new_depth)
+      else {
+        printOverallStats()
         cp
-    }*/
-
+      }
+    }
+    printOverallStats()
     var justifications =  scala.collection.mutable.Set[Set[OWLAxiom]]()
     var discovered = scala.collection.mutable.HashSet[Set[Edge]]()
     searchIterator match {
       case BFS => bfs( Queue( root ), discovered, Set( ), justifications, 0)
-      //case DFS => dfs( List( root ), Set( ), Set(  ), justifications)
+      case DFS => dfs( List( root ), discovered, Set(  ), justifications, 0)
     }
   }
 }
