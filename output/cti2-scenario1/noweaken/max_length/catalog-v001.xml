@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl" uri="file:/home/chris/Dokumente/UNI/Masterprojekt/ic-owl/owls/cti2.owl"/>
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1-bk.owl" uri="file:/home/chris/Dokumente/UNI/Masterprojekt/ic-owl/owls/cti2-scenario1-bk.owl"/>
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl" uri="file:/home/chris/Dokumente/UNI/Masterprojekt/ic-owl/owls/cti2.owl"/>
+    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1-bk.owl" uri="file:/home/chris/Dokumente/UNI/Masterprojekt/ic-owl/owls/cti2-scenario1-bk.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1648029019554" name="urn:unnamed:ontology#ont2090083310928" uri="237_openllet.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1648029019554" name="urn:unnamed:ontology#ont4437117124581" uri="246_hermit.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1648029019554" name="urn:unnamed:ontology#ont8670434138796" uri="203_hermit_changed_subchain.owl"/>
+    </group>
+</catalog>

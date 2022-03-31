@@ -1,0 +1,43 @@
+New path
+, file: repair/3.owl
+, length: 5
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#targets> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#targets> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#victim> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#victim> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
