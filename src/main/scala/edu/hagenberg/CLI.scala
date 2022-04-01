@@ -87,6 +87,7 @@ object Main extends LogSupport{
     remove_axioms match {
       case Left(s) => println(s"ERROR: ${s.getMessage}")
       case Right(paths) =>
+        val duration2 = (System.nanoTime - t2) / 1e9d
         val distinct_paths = paths.map(path => path.flatMap { pe =>
           val pathSet = Set(pe.selected)
           if (pe.weakened.isDefined)
@@ -95,7 +96,6 @@ object Main extends LogSupport{
             pathSet
         }).distinct
 
-        val duration2 = (System.nanoTime - t2) / 1e9d
         if(create_files){
 
           paths.zipWithIndex.foreach{

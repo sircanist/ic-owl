@@ -52,9 +52,9 @@ object Algorithm {
 
   def hittingSet(weaken: Boolean, searchIterator: SearchIterator, stop_after: Int):Algorithm[java.util.Set[OWLAxiom], OWLAxiom] = {
     (input, finder, reasonerFactory) => {
-      val rootNode = new HittingSetTreeNode(root = None)
+      val rootNode = new HittingSetTreeNode(edges_set = Set())
       val tree = new HittingSetTree(input, rootNode, finder, reasonerFactory, weaken, searchIterator, stop_after)
-      tree.search().toList.map(el => el.getPathElementsToRoot)
+      tree.search().toList.map(el => el.edges_set.toList.map(edge => new PathElement(Set(), edge.selected, edge.weakened)))
     }
   }
 //  def hittingSetWeakening: Algorithm[java.util.Set[OWLAxiom], OWLAxiom] =

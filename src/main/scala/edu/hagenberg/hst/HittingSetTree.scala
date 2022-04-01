@@ -61,7 +61,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
                   justifications: Set[OWLAxiom],
                   closedPaths: Set[HittingSetTreeNode]): List[HittingSetTreeNode] = {
     def createChildForEdge(root: HittingSetTreeNode, edge: Edge) = {
-      new HittingSetTreeNode(Some(RootConnection(root, edge)))
+      new HittingSetTreeNode(root.edges_set + edge)
     }
     val children = justifications.flatMap {
       just =>{
@@ -69,7 +69,7 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
         edges.map(edge => createChildForEdge(root, edge))
       }
     }
-    val remaining =   children
+    val remaining = children
       .filterNot(child => closedPaths.exists(cp => cp.edges_set == cp.edges_set.intersect(child.edges_set)))
     // Filter childs so memory footprint is smaller
     //val removed_amount = children.size - remaining.size
@@ -131,17 +131,10 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
           case Some(_) => discover
           case None => getJustification(axioms)
         }
-
       }
     }
     if (just.isEmpty && node_stat == NodeStatus.Open){
       node_stat = NodeStatus.Closed
-      // TODO, manual debug only
-      if (edges_set.size > 8) {
-        val o = Util.createManager.createOntology()
-        o.addAxioms(axioms.asJava)
-        o.saveOntology(new FileOutputStream("/tmp/ont.owl"))
-      }
     }
     node_stat match {
       case NodeStatus.Open => counts("O") += 1
@@ -158,15 +151,14 @@ class HittingSetTree[E, I](input: Set[OWLAxiom],
       val rootid: Vertex = node.root.get.root.id
       rootid --- ("child", SelectedLabel ->edge.selected.toString, WeakenedLabel -> edge.weakened.toString) --> new_v
     }*/
-    val new_v = null
-    val newNode = new HittingSetTreeNode(node.root, just, new_v)
-    newNode.status = node_stat
-    (newNode, axioms)
+    node.justification = just
+    node.status = node_stat
+    (node, axioms)
   }
 
 
-  def search(): Set[HittingSetTreeNode] = {
-
+  def search(): Set[HittingSetTreeNode] =
+    {
     def common(head: HittingSetTreeNode,
                discovered: mutable.HashSet[Set[Edge]],
                closedPaths: Set[HittingSetTreeNode],
