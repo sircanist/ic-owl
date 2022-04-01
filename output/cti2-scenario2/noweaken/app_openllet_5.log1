@@ -1,0 +1,1049 @@
+[34m2022-03-18 10:37:33.918+0100[0m [32mdebug[0m [[37mMain[0m] [32mFetching iris from file: $path[0m
+[34m2022-03-18 10:37:34.576+0100[0m  [36minfo[0m [[37mBlackBoxGenerator[0m] [36mchecking start conditions[0m
+[34m2022-03-18 10:37:35.139+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:35.151+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:35.163+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:35.288+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.148464808, expansion candidates amount: 546[0m
+[34m2022-03-18 10:37:35.289+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:35.404+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:35.508+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:35.616+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:35.715+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:35.825+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:35.936+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:36.052+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:36.145+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:36.251+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:36.351+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:36.450+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:36.517+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:36.600+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:36.697+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:36.804+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:36.868+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:36.900+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:36.941+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:36.997+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.046+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.094+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.137+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.177+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:37.219+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:37.262+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:37.302+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.346+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.387+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.423+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.461+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.496+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:37.538+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:37.571+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.282444035, pruned candidates amount 4[0m
+[34m2022-03-18 10:37:37.574+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.432181953, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>)))[0m
+[34m2022-03-18 10:37:37.578+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:37.585+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:37.591+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:37.688+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:37.836+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:37.996+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:38.152+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:38.325+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.745948798, expansion candidates amount: 0[0m
+[34m2022-03-18 10:37:38.325+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 0.746425078, just: None[0m
+[34m2022-03-18 10:37:38.325+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mqueue size: 3[0m
+[34m2022-03-18 10:37:38.325+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36medges length: 1[0m
+[34m2022-03-18 10:37:38.326+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mprocessed: 2[0m
+[34m2022-03-18 10:37:38.326+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mcp: 1[0m
+[34m2022-03-18 10:37:38.327+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:38.332+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:38.338+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:38.429+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.102225129, expansion candidates amount: 545[0m
+[34m2022-03-18 10:37:38.430+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:38.524+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:38.612+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:38.704+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:38.788+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:38.879+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:38.976+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:39.082+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:39.164+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:39.256+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:39.357+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:39.466+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:39.557+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:39.650+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:39.742+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:39.835+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:39.926+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:40.024+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:40.122+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:40.233+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:40.327+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:40.403+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:40.519+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:40.605+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:40.702+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:40.766+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:40.862+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:40.946+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.026+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.110+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.193+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.276+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.358+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.441+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.534+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:41.591+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:41.626+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:41.660+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:41.706+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.753+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.798+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.839+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:41.873+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:41.910+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:41.945+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 3.515805206, pruned candidates amount 5[0m
+[34m2022-03-18 10:37:41.946+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 3.618805815, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIndicator>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIndicator> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)))[0m
+[34m2022-03-18 10:37:41.946+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:41.951+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:41.955+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:42.039+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.092906248, expansion candidates amount: 542[0m
+[34m2022-03-18 10:37:42.040+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:42.124+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:42.208+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:42.297+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:42.378+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:42.468+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:42.568+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:42.673+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:42.752+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:42.841+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:42.921+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:43.007+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:43.104+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:43.199+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:43.289+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:43.381+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:43.472+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:43.555+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:43.638+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:43.704+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:43.788+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:43.869+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:43.950+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:44.031+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:44.113+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:44.166+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:44.199+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:44.232+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:44.264+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:44.298+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:44.331+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:44.359+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.319758005, pruned candidates amount 4[0m
+[34m2022-03-18 10:37:44.360+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.413362633, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>)))[0m
+[34m2022-03-18 10:37:44.360+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:44.365+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:44.369+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:44.424+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.063715979, expansion candidates amount: 545[0m
+[34m2022-03-18 10:37:44.424+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:44.478+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:44.525+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:44.574+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:44.628+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:44.681+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:44.731+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:44.786+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:44.883+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:44.943+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:45.003+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.059+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.117+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.175+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.231+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.289+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.381+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:45.441+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:45.507+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:45.570+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:45.621+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:45.680+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:45.733+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.788+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.835+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.880+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.926+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:45.982+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:46.025+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:46.058+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:46.086+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:46.119+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:46.147+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 1.722198363, pruned candidates amount 4[0m
+[34m2022-03-18 10:37:46.147+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 1.786521252, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)))[0m
+[34m2022-03-18 10:37:46.148+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mqueue size: 9[0m
+[34m2022-03-18 10:37:46.148+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36medges length: 2[0m
+[34m2022-03-18 10:37:46.149+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mprocessed: 4[0m
+[34m2022-03-18 10:37:46.149+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mcp: 1[0m
+[34m2022-03-18 10:37:46.149+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:46.153+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:46.157+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:46.241+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.092007589, expansion candidates amount: 541[0m
+[34m2022-03-18 10:37:46.241+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:46.330+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:46.416+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:46.500+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:46.584+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:46.676+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:46.771+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:46.873+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:46.957+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:47.050+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:47.116+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:47.186+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:47.278+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:47.373+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:47.465+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:47.557+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:47.648+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:47.738+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:47.823+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:47.905+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:47.996+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:48.085+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:48.169+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:48.239+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:48.328+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:48.416+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:48.507+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:48.578+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:48.670+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:48.762+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:48.856+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:48.951+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:49.044+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:49.138+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:49.231+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:49.332+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:49.417+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:49.472+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:49.513+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:49.550+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 3.308021739, pruned candidates amount 5[0m
+[34m2022-03-18 10:37:49.550+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 3.400797428, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIndicator>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIndicator> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string)))[0m
+[34m2022-03-18 10:37:49.551+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:49.556+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:49.559+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:49.611+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:49.740+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:49.888+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:50.037+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:50.197+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.64575264, expansion candidates amount: 0[0m
+[34m2022-03-18 10:37:50.198+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 0.64614038, just: None[0m
+[34m2022-03-18 10:37:50.198+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:50.203+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:50.206+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:50.260+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.061454589, expansion candidates amount: 541[0m
+[34m2022-03-18 10:37:50.260+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:50.308+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:50.364+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:50.411+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:50.468+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:50.529+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:50.591+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:50.658+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:50.741+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:50.812+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:50.882+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:50.953+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.022+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.090+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.158+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.228+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.307+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:51.383+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:51.442+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:51.506+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:51.581+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.655+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.733+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.808+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.884+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:51.960+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:52.027+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:52.097+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:52.161+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:52.196+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:52.247+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:52.318+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:52.385+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:52.448+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:52.505+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:52.562+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:52.616+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:52.669+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:52.702+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:52.733+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.472413682, pruned candidates amount 4[0m
+[34m2022-03-18 10:37:52.733+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.534475091, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)))[0m
+[34m2022-03-18 10:37:52.734+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:52.737+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:52.741+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:52.787+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.053412559, expansion candidates amount: 542[0m
+[34m2022-03-18 10:37:52.787+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:52.836+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:52.883+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:52.931+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:52.977+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:53.028+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:53.079+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:53.134+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:53.233+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:53.288+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:53.346+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:53.406+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:53.465+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:53.520+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:53.576+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:53.631+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:53.727+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:53.792+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:53.856+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:53.922+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:53.973+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:54.040+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:54.107+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.176+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.247+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.316+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.385+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.451+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.517+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.589+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:54.620+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:54.670+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:54.720+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.766+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.808+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.847+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.886+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:54.920+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:54.955+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:54.989+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:55.025+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:55.062+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:55.098+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:55.136+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:55.175+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:55.212+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:55.249+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:55.285+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.497083312, pruned candidates amount 5[0m
+[34m2022-03-18 10:37:55.285+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.551192961, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>)))[0m
+[34m2022-03-18 10:37:55.286+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:55.290+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:55.294+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:55.364+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:55.464+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:55.569+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:55.676+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:55.787+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.501447482, expansion candidates amount: 0[0m
+[34m2022-03-18 10:37:55.788+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 0.501816482, just: None[0m
+[34m2022-03-18 10:37:55.788+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mqueue size: 18[0m
+[34m2022-03-18 10:37:55.788+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36medges length: 3[0m
+[34m2022-03-18 10:37:55.788+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mprocessed: 9[0m
+[34m2022-03-18 10:37:55.788+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mcp: 3[0m
+[34m2022-03-18 10:37:55.789+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:55.793+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:55.797+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:55.848+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.059329069, expansion candidates amount: 541[0m
+[34m2022-03-18 10:37:55.848+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:55.903+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:55.952+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:56.005+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:56.055+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:56.114+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:56.170+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:56.232+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:56.342+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:56.406+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:56.470+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:56.531+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:56.593+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:56.656+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:56.717+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:56.778+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:56.881+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:56.950+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:57.047+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:57.123+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:57.230+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:57.302+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:57.373+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:57.475+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:57.549+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:57.653+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:57.712+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:57.784+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:57.855+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:57.926+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:57.997+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:58.067+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:58.141+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:58.176+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:58.228+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:58.279+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:58.324+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:58.369+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:58.414+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:58.451+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:58.483+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:58.519+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:58.553+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.704934839, pruned candidates amount 6[0m
+[34m2022-03-18 10:37:58.554+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.764910678, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIndicator>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIndicator> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)))[0m
+[34m2022-03-18 10:37:58.556+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:37:58.560+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:58.564+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:37:58.649+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.092452318, expansion candidates amount: 539[0m
+[34m2022-03-18 10:37:58.649+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:37:58.739+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:58.821+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:58.913+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:58.998+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:59.088+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:59.184+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:59.292+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:59.373+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:59.433+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:59.534+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:37:59.645+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:37:59.703+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:37:59.823+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:37:59.887+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:37:59.994+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:00.055+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:00.115+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.178+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.241+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.304+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.369+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.433+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.540+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:00.578+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:00.607+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:00.635+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:00.672+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.707+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.740+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:00.769+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:00.801+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:00.829+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.179928497, pruned candidates amount 4[0m
+[34m2022-03-18 10:38:00.829+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.272991525, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)))[0m
+[34m2022-03-18 10:38:00.831+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:00.835+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:00.839+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:00.897+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.065521249, expansion candidates amount: 538[0m
+[34m2022-03-18 10:38:00.897+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:00.947+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:01.002+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:01.050+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:01.110+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:01.175+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:01.239+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:01.313+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:01.402+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:01.476+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:01.559+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:01.634+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:01.709+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:01.784+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:01.860+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:01.932+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:02.017+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:02.100+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:02.165+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:02.234+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:02.317+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:02.402+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:02.487+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:02.570+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:02.652+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:02.735+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:02.804+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:02.880+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:02.949+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:02.986+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:03.038+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:03.107+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:03.145+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:03.182+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:03.218+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:03.257+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:03.295+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:03.335+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:03.375+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:03.410+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.512592331, pruned candidates amount 5[0m
+[34m2022-03-18 10:38:03.410+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.57870642, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>)))[0m
+[34m2022-03-18 10:38:03.411+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:03.415+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:03.419+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:03.468+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.057271949, expansion candidates amount: 541[0m
+[34m2022-03-18 10:38:03.469+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:03.515+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:03.564+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:03.609+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:03.661+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:03.718+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:03.775+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:03.835+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:03.939+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:04.042+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:04.105+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:04.163+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:04.264+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:04.371+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:04.429+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:04.489+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:04.547+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:04.607+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:04.712+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:04.775+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:04.842+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:04.906+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:04.961+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:05.012+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:05.061+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:05.104+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:05.160+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:05.205+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:05.243+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:05.275+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:05.306+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:05.337+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:05.366+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 1.897361951, pruned candidates amount 5[0m
+[34m2022-03-18 10:38:05.366+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 1.95522758, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#targets> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)))[0m
+[34m2022-03-18 10:38:05.367+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:05.371+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:05.375+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:05.431+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.064044049, expansion candidates amount: 537[0m
+[34m2022-03-18 10:38:05.431+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:05.483+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:05.538+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:05.589+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:05.651+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:05.715+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:05.778+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:05.853+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:05.944+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:06.017+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:06.091+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:06.165+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:06.238+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:06.311+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:06.385+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:06.458+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:06.548+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:06.633+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:06.703+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:06.775+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:06.859+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:06.942+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:07.027+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:07.114+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:07.197+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:07.278+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:07.348+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:07.439+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:07.529+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:07.612+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:07.711+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:07.788+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:07.862+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:07.961+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:08.036+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:08.124+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:08.185+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:08.263+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:08.338+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:08.414+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:08.484+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:08.558+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:08.629+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:08.669+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:08.707+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:08.745+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 3.313480559, pruned candidates amount 6[0m
+[34m2022-03-18 10:38:08.745+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 3.378100748, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIndicator>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIndicator> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)))[0m
+[34m2022-03-18 10:38:08.746+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mqueue size: 23[0m
+[34m2022-03-18 10:38:08.746+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36medges length: 4[0m
+[34m2022-03-18 10:38:08.746+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mprocessed: 14[0m
+[34m2022-03-18 10:38:08.746+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mcp: 3[0m
+[34m2022-03-18 10:38:08.748+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:08.752+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:08.756+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:08.841+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.092462659, expansion candidates amount: 535[0m
+[34m2022-03-18 10:38:08.841+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:08.929+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:09.016+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:09.104+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:09.190+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:09.282+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:09.377+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:09.481+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:09.569+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:09.636+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:09.706+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:09.779+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:09.845+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:09.943+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:09.997+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:10.055+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:10.122+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:10.189+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:10.256+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:10.312+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:10.372+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:10.445+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:10.504+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:10.567+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:10.627+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:10.720+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:10.758+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:10.786+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:10.816+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 1.97501985, pruned candidates amount 4[0m
+[34m2022-03-18 10:38:10.816+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.068073399, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string)))[0m
+[34m2022-03-18 10:38:10.818+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:10.822+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:10.826+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:10.866+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.047812249, expansion candidates amount: 536[0m
+[34m2022-03-18 10:38:10.867+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:10.915+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:10.953+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:10.997+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:11.037+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:11.076+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:11.122+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:11.199+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:11.278+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:11.399+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:11.511+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:11.592+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:11.671+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:11.752+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:11.833+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:11.916+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:12.002+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:12.089+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:12.201+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:12.300+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:12.393+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:12.456+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:12.556+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:12.645+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:12.736+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:12.828+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:12.918+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:13.010+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:13.100+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:13.201+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:13.258+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:13.328+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:13.422+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:13.512+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:13.603+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:13.687+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:13.764+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:13.803+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:13.867+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:13.931+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:13.990+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:14.047+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:14.097+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:14.145+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:14.191+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:14.232+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:14.268+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:14.309+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:14.347+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 3.479975336, pruned candidates amount 5[0m
+[34m2022-03-18 10:38:14.347+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 3.528315445, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iObservedDataHoneypot>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iObservedDataHoneypot> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)))[0m
+[34m2022-03-18 10:38:14.349+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:14.352+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:14.356+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:14.414+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.065351579, expansion candidates amount: 537[0m
+[34m2022-03-18 10:38:14.414+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:14.463+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:14.520+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:14.564+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:14.626+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:14.692+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:14.752+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:14.818+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:14.907+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:14.993+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:15.056+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:15.120+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:15.206+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:15.297+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:15.362+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:15.428+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:15.490+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:15.556+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:15.646+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:15.714+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:15.768+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:15.827+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:15.898+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:15.967+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:16.036+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:16.105+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:16.174+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:16.241+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:16.303+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:16.370+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:16.428+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:16.470+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:16.523+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:16.583+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:16.638+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:16.688+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:16.743+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:16.775+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:16.803+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.388721184, pruned candidates amount 5[0m
+[34m2022-03-18 10:38:16.803+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.454619173, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#targets> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)))[0m
+[34m2022-03-18 10:38:16.804+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:16.808+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:16.812+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:16.865+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.061093819, expansion candidates amount: 539[0m
+[34m2022-03-18 10:38:16.866+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:16.917+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:16.966+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:17.016+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:17.066+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:17.122+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:17.208+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:17.291+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:17.349+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:17.407+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:17.465+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:17.521+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:17.577+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:17.638+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:17.721+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:17.783+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:17.849+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:17.955+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:18.056+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:18.121+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:18.189+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:18.254+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:18.319+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:18.387+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:18.456+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:18.561+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:18.635+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:18.711+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:18.791+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:18.846+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:18.906+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:18.946+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:18.995+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:19.039+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:19.084+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:19.122+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:19.167+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:19.222+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:19.279+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.413060633, pruned candidates amount 4[0m
+[34m2022-03-18 10:38:19.279+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.474652062, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#victim> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)))[0m
+[34m2022-03-18 10:38:19.280+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mqueue size: 37[0m
+[34m2022-03-18 10:38:19.280+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36medges length: 5[0m
+[34m2022-03-18 10:38:19.280+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mprocessed: 16[0m
+[34m2022-03-18 10:38:19.280+0100[0m  [36minfo[0m [[37mHittingSetTree[0m] [36mcp: 3[0m
+[34m2022-03-18 10:38:19.282+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:19.286+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:19.289+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:19.331+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.048199139, expansion candidates amount: 532[0m
+[34m2022-03-18 10:38:19.331+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:19.380+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:19.420+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:19.464+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:19.506+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:19.556+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:19.608+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:19.696+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:19.785+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:19.883+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:19.980+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:20.067+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:20.160+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:20.253+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:20.344+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:20.437+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:20.530+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:20.629+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:20.723+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:20.815+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:20.916+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:21.016+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:21.118+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:21.216+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:21.313+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:21.408+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:21.483+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:21.580+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:21.672+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:21.763+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:21.852+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:21.903+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:21.969+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:22.061+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:22.156+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:22.249+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:22.330+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:22.400+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:22.444+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:22.486+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:22.523+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 3.191728131, pruned candidates amount 5[0m
+[34m2022-03-18 10:38:22.523+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 3.24044258, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iObservedDataHoneypot>), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iObservedDataHoneypot> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>)))[0m
+[34m2022-03-18 10:38:22.524+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:22.528+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:22.532+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:22.572+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.047669909, expansion candidates amount: 535[0m
+[34m2022-03-18 10:38:22.572+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:22.620+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:22.659+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:22.704+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:22.742+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:22.785+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:22.829+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:22.909+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:22.990+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:23.115+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:23.235+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:23.316+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:23.398+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:23.480+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:23.563+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:23.679+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:23.789+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:23.876+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:23.968+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:24.057+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:24.153+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:24.245+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:24.336+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:24.455+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:24.551+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:24.628+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:24.726+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:24.821+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:24.915+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:25.010+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:25.114+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:25.166+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:25.202+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:25.239+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:25.286+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:25.335+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:25.374+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:25.409+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:25.447+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:25.483+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.910083616, pruned candidates amount 5[0m
+[34m2022-03-18 10:38:25.483+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 2.958179605, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iFileHash> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iFileHash>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)))[0m
+[34m2022-03-18 10:38:25.485+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:25.488+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:25.492+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:25.551+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.066718768, expansion candidates amount: 536[0m
+[34m2022-03-18 10:38:25.551+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting contraction[0m
+[34m2022-03-18 10:38:25.604+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:25.662+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:25.715+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:25.772+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:25.839+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:25.912+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:25.983+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:26.047+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:26.115+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:26.181+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:26.249+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:26.315+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:26.382+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:26.454+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:26.531+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:26.617+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:26.700+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:26.780+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:26.853+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:26.926+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.002+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.074+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.146+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.222+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.295+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.371+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:27.454+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:27.538+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 8 [0m
+[34m2022-03-18 10:38:27.629+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment NOT found, new remove_window = 4 [0m
+[34m2022-03-18 10:38:27.711+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.792+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.876+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:27.957+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:28.039+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:28.119+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise[0m
+[34m2022-03-18 10:38:28.212+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, stepwise culprit found, new remove_window 16[0m
+[34m2022-03-18 10:38:28.292+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:28.365+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:28.399+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:28.455+0100[0m [32mdebug[0m [[37mContractionStrategy[0m] [32mexecuted contraction, entailment found, new remove_window = 16 [0m
+[34m2022-03-18 10:38:28.511+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mcontraction took 2.959857035, pruned candidates amount 4[0m
+[34m2022-03-18 10:38:28.512+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 3.026981193, just: Some(Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#victim> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>)))[0m
+[34m2022-03-18 10:38:28.512+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:28.516+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:28.519+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:28.583+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:28.680+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:28.781+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:28.883+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:28.990+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.477987903, expansion candidates amount: 0[0m
+[34m2022-03-18 10:38:28.990+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 0.478228703, just: None[0m
+[34m2022-03-18 10:38:28.991+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mstarting expanding[0m
+[34m2022-03-18 10:38:28.994+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:28.997+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:29.058+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:29.150+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:29.250+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:29.351+0100[0m [32mdebug[0m [[37mExpansionStrategy[0m] [32mexecuting structural expansion[0m
+[34m2022-03-18 10:38:29.456+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mexpansion took 0.465532473, expansion candidates amount: 0[0m
+[34m2022-03-18 10:38:29.457+0100[0m  [36minfo[0m [[37mJustificationFinder[0m] [36mjust search took 0.465737853, just: None[0m
+[34m2022-03-18 10:38:29.457+0100[0m  [33mwarn[0m [[37mHittingSetTree[0m] [33miteration count: 96[0m
+[34m2022-03-18 10:38:29.460+0100[0m  [33mwarn[0m [[37mMain[0m] [33m
+New path
+, file: repair/0.owl
+, length: 2
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string)
+weakened:
+ None
+}[0m
+[34m2022-03-18 10:38:29.532+0100[0m  [33mwarn[0m [[37mMain[0m] [33m
+New path
+, file: repair/1.owl
+, length: 5
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#targets> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#victim> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#victim> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}[0m
+[34m2022-03-18 10:38:29.549+0100[0m  [33mwarn[0m [[37mMain[0m] [33m
+New path
+, file: repair/2.owl
+, length: 1
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>)
+weakened:
+ None
+}[0m
+[34m2022-03-18 10:38:29.562+0100[0m  [33mwarn[0m [[37mMain[0m] [33m
+New path
+, file: repair/3.owl
+, length: 5
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#works-for> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#targets> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#targets> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIntrusionSet> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#victim> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ> "CompanyXYZ"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#victim> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iCompanyXYZ>)
+weakened:
+ None
+}[0m
+[34m2022-03-18 10:38:29.574+0100[0m  [33mwarn[0m [[37mMain[0m] [33m
+New path
+, file: repair/4.owl
+, length: 2
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>)
+weakened:
+ None
+}
+{
+Justifications:
+ Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+selected:
+ ClassAssertion(ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#has-impact> ObjectSomeValuesFrom(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#BusinessImpact-Major>)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>)
+weakened:
+ None
+}[0m
