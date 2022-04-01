@@ -13,15 +13,14 @@ function ex(){
     done
 }
 
-ex scenario1 noweaken 1
-ex scenario1 weaken 1
+#ex scenario1 noweaken 1
+#ex scenario1 weaken 1
 
-ex scenario1 noweaken -1
-ex scenario1 weaken -1
+#ex scenario1 noweaken -1
+#ex scenario1 weaken -1
 
+#ex scenario2 noweaken 5
+#ex scenario2 weaken 5
 
-ex scenario2 noweaken 5
-ex scenario2 weaken 5
-
-ex scenario2 noweaken 1
-ex scenario2 weaken 1
+#ex scenario2 noweaken 1
+#ex scenario2 weaken 1

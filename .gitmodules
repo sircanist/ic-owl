@@ -1,6 +1,6 @@
 [submodule "concept-fx-dl-only"]
 	path = concept-fx-dl-only
-	url = https://github.com/sircanist/concept-fx-dl-only.git
+	url = git@github.com:sircanist/concept-fx-dl-only.git
 [submodule "owls"]
 	path = owls
 	url = git@github.com:sircanist/tawny-ctidev.git

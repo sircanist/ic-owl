@@ -13,8 +13,12 @@ read ans
 printf "\n"
 if [ $ans -eq 1 ]
 then
+    	touch /tmp/app.log
+	tail -f /tmp/app.log &
 	run_scenario1
 elif [ $ans -eq 2 ]
 then
+        touch /tmp/app.log
+	tail -f /tmp/app.log &
 	run_scenario2
 fi
