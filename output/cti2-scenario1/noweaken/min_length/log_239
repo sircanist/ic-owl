@@ -2,33 +2,33 @@ New path, file: repair/239.owl
 , length: 4
 {
 Justifications:
- Set(ClassAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#HoneyPotSensor> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iHoneypotSensor>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iHoneypotSensor>))
+ Set(ClassAssertion(<cti2:HoneyPotSensor> <sc1:iHoneypotSensor>), ObjectPropertyAssertion(<cti2:grouping-ref> <sc1:iIncidentGrouping> <sc1:iHoneypotSensor>))
 selected:
- ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iHoneypotSensor>)
+ ObjectPropertyAssertion(<cti2:grouping-ref> <sc1:iIncidentGrouping> <sc1:iHoneypotSensor>)
 weakened:
  None
 }
 {
 Justifications:
- Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iThreatActor>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#actor_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iThreatActor> "HackerGroupXYZ"^^xsd:string))
+ Set(ObjectPropertyAssertion(<cti2:grouping-ref> <sc1:iIncidentGrouping> <sc1:iThreatActor>), DataPropertyAssertion(<cti2:actor_name> <sc1:iThreatActor> "HackerGroupXYZ"^^xsd:string))
 selected:
- DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#actor_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iThreatActor> "HackerGroupXYZ"^^xsd:string)
+ DataPropertyAssertion(<cti2:actor_name> <sc1:iThreatActor> "HackerGroupXYZ"^^xsd:string)
 weakened:
  None
 }
 {
 Justifications:
- Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#confidence> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentStatusRelationship> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-Confidence-High>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#business-impact-target> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iBusinessImpactRelationship> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-BusinessImpact-None>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentStatusRelationship>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#incident-status-target> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentStatusRelationship> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-IncidentStatus-Closed>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iBusinessImpactRelationship>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#confidence> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iBusinessImpactRelationship> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-Confidence-High>))
+ Set(ObjectPropertyAssertion(<cti2:confidence> <sc1:iIncidentStatusRelationship> <cti2:ind-Confidence-High>), ObjectPropertyAssertion(<cti2:business-impact-target> <sc1:iBusinessImpactRelationship> <cti2:ind-BusinessImpact-None>), ObjectPropertyAssertion(<cti2:grouping-ref> <sc1:iIncidentGrouping> <sc1:iIncidentStatusRelationship>), ObjectPropertyAssertion(<cti2:incident-status-target> <sc1:iIncidentStatusRelationship> <cti2:ind-IncidentStatus-Closed>), ObjectPropertyAssertion(<cti2:grouping-ref> <sc1:iIncidentGrouping> <sc1:iBusinessImpactRelationship>), ObjectPropertyAssertion(<cti2:confidence> <sc1:iBusinessImpactRelationship> <cti2:ind-Confidence-High>))
 selected:
- ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#incident-status-target> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentStatusRelationship> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-IncidentStatus-Closed>)
+ ObjectPropertyAssertion(<cti2:incident-status-target> <sc1:iIncidentStatusRelationship> <cti2:ind-IncidentStatus-Closed>)
 weakened:
  None
 }
 {
 Justifications:
- Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#sighting-of> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iSightingIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iSightingIncident>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#sensed-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iSightingIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iSnortsensor>), ClassAssertion(ObjectIntersectionOf(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#SnortSensor> DataHasValue(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#sensor_version> "3.210X"^^xsd:string)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iSnortsensor>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#incident-name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iIncident> "Incident1"^^xsd:string))
+ Set(ObjectPropertyAssertion(<cti2:sighting-of> <sc1:iSightingIncident> <sc1:iIncident>), ObjectPropertyAssertion(<cti2:grouping-ref> <sc1:iIncidentGrouping> <sc1:iSightingIncident>), ObjectPropertyAssertion(<cti2:sensed-by> <sc1:iSightingIncident> <sc1:iSnortsensor>), ClassAssertion(ObjectIntersectionOf(<cti2:SnortSensor> DataHasValue(<cti2:sensor_version> "3.210X"^^xsd:string)) <sc1:iSnortsensor>), DataPropertyAssertion(<cti2:incident-name> <sc1:iIncident> "Incident1"^^xsd:string))
 selected:
- ClassAssertion(ObjectIntersectionOf(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#SnortSensor> DataHasValue(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#sensor_version> "3.210X"^^xsd:string)) <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario1.owl#iSnortsensor>)
+ ClassAssertion(ObjectIntersectionOf(<cti2:SnortSensor> DataHasValue(<cti2:sensor_version> "3.210X"^^xsd:string)) <sc1:iSnortsensor>)
 weakened:
  None
 }

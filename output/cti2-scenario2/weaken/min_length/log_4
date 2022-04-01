@@ -3,9 +3,9 @@ New path
 , length: 1
 {
 Justifications:
- Set(ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>), DataPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#identity_name> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#discovered-method> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#created-by> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iBobMayerIdentity>))
+ Set(ObjectPropertyAssertion(<cti2:grouping-ref> <sc2:iIncidentGrouping> <sc2:iIncident>), DataPropertyAssertion(<cti2:identity_name> <sc2:iBobMayerIdentity> "BobMayer"^^xsd:string), ObjectPropertyAssertion(<cti2:discovered-method> <sc2:iIncident> <cti2:ind-DiscoveredMethod-Customer>), ObjectPropertyAssertion(<cti2:created-by> <sc2:iIncident> <sc2:iBobMayerIdentity>))
 selected:
- ObjectPropertyAssertion(<https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2.owl#grouping-ref> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncidentGrouping> <https://raw.githubusercontent.com/sircanist/tawny-ctidev/main/cti2-scenario2.owl#iIncident>)
+ ObjectPropertyAssertion(<cti2:grouping-ref> <sc2:iIncidentGrouping> <sc2:iIncident>)
 weakened:
  None
 }
